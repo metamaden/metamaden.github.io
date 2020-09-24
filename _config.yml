@@ -7,7 +7,7 @@ logo: # filename of a logo image that has been placed into your images directory
 # Enter the following platform usernames if you would like for them to appear on your site.
 owner:
   name: Sean Maden
-  avatar: https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/images/seanmaden_profilepic.jpg
+  avatar: seanmaden_profilepic.jpg
   bio: "Bioinformatician and computationalist tackling topics in epigenetics, biomedicine, and data informatics"
   email: maden.sean@gmail.com
   # Do not include the @ symbol in your Twitter username
