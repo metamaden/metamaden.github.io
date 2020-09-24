@@ -1,27 +1,27 @@
 # Site wide configuration
 
-title: Site Title
+title: Sean Maden (metamaden)'s personal website
 locale: en_US
 logo: # filename of a logo image that has been placed into your images directory
 
 # Enter the following platform usernames if you would like for them to appear on your site.
 owner:
-  name: Your Name
-  avatar: bio-photo.jpg
-  bio: "A brief description of yourself."
-  email: #emailaddress
+  name: Sean Maden
+  avatar: https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/images/seanmaden_profilepic.jpg
+  bio: "Bioinformatician and computationalist tackling topics in epigenetics, biomedicine, and data informatics"
+  email: maden.sean@gmail.com
   # Do not include the @ symbol in your Twitter username
-  twitter: #username
-  linkedin: #username
-  github: #username
-  orcid: # ID Number (ex. 0000-0000-0000-0000)
-  researchgate: #username
+  twitter: @MadenSean
+  linkedin: sean-maden-41623640
+  github: metamaden
+  orcid: 0000-0002-2212-4894
+  researchgate: Sean_Maden3
   mendeley: #username
   google:
     plus: #username
     analytics:
     verify:
-    scholar: #id
+    scholar: maden.sean@gmail.com
   facebook: #username
   instagram: #username
   bing-verify:
