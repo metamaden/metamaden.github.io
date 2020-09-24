@@ -8,7 +8,7 @@ logo: # filename of a logo image that has been placed into your images directory
 owner:
   name: Sean Maden
   avatar: seanmaden_profilepic.jpg
-  bio: "Bioinformatician and computationalist tackling topics in epigenetics, biomedicine, and data informatics"
+  bio: "Bioinformatician and computationalist tackling topics in data science, biomedicine, and epigenetics"
   email: maden.sean@gmail.com
   # Do not include the @ symbol in your Twitter username
   twitter: @MadenSean
