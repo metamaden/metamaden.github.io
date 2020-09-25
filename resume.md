@@ -6,11 +6,11 @@ layout: resume
 
 `2018 - 2022 (expected)` __Oregon Health & Science University__
 
-Ph.D. Computational Biology, Biomedical Engineering Department
+Ph.D. Computational Biology program, Biomedical Engineering Department, advised by Prof. Abhi Nellore.
 
 `2007-2011` __Reed College__
 
-B.A. Biology, Biology Department
+B.A. Biology, Biology Department, thesis advisor Prof. Suzy Renn
 
 ## Publications
 
@@ -18,17 +18,13 @@ See my full publications at [Google Scholar](https://scholar.google.co.uk/citati
 
 ## Software
 
-`2020`, [recountmethylation](https://www.bioconductor.org/packages/devel/bioc/html/recountmethylation.html), R package
-
-Utilities to obtain, query, and analyze cross-study compilations of DNAm array datasets from the Gene Expression Omnibus. Hosted by Bioconductor.
+`2020`, [recountmethylation](https://www.bioconductor.org/packages/devel/bioc/html/recountmethylation.html), a Bioconductor R package. Utilities to obtain, query, and analyze cross-study compilations of DNAm array datasets from the Gene Expression Omnibus.
 
 ## Occupation
 
 `Current` __Ph.D. Candidate__, 
 
-Computational Biology, Biomedical Engineering Department, Oregon Health & Science University, Portland, OR
-
-Graduate student in computation, bioinformatics, and data science, advised by Prof. Abhi Nellore.
+Graduate student in computation, bioinformatics, and data science, advised by Prof. Abhi Nellore. Computational Biology program, Biomedical Engineering Department, Oregon Health & Science University, Portland, OR
 
 - Biomedical research
 - Manuscript writing
@@ -43,9 +39,7 @@ Graduate student in computation, bioinformatics, and data science, advised by Pr
 
 `2015-2018` __Data Analyst Assistant__, 
 
-Clinical Research Division, Fred Hutch, Seattle, WA
-
-Epigenetics analyst and co-author contributor in Grady Lab.
+Epigenetics analyst and co-author contributor in Grady Lab, Clinical Research Division, Fred Hutch, Seattle, WA
 
 - Epigenetic modeling
 - Epigenetic drift
@@ -60,9 +54,7 @@ Epigenetics analyst and co-author contributor in Grady Lab.
 
 `May - September 2015` __Bioinformatics Intern__, 
 
-Clinical Research Division, Fred Hutch, Seattle, WA
-
-Interned with Grady Lab to study epigenetics and gastrointestinal cancer risk. 
+Interned with Grady Lab to study epigenetics and gastrointestinal cancer risk, Clinical Research Division, Fred Hutch, Seattle, WA
 
 - Epigenetic modeling
 - Colorectal cancer biomarkers
@@ -72,9 +64,7 @@ Interned with Grady Lab to study epigenetics and gastrointestinal cancer risk.
 
 `January - October 2013` __Laboratory Assistant__, 
 
-University of Washington Medical Genetics, Seattle, WA
-
-Clinical genomics and epidemiological data analysis, Jarvik Lab.
+Clinical genomics and epidemiological data analysis, Jarvik Lab at University of Washington Medical Genetics, Seattle, WA
 
 - Genome-wide association studies
 - Manhattan plots
