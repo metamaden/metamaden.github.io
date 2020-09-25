@@ -1,8 +1,8 @@
 # Site wide configuration
 
-title: Sean Maden (metamaden)'s personal website
+title: Sean Maden
 locale: en_US
-logo: # filename of a logo image that has been placed into your images directory
+logo: blogavatar2.jpg # filename of a logo image that has been placed into your images directory
 
 # Enter the following platform usernames if you would like for them to appear on your site.
 owner:
