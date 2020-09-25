@@ -8,9 +8,11 @@ Ph.D. candidate (3rd year), Advisor Prof. Abhi Nellore, Computational Biology pr
 ## Education
 
 `2018 - 2022 (expected)` __Oregon Health & Science University__
-Ph.D. Computational Biology, Biomedical Engineering Department, School of Medicine
+
+Ph.D. Computational Biology, Biomedical Engineering Department
 
 `2007-2011` __Reed College__
+
 B.A. Biology, Biology Department
 
 ## Publications
