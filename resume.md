@@ -31,7 +31,7 @@ Designed and conducted habitat field survey experiment of native at-risk frog Ra
 
 ## Publications
 
-See my full publications at [Google Scholar](https://scholar.google.co.uk/citations?user=LTOTl0YAAAAJ)
+See my full publications at [Google Scholar](https://scholar.google.co.uk/citations?user=tI9CzMgAAAAJ)
 
 ## Presentations
 
