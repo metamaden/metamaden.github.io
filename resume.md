@@ -17,25 +17,6 @@ B.A. Biology, Biology Department
 
 See my full publications at [Google Scholar](https://scholar.google.co.uk/citations?user=tI9CzMgAAAAJ)
 
-## Skills and interests
-
-* Bioinformatics
-* Computation
-* Analytics
-* Statistical modeling
-* Programming
-* Epigenetic biomarkers
-* Biological aging
-* Reproducible research
-* Data science
-* Machine learning
-* Databases for high-throughput datasets
-* Meta-analysis
-* Version control
-* Parallel computing
-* Remote serveres
-* Workflow optimization
-
 ## Awards
 
 `May 2019` Graduate Student Travel Award, MOMACs Modeling the World's Systems 2019, Washington, DC
@@ -78,9 +59,11 @@ Sean Maden+, Ming Yu+, Matthew Stachler+, et. al. (+first authors). *Genome-wide
 
 ## Occupation
 
-`Current` __Ph.D. Candidate__, Oregon Health & Science University, Portland, OR
+`Current` __Ph.D. Candidate__, 
 
-Ph.D. candidate advised by Prof. Abhi Nellore.
+Computational Biology, Biomedical Engineering Department, Oregon Health & Science University, Portland, OR
+
+Graduate student in computation, bioinformatics, and data science, advised by Prof. Abhi Nellore.
 
 - Biomedical research
 - Manuscript writing
@@ -93,9 +76,11 @@ Ph.D. candidate advised by Prof. Abhi Nellore.
 - Parallel computing
 - Machine learning
 
-`2015-2018` __Data Analysis Assistant__, Fred Hutch, Seattle, WA
+`2015-2018` __Data Analyst Assistant__, 
 
-Epigenetics analyst in Grady Lab, Clinical Research Division at Fred Hutch.
+Clinical Research Division, Fred Hutch, Seattle, WA
+
+Epigenetics analyst and co-author contributor in Grady Lab.
 
 - Epigenetic modeling
 - Epigenetic drift
@@ -108,9 +93,11 @@ Epigenetics analyst in Grady Lab, Clinical Research Division at Fred Hutch.
 - Grant contributions
 - Conference presentations
 
-`May - September 2015` __Bioinformatics Intern__, Fred Hutch, Seattle, WA
+`May - September 2015` __Bioinformatics Intern__, 
 
-Intern in Grady Lab, Clinical Research Division at Fred Hutch.
+Clinical Research Division, Fred Hutch, Seattle, WA
+
+Interned with Grady Lab to study epigenetics and gastrointestinal cancer risk. 
 
 - Epigenetic modeling
 - Colorectal cancer biomarkers
@@ -118,11 +105,11 @@ Intern in Grady Lab, Clinical Research Division at Fred Hutch.
 - Results visualization
 - Lab presentations
 
-`January - October 2013`
+`January - October 2013` __Laboratory Assistant__, 
 
-__Laboratory Assistant__, University of Washington Medical Genetics, Seattle, WA
+University of Washington Medical Genetics, Seattle, WA
 
-Clinical genomics and epidemiological data analysis.
+Clinical genomics and epidemiological data analysis, Jarvik Lab.
 
 - Genome-wide association studies
 - Manhattan plots
@@ -134,11 +121,30 @@ Clinical genomics and epidemiological data analysis.
 - Lipids and cholesterol
 - Blood samples
 
+## Skills and interests
+
+* Bioinformatics
+* Computation
+* Analytics
+* Statistical modeling
+* Programming
+* Epigenetic biomarkers
+* Biological aging
+* Reproducible research
+* Data science
+* Machine learning
+* Databases for high-throughput datasets
+* Meta-analysis
+* Version control
+* Parallel computing
+* Remote serveres
+* Workflow optimization
+
 ## Coursework
 
 `2018-2020` Oregon Health and Science University, Portland, OR
 
-Ph.D. Computational Biology, Biomedical Engineering (Summer 2018 – Winter 2020, expected)
+Ph.D. Computational Biology program, Biomedical Engineering Department
 
 * BMI 550/650: Bioinformatics and Computational Biology I: Algorithms
 * CONJ 650: Practice and Ethics of Science
