@@ -18,41 +18,36 @@ See my full publications at [Google Scholar](https://scholar.google.co.uk/citati
 
 ## Software
 
-`2020`, [recountmethylation](https://www.bioconductor.org/packages/devel/bioc/html/recountmethylation.html), a Bioconductor R package. Utilities to obtain, query, and analyze cross-study compilations of DNAm array datasets from the Gene Expression Omnibus.
+`2020` [recountmethylation](https://www.bioconductor.org/packages/devel/bioc/html/recountmethylation.html), Bioconductor/R package
+
+Utilities to obtain, query, and analyze cross-study compilations of DNAm array datasets from the Gene Expression Omnibus.
 
 ## Occupation
 
-`Current` __Ph.D. Candidate__, 
+`Current` __Ph.D. Candidate__
 
 Graduate student in computation, bioinformatics, and data science, advised by Prof. Abhi Nellore. Computational Biology program, Biomedical Engineering Department, Oregon Health & Science University, Portland, OR
 
 - Biomedical research
 - Manuscript writing
-- Epigenetics research
-- Biological aging research
-- Bioinformatic analysis
+- Epigenetics and biological aging
+- Bioinformatic analysis and visualizations
 - Statistical modeling
-- Analysis visualization
-- Data mining
 - Parallel computing
 - Machine learning
 
-`2015-2018` __Data Analyst Assistant__, 
+`2015-2018` __Data Analyst Assistant__
 
 Epigenetics analyst and co-author contributor in Grady Lab, Clinical Research Division, Fred Hutch, Seattle, WA
 
 - Epigenetic modeling
-- Epigenetic drift
-- Biological aging research
-- Biomarker development
+- Epigenetic drift and aging
+- Biomarker discovery
 - Gastrointestinal oncology
-- Research software and utilities development
-- Data mining
-- Manuscript writing
-- Grant contributions
-- Conference presentations
+- Software utilities development
+- Manuscript and grant writing
 
-`May - September 2015` __Bioinformatics Intern__, 
+`May - September 2015` __Bioinformatics Intern__
 
 Interned with Grady Lab to study epigenetics and gastrointestinal cancer risk, Clinical Research Division, Fred Hutch, Seattle, WA
 
@@ -60,21 +55,16 @@ Interned with Grady Lab to study epigenetics and gastrointestinal cancer risk, C
 - Colorectal cancer biomarkers
 - R programming
 - Results visualization
-- Lab presentations
 
-`January - October 2013` __Laboratory Assistant__, 
+`January - October 2013` __Laboratory Assistant__
 
 Clinical genomics and epidemiological data analysis, Jarvik Lab at University of Washington Medical Genetics, Seattle, WA
 
-- Genome-wide association studies
-- Manhattan plots
+- Genome-wide association studies (GWAS)
 - Manuscript contribution, co-authorship
 - Gene-environment interactions
-- Heart disease
-- Population data
 - Population genetics
 - Lipids and cholesterol
-- Blood samples
 
 ## Awards
 
@@ -92,48 +82,49 @@ Field survey and habitat study of the native, at-risk frog species *Rana aurora*
 
 ## Presentations
 
-`December 2019` poster/abstract
+`December 2019` Poster/abstract
 
 Sean K. Maden, Kasper D. Hansen, Abhi Nellore. *Human methylome variation across Infinium 450K raw data on the Gene Expression Omnibus*. Canadian Epigenetics, Environment and Health Research Consortium (CEEHRC) Network and International Human Epigenome Consortium (IHEC) Annual Meeting in Banff, AB, Canada.
 
-`May 2019` poster/abstract 
+`May 2019` Poster/abstract 
 
 Sean K. Maden, Kasper D. Hansen, Abhinov Nellore. *Comprehensive Reanalysis of DNA Methylation Array Data.* MOMACS Modeling the World’s Systems Conference in Washington, DC.
 
-`October 2018` lecture
+`October 2018` Lecture
 
 Sean Maden. *Recount Methylation: A generalizable platform for re-analysis of array- based epigenetic data.* Biophysics Journal Club meeting, at OHSU campus, Portland, OR.
 
-`October 2017` poster
+`October 2017` Poster
 
 Sean Maden+ and Georg Luebeck+, et. al. (+first authors). *Scope and Significance of Epigenetic Drift in Barrett’s Esophagus.* Cancer Systems Biology Consortium (CSBC) Annual Meeting at the Broad Institute, MIT campus, Cambridge, MA.
 
-`June 2017` lecture
+`June 2017` Lecture
 
 Sean Maden. *Spatial and temporal epigenetic pattern gradients differentiate normal and progressed tissues in esophagus.* Cancer Intervention and Surveillance Modeling Network (CISNET) meeting.
 
-`Summer 2016` poster
+`Summer 2016` Poster
 
 Sean Maden+, Ming Yu+, Matthew Stachler+, et. al. (+first authors). *Genome-wide methylation analysis reveals methylator subtypes of Barrett’s esophagus and esophageal adenocarcinoma.* American Association for Cancer Research (AACR) Annual Meeting, New Orleans, LA.
 
-## Skills and interests
+## Skills and expertise
 
-* Bioinformatics
-* Computation
-* Analytics
-* Statistical modeling
-* Programming
-* Epigenetic biomarkers
-* Biological aging
-* Reproducible research
-* Data science
-* Machine learning
-* Databases for high-throughput datasets
-* Meta-analysis
-* Version control
-* Parallel computing
-* Remote serveres
-* Workflow optimization
+* Data science, reproducible research
+* Git, GitHub, Overleaf, LaTeX, Markdown, R and Jupytr notebooks
+* DNA methylation arrays and epigenome analyses
+* Biological aging, epigenetic drift, biological clock discovery
+* Differential expression and alternative splicing in cancer
+* Bioinformatic analysis and computational biology
+* Python, pandas, numpy, TensorFlow
+* Bioconductor, SummarizedExperiment, GenomicRanges, DelayedArray
+* R, CRAN, ggplot2, data.table, glmnet, randomForest, e1071
+* Machine learning, neural networks, elastic net
+* Linear, logistic, and multivariate regression
+* Principal component analyses (PCA)
+* Analyses of variance (ANOVA)
+* Structured query language (SQL), SQLite, MySQL
+* Hierarchical database format 5 (HDF5)
+* Regular expressions, metadata mapping, grepl
+* MetaSRA-pipeline, term ontology databases
 
 ## Coursework
 
