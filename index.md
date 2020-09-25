@@ -1,14 +1,23 @@
 ---
 layout: page
-excerpt: "About Me..."
+title: About Me
+permalink: /about/
 ---
+<img src="https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/images/seanmaden_profilepic.jpg" url="https://github.com/metamaden/" alt="sean-maden_profile-pic" width="325" align = "right"/>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Greetings! My name's Sean. I'm a bioinformatician and proponent of "objective oriented programming". I program using R, Python, bash and more. I'm currently a Ph.D. candidate in the Computational Biology at the Biomedical Engineering Department, Oregon Health and Science University. My advisor is Professor Abhi Nellore, and my affiliations include PDXgx and the recount team at Johns Hopkins.
 
-## Current Interests and Projects:
+### Research experience
 
-- Lorem ipsum dolor sit amet
-- Lorem ipsum dolor sit amet
-- DLorem ipsum dolor sit amet
-- Lorem ipsum dolor sit amet
-- Lorem ipsum dolor sit amet
+My research incorporates bioinformatics, biostatistics, and computation, with particulat focus on computational research in epigenetics, biological aging, and oncology. Much of my work uses integrative cross-study analysis, or meta-analysis, of large genomics datasets, including from the Cancer Genome Atlas (TCGA) and the Gene Expression Omnibus (GEO). My research has lead to numerous significant first- and co-author contributions in published and peer-reviewed scientific works.
+
+### Programming experience and interests
+
+I have over 5 years of full-time programming work experience in research. My work typically incorporates R, Python, and bash using remote server clusters running CentOS or Linux, with advanced utilization of the `minfi`, `ggplot2`, `data.table`, `pandas`, `HDF5`, and `HDF5Array` libraries. My first software package, [`recountmethylation`](https://www.bioconductor.org/packages/devel/bioc/html/recountmethylation.html), was recently published on Bioconductor, a resource for curated libraries and databases that power reproducible high-throughput genomics analysis.
+
+### Work interests
+
+I'm generally interested in opportunities to do reproducible research tackling high-impact problems in data science, computation, and biomedicine. I favor open cross-disciplinary collaborations and development of open-access code and software. 
+
+### Curriculum Vitae
+You can find my latest full CV at my [CV repo.](https://github.com/metamaden/CV_repo).
