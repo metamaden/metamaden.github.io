@@ -13,6 +13,29 @@ Ph.D. Computational Biology, Biomedical Engineering Department, School of Medici
 `2007-2011` __Reed College__
 B.A. Biology, Biology Department
 
+## Publications
+
+See my full publications at [Google Scholar](https://scholar.google.co.uk/citations?user=tI9CzMgAAAAJ)
+
+## Skills and interests
+
+* Bioinformatics
+* Computation
+* Analytics
+* Statistical modeling
+* Programming
+* Epigenetic biomarkers
+* Biological aging
+* Reproducible research
+* Data science
+* Machine learning
+* Databases for high-throughput datasets
+* Meta-analysis
+* Version control
+* Parallel computing
+* Remote serveres
+* Workflow optimization
+
 ## Awards
 
 `May 2019` Graduate Student Travel Award, MOMACs Modeling the World's Systems 2019, Washington, DC
@@ -27,28 +50,30 @@ Research collaboration hosted by the SAS Institute and Burroughs Wellcome Fund. 
 
 Field survey and habitat study of the native, at-risk frog species *Rana aurora* . Performed amphibian ecology literature review, reared tadpoles, and constructed breeding habitat. Authored and coauthored research reports (Kaplan Lab).
 
-## Publications
-
-See my full publications at [Google Scholar](https://scholar.google.co.uk/citations?user=tI9CzMgAAAAJ)
-
 ## Presentations
 
 `December 2019` poster/abstract
+
 Sean K. Maden, Kasper D. Hansen, Abhi Nellore. *Human methylome variation across Infinium 450K raw data on the Gene Expression Omnibus*. Canadian Epigenetics, Environment and Health Research Consortium (CEEHRC) Network and International Human Epigenome Consortium (IHEC) Annual Meeting in Banff, AB, Canada.
 
 `May 2019` poster/abstract 
+
 Sean K. Maden, Kasper D. Hansen, Abhinov Nellore. *Comprehensive Reanalysis of DNA Methylation Array Data.* MOMACS Modeling the World’s Systems Conference in Washington, DC.
 
 `October 2018` lecture
+
 Sean Maden. *Recount Methylation: A generalizable platform for re-analysis of array- based epigenetic data.* Biophysics Journal Club meeting, at OHSU campus, Portland, OR.
 
 `October 2017` poster
+
 Sean Maden+ and Georg Luebeck+, et. al. (+first authors). *Scope and Significance of Epigenetic Drift in Barrett’s Esophagus.* Cancer Systems Biology Consortium (CSBC) Annual Meeting at the Broad Institute, MIT campus, Cambridge, MA.
 
 `June 2017` lecture
+
 Sean Maden. *Spatial and temporal epigenetic pattern gradients differentiate normal and progressed tissues in esophagus.* Cancer Intervention and Surveillance Modeling Network (CISNET) meeting.
 
 `Summer 2016` poster
+
 Sean Maden+, Ming Yu+, Matthew Stachler+, et. al. (+first authors). *Genome-wide methylation analysis reveals methylator subtypes of Barrett’s esophagus and esophageal adenocarcinoma.* American Association for Cancer Research (AACR) Annual Meeting, New Orleans, LA.
 
 ## Occupation
