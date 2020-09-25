@@ -4,11 +4,11 @@ layout: resume
 
 ## Education
 
-* `2018 - 2022 (expected)` __Oregon Health & Science University__
+`2018 - 2022 (expected)` __Oregon Health & Science University, Portland, OR__
 
  Ph.D. Computational Biology program, Biomedical Engineering Department, advised by Prof. Abhi Nellore.
 
-* `2007-2011` __Reed College__
+`2007-2011` __Reed College, Portland, OR__
 
 B.A. Biology, Biology Department, thesis advisor Prof. Suzy Renn
 
