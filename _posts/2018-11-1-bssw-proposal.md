@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My 2018 Proposal for the Better Scientific Software Fellowship
+title: My 2018 proposal for the Better Scientific Software Fellowship
 excerpt: How can we better preserve and track research software?
 modified: 2018/11/1, 12:00:00
 tags: [research, bioinformatics, replication, compilation, reproducibility, scientific_code, programming, data_science]
