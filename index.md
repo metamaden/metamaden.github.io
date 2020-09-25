@@ -1,7 +1,6 @@
 ---
 layout: page
 title: About Me
-permalink: /about/
 ---
 <img src="https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/images/seanmaden_profilepic.jpg" url="https://github.com/metamaden/" alt="sean-maden_profile-pic" width="325" align = "right"/>
 
