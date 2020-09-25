@@ -5,7 +5,7 @@ permalink: /about/
 ---
 <img src="https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/images/seanmaden_profilepic.jpg" url="https://github.com/metamaden/" alt="sean-maden_profile-pic" width="325" align = "right"/>
 
-Greetings! My name's Sean. I'm a bioinformatician and proponent of "objective oriented programming". I program using R, Python, bash and more. I'm currently a Ph.D. candidate in the Computational Biology at the Biomedical Engineering Department, Oregon Health and Science University. My advisor is Professor Abhi Nellore, and my affiliations include PDXgx and the recount team at Johns Hopkins.
+Greetings! My name's Sean. I'm a bioinformatician and proponent of "objective oriented programming". I program using R, Python, bash and more. I'm currently a 3rd year [Ph.D. candidate](https://www.ohsu.edu/people/sean-maden) in the Computational Biology at the Biomedical Engineering Department, Oregon Health and Science University. My advisor is Professor Abhi Nellore, and my affiliations include [PDXgx](https://github.com/pdxgx) and the [recount](https://jhubiostatistics.shinyapps.io/recount/) team at Johns Hopkins.
 
 ### Research experience
 
@@ -17,7 +17,7 @@ I have over 5 years of full-time programming work experience in research. My wor
 
 ### Work interests
 
-I'm generally interested in opportunities to do reproducible research tackling high-impact problems in data science, computation, and biomedicine. I favor open cross-disciplinary collaborations and development of open-access code and software. 
+I'm generally interested in opportunities to do reproducible research tackling high-impact problems in data science, computation, and biomedicine. I favor open cross-disciplinary collaborations and development of open-access code and software. Whether you have an interesting computational problem in genomics, want to improve reproducibility and data access in science, or want to discuss pursuing a bioinformatics career, feel free to reach out! 
 
 ### Curriculum Vitae
 You can find my latest full CV at my [CV repo.](https://github.com/metamaden/CV_repo).
