@@ -3,7 +3,7 @@ layout: page
 title: About Me
 ---
 
-Hello! My name's Sean, I'm a bioinformatician and computationalist. I'm currently a [3rd year Ph.D. candidate](https://www.ohsu.edu/people/sean-maden) in the Computational Biology at the Biomedical Engineering Department, Oregon Health and Science University (OHSU) (advised by Prof. Abhi Nellore). My reseach affiliations include [PDXgx](https://github.com/pdxgx) and the [recount](https://jhubiostatistics.shinyapps.io/recount/) team at Johns Hopkins.
+Hello! My name's Sean, I'm a bioinformatician and computationalist. I'm currently a [3rd year Ph.D. candidate](https://www.ohsu.edu/people/sean-maden) in the Computational Biology at the Biomedical Engineering Department, Oregon Health and Science University (OHSU) (advised by Prof. Abhi Nellore). My reseach affiliations include [PDXgx](https://github.com/pdxgx) (Thompson and Nellore lab groups) and the [recount](https://jhubiostatistics.shinyapps.io/recount/) team at Johns Hopkins (includes the Leek, Langmead, and Hansen lab groups).
 
 ### Research experience
 
