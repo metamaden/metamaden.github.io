@@ -7,31 +7,23 @@ Ph.D. candidate (3rd year), Advisor Prof. Abhi Nellore, Computational Biology pr
 
 ## Education
 
-`2018 - 2022 (expected)`
-__Oregon Health & Science University__
-Ph.D. Computational Biology
+`2018 - 2022 (expected)` __Oregon Health & Science University__
+Ph.D. Computational Biology, Biomedical Engineering Department, School of Medicine
 
-`2007-2011`
-__Reed College__
-B.A. Biology
+`2007-2011` __Reed College__
+B.A. Biology, Biology Department
 
 ## Awards
 
-`May 2019`
-
-Graduate Student Travel Award, MOMACs Modeling the World's Systems 2019, Washington, DC
+`May 2019` Graduate Student Travel Award, MOMACs Modeling the World's Systems 2019, Washington, DC
 
 Computer science and informatics conference hosted by the Department of Computer Science, University of Pittsburg. Presented a poster introducing meta-analysis of DNA methylation array data and variation in the Gene Expression Omnibus (Nellore Lab).
 
-`May 2016 - May 2017`
-
-SAS-BWF Fellow, Fred Hutch, Seattle, WA
+`May 2016 - May 2017` SAS-BWF Fellow, Fred Hutch, Seattle, WA
 
 Research collaboration hosted by the SAS Institute and Burroughs Wellcome Fund. Collaborations with SAS JMP Genomics team, researched epigenetic instability in colorectal cancers and matched normal tissues (Grady Lab).
 
-`May - September 2010`
-
-Fischer Memorial Fellow, Reed College, Portland, OR
+`May - September 2010` Fischer Memorial Fellow, Reed College, Portland, OR
 
 Field survey and habitat study of the native, at-risk frog species *Rana aurora* . Performed amphibian ecology literature review, reared tadpoles, and constructed breeding habitat. Authored and coauthored research reports (Kaplan Lab).
 
@@ -41,42 +33,27 @@ See my full publications at [Google Scholar](https://scholar.google.co.uk/citati
 
 ## Presentations
 
-`December 2019`
-(poster/abstract) 
-
+`December 2019` poster/abstract
 Sean K. Maden, Kasper D. Hansen, Abhi Nellore. *Human methylome variation across Infinium 450K raw data on the Gene Expression Omnibus*. Canadian Epigenetics, Environment and Health Research Consortium (CEEHRC) Network and International Human Epigenome Consortium (IHEC) Annual Meeting in Banff, AB, Canada.
 
-`May 2019`
-(poster/abstract) 
-
+`May 2019` poster/abstract 
 Sean K. Maden, Kasper D. Hansen, Abhinov Nellore. *Comprehensive Reanalysis of DNA Methylation Array Data.* MOMACS Modeling the World’s Systems Conference in Washington, DC.
 
-`October 2018`
-(lecture) 
-
+`October 2018` lecture
 Sean Maden. *Recount Methylation: A generalizable platform for re-analysis of array- based epigenetic data.* Biophysics Journal Club meeting, at OHSU campus, Portland, OR.
 
-`October 2017`
-(poster) 
-
+`October 2017` poster
 Sean Maden+ and Georg Luebeck+, et. al. (+first authors). *Scope and Significance of Epigenetic Drift in Barrett’s Esophagus.* Cancer Systems Biology Consortium (CSBC) Annual Meeting at the Broad Institute, MIT campus, Cambridge, MA.
 
-`June 2017`
-(lecture) 
-
+`June 2017` lecture
 Sean Maden. *Spatial and temporal epigenetic pattern gradients differentiate normal and progressed tissues in esophagus.* Cancer Intervention and Surveillance Modeling Network (CISNET) meeting.
 
-`Summer 2016`
-(poster) 
-
+`Summer 2016` poster
 Sean Maden+, Ming Yu+, Matthew Stachler+, et. al. (+first authors). *Genome-wide methylation analysis reveals methylator subtypes of Barrett’s esophagus and esophageal adenocarcinoma.* American Association for Cancer Research (AACR) Annual Meeting, New Orleans, LA.
 
 ## Occupation
 
-`Current`
-__Ph.D. Candidate__, 
-
-Oregon Health & Science University, Portland, OR
+`Current` __Ph.D. Candidate__, Oregon Health & Science University, Portland, OR
 
 Ph.D. candidate advised by Prof. Abhi Nellore.
 
@@ -91,10 +68,7 @@ Ph.D. candidate advised by Prof. Abhi Nellore.
 - Parallel computing
 - Machine learning
 
-`2015-2018`
-__Data Analysis Assistant__, 
-
-Fred Hutch, Seattle, WA
+`2015-2018` __Data Analysis Assistant__, Fred Hutch, Seattle, WA
 
 Epigenetics analyst in Grady Lab, Clinical Research Division at Fred Hutch.
 
@@ -109,11 +83,7 @@ Epigenetics analyst in Grady Lab, Clinical Research Division at Fred Hutch.
 - Grant contributions
 - Conference presentations
 
-`May - September 2015`
-
-__Bioinformatics Intern__, 
-
-Fred Hutch, Seattle, WA
+`May - September 2015` __Bioinformatics Intern__, Fred Hutch, Seattle, WA
 
 Intern in Grady Lab, Clinical Research Division at Fred Hutch.
 
@@ -125,9 +95,7 @@ Intern in Grady Lab, Clinical Research Division at Fred Hutch.
 
 `January - October 2013`
 
-__Laboratory Assistant__, 
-
-University of Washington Medical Genetics, Seattle, WA
+__Laboratory Assistant__, University of Washington Medical Genetics, Seattle, WA
 
 Clinical genomics and epidemiological data analysis.
 
@@ -143,52 +111,60 @@ Clinical genomics and epidemiological data analysis.
 
 ## Coursework
 
-`2018-2020`
-Oregon Health and Science University, Ph.D. Computational Biology, Biomedical Engineering Summer 2018 – Winter 2020 (expected, Nellore Lab and PDXgx)
-BMI 550/650: Bioinformatics and Computational Biology I: Algorithms
-CONJ 650: Practice and Ethics of Science
-BME 601: Prequalifying PhD Research
-CS 545: Machine Learning
+`2018-2020` Oregon Health and Science University, Portland, OR
 
-`2012-2013`
-University of Washington, Public Health Genetics Program
-PHG 536: Bioinformatics and Sequence Analysis 
-BIOSTAT 517/518: Applied Biostatistics I and II
-EPI 512/513: Epidemiological Methods I and II
-PHG 512: Law and Ethics in Public Health Genetics
-PHG 513: Pharmacogenetics and Toxicogenomics
-BIOST 580: Biostatistics Seminar
-EPI 583: Epidemiology Seminar 
-GENOME 525: Topics in Human Genetics PHG 511: Genetic Epidemiology
-PHG 521: Culture and Societal Genomics 
-PHG 523: Genetics and the Law
+Ph.D. Computational Biology, Biomedical Engineering (Summer 2018 – Winter 2020, expected)
 
-`2014-2015`
-Shoreline Community College, Biotechnology Program
-BIOL 270: Molecular Biology
-BIOL 285: Basics of Bioinformatics
-BIOL 286: Molecular Diagnostics
-BIOL 265/266: Solution and Media Prep I and II
-BIOL 275: Recombinant DNA
+* BMI 550/650: Bioinformatics and Computational Biology I: Algorithms
+* CONJ 650: Practice and Ethics of Science
+* BME 601: Prequalifying PhD Research
+* CS 545: Machine Learning
 
-`2007-2011`
-Reed College, B.A. Biology (2011, Renn Lab)
-MATH 111: Calculus
-MATH 112: Intro to Analysis 
-PHYS 100: General Physics I 
-HIST 315: Medieval/Renaissance Science and Religion
-BIOL 332: Vascular Plant Diversity 
-BIOL 101/102: Introductory Biology 
-CHEM 101/102: Introductory Chemistry
-BIOL 361: Genetics
-BIOL 431: Seminar, Ecology and Evolution of Plant-Human Interactions
-BIOL 358: Microbiology 
-BIOL 366: Population Ecology and Evolution
-CHEM 201/202: Organic Chemistry I and II
-PHIL 201: Logic
-BIOL 351: Developmental Biology (lecture only)
-BIOL 431: Seminar, Chromosome Structure
-PHIL 316: Philosophy of Science 
-BIOL 431: Seminar: Gene Duplication/Overexpression
+`2012-2013` University of Washington, Seattle, WA
+
+Public Health Genetics Program, Department of Public Health
+
+* PHG 536: Bioinformatics and Sequence Analysis 
+* BIOSTAT 517/518: Applied Biostatistics I and II
+* EPI 512/513: Epidemiological Methods I and II
+* PHG 512: Law and Ethics in Public Health Genetics
+* PHG 513: Pharmacogenetics and Toxicogenomics
+* BIOST 580: Biostatistics Seminar
+* EPI 583: Epidemiology Seminar 
+* GENOME 525: Topics in Human Genetics PHG 511: Genetic Epidemiology
+* PHG 521: Culture and Societal Genomics 
+* PHG 523: Genetics and the Law
+
+`2014-2015` Shoreline Community College, Shoreline, WA
+
+Biotechnology lab specialist program
+
+* BIOL 270: Molecular Biology
+* BIOL 285: Basics of Bioinformatics
+* BIOL 286: Molecular Diagnostics
+* BIOL 265/266: Solution and Media Prep I and II
+* BIOL 275: Recombinant DNA
+
+`2007-2011` Reed College, Portland, OR
+
+B.A. Biology (2011, Renn Lab)
+
+* MATH 111: Calculus
+* MATH 112: Intro to Analysis 
+* PHYS 100: General Physics I 
+* HIST 315: Medieval/Renaissance Science and Religion
+* BIOL 332: Vascular Plant Diversity 
+* BIOL 101/102: Introductory Biology 
+* CHEM 101/102: Introductory Chemistry
+* BIOL 361: Genetics
+* BIOL 431: Seminar, Ecology and Evolution of Plant-Human Interactions
+* BIOL 358: Microbiology 
+* BIOL 366: Population Ecology and Evolution
+* CHEM 201/202: Organic Chemistry I and II
+* PHIL 201: Logic
+* BIOL 351: Developmental Biology (lecture only)
+* BIOL 431: Seminar, Chromosome Structure
+* PHIL 316: Philosophy of Science 
+* BIOL 431: Seminar: Gene Duplication/Overexpression
 
 <!-- ### Footer Last updated: May 2013 -->
