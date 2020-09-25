@@ -15,7 +15,7 @@ Sean's research incorporates bioinformatics, biostatistics, and computation, foc
 
 ### Programming
 
-Sean has over 5 years of full-time programming experience. He often works with R, Python, and bash on remote server clusters, with advanced utilization of the `ggplot2`, `pandas`, `HDF5`, and `RSQLite` libraries. He has worked with many of the major database formats, including SQLite, MongoDB, and HDF5. Sean's first R software package, [`recountmethylation`](https://www.bioconductor.org/packages/devel/bioc/html/recountmethylation.html), is available on Bioconductor, a curated resource for analysis of high-throughput genomics data.
+Sean has over 5 years of full-time programming experience. He often works with R, Python, and bash on remote server clusters, with advanced utilization of the `ggplot2`, `pandas`, `HDF5`, and `RSQLite` libraries. He often works with many major database syntaxes and backends, including SQLite, MongoDB, and HDF5. Sean's first R software package, [`recountmethylation`](https://www.bioconductor.org/packages/devel/bioc/html/recountmethylation.html), is available on Bioconductor, a curated resource for analysis of high-throughput genomics data.
 
 ### Interests
 
