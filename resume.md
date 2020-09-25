@@ -1,9 +1,6 @@
 ---
 layout: resume
 ---
-## Currently
-
-Ph.D. candidate (3rd year), Advisor Prof. Abhi Nellore, Computational Biology program, Biomedical Engineering Department, Oregon Health & Science University
 
 ## Education
 
@@ -24,46 +21,6 @@ See my full publications at [Google Scholar](https://scholar.google.co.uk/citati
 `2020`, [recountmethylation](https://www.bioconductor.org/packages/devel/bioc/html/recountmethylation.html), R package
 
 Utilities to obtain, query, and analyze cross-study compilations of DNAm array datasets from the Gene Expression Omnibus. Hosted by Bioconductor.
-
-## Awards
-
-`May 2019` Graduate Student Travel Award, MOMACs Modeling the World's Systems 2019, Washington, DC
-
-Computer science and informatics conference hosted by the Department of Computer Science, University of Pittsburg. Presented a poster introducing meta-analysis of DNA methylation array data and variation in the Gene Expression Omnibus (Nellore Lab).
-
-`May 2016 - May 2017` SAS-BWF Fellow, Fred Hutch, Seattle, WA
-
-Research collaboration hosted by the SAS Institute and Burroughs Wellcome Fund. Collaborations with SAS JMP Genomics team, researched epigenetic instability in colorectal cancers and matched normal tissues (Grady Lab).
-
-`May - September 2010` Fischer Memorial Fellow, Reed College, Portland, OR
-
-Field survey and habitat study of the native, at-risk frog species *Rana aurora* . Performed amphibian ecology literature review, reared tadpoles, and constructed breeding habitat. Authored and coauthored research reports (Kaplan Lab).
-
-## Presentations
-
-`December 2019` poster/abstract
-
-Sean K. Maden, Kasper D. Hansen, Abhi Nellore. *Human methylome variation across Infinium 450K raw data on the Gene Expression Omnibus*. Canadian Epigenetics, Environment and Health Research Consortium (CEEHRC) Network and International Human Epigenome Consortium (IHEC) Annual Meeting in Banff, AB, Canada.
-
-`May 2019` poster/abstract 
-
-Sean K. Maden, Kasper D. Hansen, Abhinov Nellore. *Comprehensive Reanalysis of DNA Methylation Array Data.* MOMACS Modeling the World’s Systems Conference in Washington, DC.
-
-`October 2018` lecture
-
-Sean Maden. *Recount Methylation: A generalizable platform for re-analysis of array- based epigenetic data.* Biophysics Journal Club meeting, at OHSU campus, Portland, OR.
-
-`October 2017` poster
-
-Sean Maden+ and Georg Luebeck+, et. al. (+first authors). *Scope and Significance of Epigenetic Drift in Barrett’s Esophagus.* Cancer Systems Biology Consortium (CSBC) Annual Meeting at the Broad Institute, MIT campus, Cambridge, MA.
-
-`June 2017` lecture
-
-Sean Maden. *Spatial and temporal epigenetic pattern gradients differentiate normal and progressed tissues in esophagus.* Cancer Intervention and Surveillance Modeling Network (CISNET) meeting.
-
-`Summer 2016` poster
-
-Sean Maden+, Ming Yu+, Matthew Stachler+, et. al. (+first authors). *Genome-wide methylation analysis reveals methylator subtypes of Barrett’s esophagus and esophageal adenocarcinoma.* American Association for Cancer Research (AACR) Annual Meeting, New Orleans, LA.
 
 ## Occupation
 
@@ -128,6 +85,46 @@ Clinical genomics and epidemiological data analysis, Jarvik Lab.
 - Population genetics
 - Lipids and cholesterol
 - Blood samples
+
+## Awards
+
+`May 2019` Graduate Student Travel Award, MOMACs Modeling the World's Systems 2019, Washington, DC
+
+Computer science and informatics conference hosted by the Department of Computer Science, University of Pittsburg. Presented a poster introducing meta-analysis of DNA methylation array data and variation in the Gene Expression Omnibus (Nellore Lab).
+
+`May 2016 - May 2017` SAS-BWF Fellow, Fred Hutch, Seattle, WA
+
+Research collaboration hosted by the SAS Institute and Burroughs Wellcome Fund. Collaborations with SAS JMP Genomics team, researched epigenetic instability in colorectal cancers and matched normal tissues (Grady Lab).
+
+`May - September 2010` Fischer Memorial Fellow, Reed College, Portland, OR
+
+Field survey and habitat study of the native, at-risk frog species *Rana aurora* . Performed amphibian ecology literature review, reared tadpoles, and constructed breeding habitat. Authored and coauthored research reports (Kaplan Lab).
+
+## Presentations
+
+`December 2019` poster/abstract
+
+Sean K. Maden, Kasper D. Hansen, Abhi Nellore. *Human methylome variation across Infinium 450K raw data on the Gene Expression Omnibus*. Canadian Epigenetics, Environment and Health Research Consortium (CEEHRC) Network and International Human Epigenome Consortium (IHEC) Annual Meeting in Banff, AB, Canada.
+
+`May 2019` poster/abstract 
+
+Sean K. Maden, Kasper D. Hansen, Abhinov Nellore. *Comprehensive Reanalysis of DNA Methylation Array Data.* MOMACS Modeling the World’s Systems Conference in Washington, DC.
+
+`October 2018` lecture
+
+Sean Maden. *Recount Methylation: A generalizable platform for re-analysis of array- based epigenetic data.* Biophysics Journal Club meeting, at OHSU campus, Portland, OR.
+
+`October 2017` poster
+
+Sean Maden+ and Georg Luebeck+, et. al. (+first authors). *Scope and Significance of Epigenetic Drift in Barrett’s Esophagus.* Cancer Systems Biology Consortium (CSBC) Annual Meeting at the Broad Institute, MIT campus, Cambridge, MA.
+
+`June 2017` lecture
+
+Sean Maden. *Spatial and temporal epigenetic pattern gradients differentiate normal and progressed tissues in esophagus.* Cancer Intervention and Surveillance Modeling Network (CISNET) meeting.
+
+`Summer 2016` poster
+
+Sean Maden+, Ming Yu+, Matthew Stachler+, et. al. (+first authors). *Genome-wide methylation analysis reveals methylator subtypes of Barrett’s esophagus and esophageal adenocarcinoma.* American Association for Cancer Research (AACR) Annual Meeting, New Orleans, LA.
 
 ## Skills and interests
 
