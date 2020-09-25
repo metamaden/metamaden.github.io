@@ -13,7 +13,7 @@ Much of my work consists of integrative cross-study analysis, or meta-analysis, 
 
 ### Programming experience and interests
 
-I have over 5 years of full-time programming work experience in research. My work typically incorporates R, Python, and bash using remote server clusters running CentOS or Linux, with advanced utilization of the `minfi`, `ggplot2`, `data.table`, `pandas`, `HDF5`, and `HDF5Array` libraries. My first software package, [`recountmethylation`](https://www.bioconductor.org/packages/devel/bioc/html/recountmethylation.html), was recently published on Bioconductor, a resource for curated libraries and databases that power reproducible high-throughput genomics analysis.
+I have over 5 years of full-time programming work experience in research. My work typically incorporates R, Python, and bash using remote server clusters running CentOS or Linux, with advanced utilization of the `minfi`, `ggplot2`, `data.table`, `pandas`, `HDF5`, and `HDF5Array` libraries. My first R software library, [`recountmethylation`](https://www.bioconductor.org/packages/devel/bioc/html/recountmethylation.html), was recently published on Bioconductor, a resource for curated libraries and databases that power reproducible high-throughput genomics analysis.
 
 ### Work interests
 
