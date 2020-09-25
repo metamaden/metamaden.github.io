@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Cracking the Monty Hall problem with brute force simulation
-categories: [simulation; probability; modeling; reproducible_code]
-tags: [R; Rstats; ggplot2; gridExtra; gganimate; hexSticker]
+excerpt: Can simulations help us to understand and solve the Monty Hall problem?
+modified: 2020/2/13, 12:00:00
+tags: [simulation, modeling, programming, R, ggplot2, gganimate, monty_hall, algorithms, statistics]
+comments: true
+category: blog
 ---
 
 On a game show stage before you wait 3 closed doors, behind which have been deposited 2 goats and 1 prize, respectively. 
