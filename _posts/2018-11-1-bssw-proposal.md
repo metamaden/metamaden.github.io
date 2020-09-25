@@ -1,8 +1,11 @@
 ---
-layout: page
-title: "My 2018 Proposal for the Better Scientific Software Fellowship"
-date: 2018-11-1
-categories: research bioinformatics replication compilation reanalysis scientific code programming data_science
+layout: post
+title: My 2018 Proposal for the Better Scientific Software Fellowship
+excerpt: How can we better preserve and track research software?
+modified: 2018/11/1, 12:00:00
+tags: [research, bioinformatics, replication, compilation, reproducibility, scientific_code, programming, data_science]
+comments: true
+category: blog
 ---
 
 I wanted to share my proposal for the [2018 Better Scientific Software (BSSw) Fellowship ](https://bssw.io/fellowship). BSSw aims to increase and preserve integrity and standards for publishing computer code in science, and their fellowship program recognizes and supports advocates of this cause. You may or may not be aware that we currently lack standard ways of referencing published code in science as independently citable units. Furthermore, vital source code for experiments can be distributed in many places, including supplemental materials sections behind paywalls, personal websites that may become inaccessible or go offline over time, and repositories on GitHub or elsewhere that may not include inherent and persistent identifiers. I propose using an autocompilation technology to aggregate published scientific computer code and code metadata into a new database, called Pubsrc. This will enable novel assessments of scientific code use, including automatic generation of dependency usage networks, tracking the impact of newly discovered software bugs throughout research, and making scientific code independently citable. I hope you enjoy reading my proposal, and please share or tweet this post if you support this cause.
