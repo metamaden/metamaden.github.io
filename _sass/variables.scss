@@ -20,7 +20,7 @@ $alt-font: $base-font;
 
 $bodycolor      : #ECECDC;
 $body-color     : $bodycolor;
-$textcolor      : #186F24;
+$textcolor      : #554B10;
 $text-color     : $textcolor;
 $border-color   : $text-color;
 $basecolor 		  : #00BF1A;
@@ -52,7 +52,7 @@ $vimeo-color        : #1ab7ea;
 $youtube-color      : #ff3333;
 
 /* links */
-$linkcolor 		    : #04618F;
+$linkcolor 		    : #186F24;
 $link-color       : $linkcolor;
 $linkcolorhover 	: darken($linkcolor, 10);
 $linkcolorvisited : lighten($linkcolorhover, 20);
