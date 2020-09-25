@@ -19,6 +19,10 @@ B.A. Biology, Biology Department
 
 See my full publications at [Google Scholar](https://scholar.google.co.uk/citations?user=tI9CzMgAAAAJ)
 
+## Software
+
+`2020`, [recountmethylation](https://www.bioconductor.org/packages/devel/bioc/html/recountmethylation.html). Utilities to obtain, query, and analyze cross-study compilations of DNAm array datasets from the Gene Experession Omnibus. Hosted on Bioconductor.
+
 ## Awards
 
 `May 2019` Graduate Student Travel Award, MOMACs Modeling the World's Systems 2019, Washington, DC
