@@ -1,6 +1,12 @@
 ---
-title: "Mushroom Edibility With Data Science and Machine Learning: My ML Final Project"
-output: html_notebook
+---
+layout: post
+title: Mushroom Edibility With Data Science and Machine Learning: My ML Final Project
+excerpt: Can machine learning tell us which mushrooms are safe to eat?
+modified: 2018/12/25, 12:00:00
+tags: [machine_learning, artificial_intelligence, keras, R, Python, e1071, randomForest, algorithm, computer_science, biology, computation]
+comments: true
+category: blog
 ---
 
 This past Fall quarter, I completed my first college-level machine learning course. 
