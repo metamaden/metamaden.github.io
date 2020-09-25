@@ -36,6 +36,7 @@ Graduate student in computation, bioinformatics, and data science, advised by Pr
 - Parallel computing
 - Machine learning
 
+
 * `2015-2018` __Data Analyst Assistant__
 
 Epigenetics analyst and co-author contributor in Grady Lab, Clinical Research Division, Fred Hutch, Seattle, WA
@@ -47,6 +48,7 @@ Epigenetics analyst and co-author contributor in Grady Lab, Clinical Research Di
 - Software utilities development
 - Manuscript and grant writing
 
+
 * `May - September 2015` __Bioinformatics Intern__
 
 Interned with Grady Lab to study epigenetics and gastrointestinal cancer risk, Clinical Research Division, Fred Hutch, Seattle, WA
@@ -55,6 +57,7 @@ Interned with Grady Lab to study epigenetics and gastrointestinal cancer risk, C
 - Colorectal cancer biomarkers
 - R programming
 - Results visualization
+
 
 * `January - October 2013` __Laboratory Assistant__
 
