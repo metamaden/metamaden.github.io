@@ -17,6 +17,6 @@ I have over 5 years of full-time programming work experience in research. My wor
 
 ### Work interests
 
-I'm generally interested in opportunities to do reproducible research tackling high-impact problems in data science, computation, and biomedicine. I excel at open cross-disciplinary collaborations developing open-access software, including a Bioconductor library (e.g. [recountmethylation](https://www.bioconductor.org/packages/devel/bioc/html/recountmethylation.html)) and other utilities for  research (e.g. [methyPre](https://github.com/metamaden/cgmappeR) and [cgmappeR](https://github.com/metamaden/cgmappeR)) and education (e.g. [montyhall](https://github.com/metamaden/montyhall)). 
+I'm generally interested in opportunities to do reproducible research tackling high-impact problems in data science, computation, and biomedicine. I excel at open cross-disciplinary collaborations developing open-access software, including a Bioconductor libraries (e.g. [recountmethylation](https://www.bioconductor.org/packages/devel/bioc/html/recountmethylation.html)) and utilities for  research (e.g. [methyPre](https://github.com/metamaden/cgmappeR) and [cgmappeR](https://github.com/metamaden/cgmappeR)) and education (e.g. [montyhall](https://github.com/metamaden/montyhall)). 
 
 Whether you have an interesting computational problem in genomics, want to improve reproducibility and data access in science, or want to discuss pursuing a bioinformatics career, feel free to reach out!
