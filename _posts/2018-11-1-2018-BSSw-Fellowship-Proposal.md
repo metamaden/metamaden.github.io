@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "My 2018 Proposal for the Better Scientific Software Fellowship"
-date: YYYY-MM-DD hh:mm:ss -0000
+date: 2018-11-1
 categories: research bioinformatics replication compilation reanalysis scientific code programming data_science
 ---
 
