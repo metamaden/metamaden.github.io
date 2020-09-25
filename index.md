@@ -19,4 +19,4 @@ I have over 5 years of full-time programming work experience in research. My wor
 I'm generally interested in opportunities to do reproducible research tackling high-impact problems in data science, computation, and biomedicine. I favor open cross-disciplinary collaborations and development of open-access code and software. Whether you have an interesting computational problem in genomics, want to improve reproducibility and data access in science, or want to discuss pursuing a bioinformatics career, feel free to reach out! 
 
 ### Curriculum Vitae
-You can find my latest full CV at my [CV repo.](https://github.com/metamaden/CV_repo).
+Find my publications and work experience/background at my [CV repo](https://github.com/metamaden/CV_repo).
