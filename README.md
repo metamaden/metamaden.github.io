@@ -9,4 +9,4 @@ Sean possesses over 8 years of experience in bioinformatics research and program
 
 Sean lives near Portland, OR with his fiancee Lindsay Dawson. In his free time, he enjoys making and consuming espresso concoctions, hikes, sci-fi and nonfiction books, and strategy games.
 
-![]("/images/snl-index-pic.PNG", 100x50)
+![]("/images/snl-index-pic.PNG")
