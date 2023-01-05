@@ -1,7 +1,5 @@
----
-layout: default
-title: Home
----
+# metamaden.github.io
+Personal website for Sean Maden (a.k.a. metamaden), PhD
 
 # About Sean
 
@@ -11,25 +9,4 @@ Sean possesses over 8 years of experience in bioinformatics research and program
 
 Sean lives near Portland, OR with his fiancee Lindsay Dawson. In his free time, he enjoys making and consuming espresso concoctions, hikes, sci-fi and nonfiction books, and strategy games.
 
-<center>
-<img src="/images/snl-index-pic.PNG" width="50%" align="center" />
-</center>
-
-# Latest blog posts
-
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <h2><a href="{{ post.url }}">({{ post.date | date_to_string }}) {{ post.title }}</a></h2>
-      {{ post.excerpt }}
-    </li>
-  {% endfor %}
-</ul>
-
-# GitHub commit history
-
-Commit frequency over the past year. Excludes commits to private repos.
-
-<center>
-<img src="https://ghchart.rshah.org/4b0082/metamaden" alt="Sean's recent GitHub commit history" width="80%">
-</center>
+![]("/images/snl-index-pic.PNG")
