@@ -27,6 +27,9 @@ Sean lives near beautiful Portland, OR with his fiancee Lindsay Dawson. In his f
 </ul>
 
 # GitHub commit history
+
+Commit frequency over the past year. Excludes commits to private repos.
+
 <center>
 <img src="https://ghchart.rshah.org/4b0082/metamaden" alt="Sean's recent GitHub commit history" width="80%">
 </center>
