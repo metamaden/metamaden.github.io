@@ -8,8 +8,7 @@ comments: true
 category: blog
 ---
 
-![AI-generated image (made using Canva Text-to-Image).](https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/_posts/media/ai_short1.JPG){width=50%}
-
+<img src="https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/_posts/media/ai_short1.JPG"  width="800" height="400">
 
 In Code Shorts, I describe code usages which I find quirky, interesting, and/or useful. I'll focus on implementations that could help to improve the working efficiency and quality of life for researchers and coders alike, all while keeping things brief.
 
