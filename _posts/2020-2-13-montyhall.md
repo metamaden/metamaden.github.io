@@ -8,6 +8,8 @@ comments: true
 category: blog
 ---
 
+![AI-generated image (made using Canva Text-to-Image).](https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/_posts/media/ai_monty.JPG){width=50%}
+
 On a game show stage before you wait 3 closed doors, behind which have been deposited 2 goats and 1 prize, respectively. 
 You are called on to pick a door to be opened to reveal either a goat or a prize. The host, Monty Hall, then reveals a 
 goat behind one of the two remaining unpicked doors. You are then given the option to switch your door selection to the 

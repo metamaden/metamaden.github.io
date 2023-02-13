@@ -8,6 +8,9 @@ comments: true
 category: blog
 ---
 
+![AI-generated image (made using Canva Text-to-Image).](https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/_posts/media/ai_short1.JPG){width=50%}
+
+
 In Code Shorts, I describe code usages which I find quirky, interesting, and/or useful. I'll focus on implementations that could help to improve the working efficiency and quality of life for researchers and coders alike, all while keeping things brief.
 
 While checks are crucial to R package development, running them from command line can quickly become repetitive. I've written a shell script, [`rpackagecheck.sh`](https://gist.github.com/metamaden/14f6b5717e2934c118ffa9edfa45e765), that runs the standard steps to checking an R package. The script uses `R CMD ...` to install, build, and check packages with any combination of the three major check types.  This script can help discourage accidents, such as running check on a directory rather than a `.tar.gz` file, and ultimately expedite your development workflow.

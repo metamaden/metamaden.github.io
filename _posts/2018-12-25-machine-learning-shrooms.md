@@ -8,6 +8,8 @@ comments: true
 category: blog
 ---
 
+![AI-generated image (made using Canva Text-to-Image).](https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/_posts/media/ai_shroom.JPG){width=50%}
+
 This past Fall quarter, I completed my first college-level machine learning course. 
 I hope you will enjoy this discussion of my final project report, entitled, if you can forgive the pun, _Shrooms and Tunes_. 
 You can find the report in its entirety in my [machine learning repo](https://github.com/metamaden/machine-learning). 
