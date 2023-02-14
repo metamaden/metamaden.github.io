@@ -1,8 +1,8 @@
 ---
 short_name: intronomer
-name: Intron persistence quantification from long-read RNA-seq data
+name: intronomer -- long-read intron persistence
 type: Python package
 ---
 
-Quantify intron persistence in long-read RNA-seq data. Performs an anolog to short-read RNA-seq intron retention 
-detection using aligned long reads as input. Access via the GitHub repo ([link]()).
+Intron persistence quantification from long-read RNA-seq data. Performs an anolog to short-read intron retention 
+quantification. Uses aligned long reads as input. Access via the GitHub repo ([link]()).
