@@ -1,6 +1,6 @@
 ---
 short_name: intronomer
-name: intronomer -- long-read intron persistence
+name: intronomer -- long-read intron persistence (co-developer)
 type: Python package
 ---
 

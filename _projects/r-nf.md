@@ -1,6 +1,6 @@
 ---
 short_name: r-nf
-name: Implementations of R and NextFlow
+name: r-nf -- implementations of R with NextFlow (lead developer)
 type: workflow
 ---
 Implementations of R and Nextflow to enhance iterative benchmarks and data analyses
