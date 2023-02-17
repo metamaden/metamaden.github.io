@@ -6,6 +6,7 @@ modified: 2018/12/25, 12:00:00
 tags: [machine_learning, artificial_intelligence, keras, R, Python, e1071, randomForest, algorithm, computer_science, biology, computation]
 comments: true
 category: blog
+author: sean_maden
 ---
 
 <img src="https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/_posts/media/ai_shroom.JPG" alt = "AI-generated image (made using Canva Text-to-Image)."  width="800" height="400">

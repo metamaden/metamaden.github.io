@@ -6,6 +6,7 @@ modified: 2021/8/13, 12:00:00
 tags: [programming, bash, shell, sh, R, developers, Bioconductor, CRAN]
 comments: true
 category: blog
+author: sean_maden
 ---
 
 <img src="https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/_posts/media/ai_short1.JPG"  width="800" height="400">

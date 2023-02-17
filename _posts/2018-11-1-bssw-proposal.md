@@ -6,6 +6,7 @@ modified: 2018/11/1, 12:00:00
 tags: [research, bioinformatics, replication, compilation, reproducibility, scientific_code, programming, data_science]
 comments: true
 category: blog
+author: sean_maden
 ---
 
 <img src="https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/_posts/media/ai_bssw.JPG" alt = "AI-generated image (made using Canva Text-to-Image)."  width="800" height="400">

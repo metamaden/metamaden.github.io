@@ -6,6 +6,7 @@ modified: 2020/2/13, 12:00:00
 tags: [simulation, modeling, programming, R, ggplot2, gganimate, monty_hall, algorithms, statistics]
 comments: true
 category: blog
+author: sean_maden
 ---
 
 <img src="https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/_posts/media/ai_monty.JPG"  width="800" height="400">
