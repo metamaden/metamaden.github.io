@@ -11,7 +11,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Sean is interested in open-access research projects for data science. He develops analysis workflows (e.g.  recountmethylation_instance and r-nf_deconvolution) and R/Bioconductor software packages (e.g. recountmethylation and lute) and other resources for genomics research."
+    "text": "Sean is interested in open-access research projects for data science. He develops R/Bioconductor software packages (e.g. recountmethylation and lute), analysis workflows (e.g. recountmethylation_instance and r-nf_deconvolution), and other resources (e.g.  geoarraydigest, methyPre, cgageR, and cgmappeR) for research."
   },
   {
     "objectID": "posts/bssw/index.html",
