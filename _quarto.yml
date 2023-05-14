@@ -1,0 +1,24 @@
+project:
+  type: website
+
+website:
+  title: "Sean K. Maden"
+  description: "Professional website for Sean K. Maden, Ph.D."
+  twitter-card: true
+  navbar:
+    background: primary
+    search: true
+    left:
+      - text: "Home"
+        file: index.qmd
+      - posts.qmd
+      - about.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
+
