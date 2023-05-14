@@ -3,6 +3,4 @@ title: "Sean K. Maden"
 image: SeanMadenProfile1.jpg
 ---
 
-![](SeanMadenProfile1.jpg){width=50}
-
-Professional website and blog for Sean Maden, Ph.D.
+Professional website and blog for Sean K. Maden, Ph.D.
