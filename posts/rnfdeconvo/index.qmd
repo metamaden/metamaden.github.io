@@ -6,6 +6,7 @@ categories:
   - R
   - nextflow
   - benchmarks
+  - workflows
 ---
 
 As workflow technologies continue to be updated and improved, their learning materials become more robust, 
