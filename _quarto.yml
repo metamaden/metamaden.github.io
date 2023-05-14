@@ -12,6 +12,7 @@ website:
     left:
       - text: "Home"
         file: index.qmd
+      - publications.qmd
       - posts.qmd
       - about.qmd
 

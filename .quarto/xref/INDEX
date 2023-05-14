@@ -19,5 +19,11 @@
   },
   "posts/rnfdeconvo/index.qmd": {
     "index.html": "f42afa2c"
+  },
+  "cv.qmd": {
+    "cv.html": "476775c2"
+  },
+  "publications.qmd": {
+    "publications.html": "8455a20a"
   }
 }
