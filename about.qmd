@@ -3,8 +3,8 @@ title: "About"
 image: SeanMadenProfile1.jpg
 ---
 
-Sean Maden is a bioinformatics researcher with expertise in transcriptomics and epigenomics. 
-He earned his Ph.D. in Computational Biology from the Department of Biomedical Engineering 
+Sean Maden is a bioinformatics researcher with expertise in transcriptomics, epigenomics, and 
+informatics analysis. He earned his Ph.D. in Computational Biology from the Department of Biomedical Engineering 
 at Oregon Health & Science University. 
 
 Sean is interested in open-access research projects for data science. He develops 
