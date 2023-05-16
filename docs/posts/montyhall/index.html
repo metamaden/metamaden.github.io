@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -86,6 +86,9 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publications.html">Publications</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../posts.html">Blog</a>
@@ -266,7 +269,7 @@ for(r in 1:length(lr)){
 mtext("Win Frequency", side = 1, outer = T)
 mtext("Number of Simulations", side = 2, outer = T)
 dev.off()</code></pre>
-<p><img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_3runs.png" alt="drawing" align="center" width="1800"></p>
+<p><img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_3runs.png" alt="drawing" align="center" width="100%/"></p>
 <p><strong>Figure 1.</strong> Composite histograms of Monty Hall simulation runs using classic parameters. At left is smallest run (5 simulations of 2 games, 10 games total), middle is intermediate run (100 simulations and games, 10,000 total games), right is largest run (1,000 simulations and games, 1,000,000 games total).</p>
 <p>If you prefer to be more precise about the increase in distribution normality, we can apply the <a href="https://en.wikipedia.org/wiki/Shapiro%E2%80%93Wilk_test">Shapiro-Wilk Normality test</a> with <code>shapiro.test()</code> to test the null hypothesis that data were drawn from a normal distribution.</p>
 <pre><code># run normality tests
@@ -303,7 +306,7 @@ pref &lt;- getlineplot(lnd, ptitle = "Canonical rules, varying doors")</code></p
 <pre><code>png("mh_ndoors_3plots.png", width = 10, height = 4, units = "in", res = 400)
 getprettyplots(lnd, "Varying door count")
 dev.off()</code></pre>
-<p><img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_ndoors_3plots.png" alt="mh_ndoors_3plots" align="center" width="1800"></p>
+<p><img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_ndoors_3plots.png" alt="mh_ndoors_3plots" align="center" width="100%/"></p>
 <p><strong>Figure 2.</strong> Three ways to visualize simulated win fraction distributions across door various quantities. Left, violin plots. Middle, ridge plots. Right, line plot of distribution means (lines) and standard deviation confidences (grey ribbon).</p>
 <p>Thus we have 3 ways of visualizing the win frequency distribution increase following increased door quantity. Interestingly, as door quantity increases, the standard deviation seems to contract slightly after the means show an asymptote, which reflects that win frequency increase becomes both higher and more certain at higher door quantities.</p>
 <p>I’ve allowed for two types of line plot overlays with the <code>ribbontype</code> argument. This allows for 2 types of confidence visualizations (the grey-colored ribbon overlay). Confidences can use either the standard deviation (if <code>sd</code>, the default), or the minimum and maximum win frequencies observed (if <code>minmax</code>). Let’s compare these below.</p>
@@ -313,7 +316,7 @@ pclassic2 &lt;- getlineplot(lnd, ptitle = "Min. max. overlay", ribbontype = "min
 png("mh_2lineplots.png", width = 5, height = 3, units = "in", res = 400)
 grid.arrange(pclassic1, pclassic2, top = "Ribbon overlay comparison", ncol = 2)
 dev.off()</code></pre>
-<p><img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_2lineplots.png" alt="mh_2lineplots" align="center" width="900"></p>
+<p><img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_2lineplots.png" alt="mh_2lineplots" align="center" width="100%/"></p>
 <p><strong>Figure 3.</strong> Line plot comparison showing 2 ways of visualizing win fraction distributions with door quantity. Left, grey confidence ribbon calculated using standard deviation. Right, confidences calculated from observed distribution minima and maxima.</p>
 <p>Again, I’ll tend to use <code>sd</code> as it’s more useful to describe the underlying win fraction distributions being plotted.</p>
 </section>
@@ -351,7 +354,7 @@ grid.arrange(plist[[1]], plist[[2]], plist[[3]],
              ncol = 5, 
              bottom = "Number of Doors", left = "Win Fraction")
 dev.off()</code></pre>
-<p><img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_switchfreq.png" alt="mh_switchfreq" align="center" width="1500"></p>
+<p><img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_switchfreq.png" alt="mh_switchfreq" align="center" width="100%/"></p>
 <p><strong>Figure 4.</strong> Composite line plots of ten simulation sets varying player switch frequency/fraction and door counts. Top row, first run to fifth run varying switch frequnecy from 0% to 40%. Bottom row, sixth run to final run varying switch frequency from 50% to 90%.</p>
 <p>Across run sets of each door switch frequency, there’s a clear transition from an approximate negative power function (e.g.&nbsp;x ^ -1, top leftmost plot), to something approaching a fractional power function (e.g.&nbsp;x ^ 1/2, bottom rightmost plot). Note the win fraction only starts to show improvement with door quantity increase when the switch frequency is greater than 50% (bottom, second from leftmost plot), and that win fraction changes for a given switch frequency tend to always form asymptotes.</p>
 <p>Increasing the switch frequency under classical rules should show progressive win fraction increases. Let’s generate and visualize the simulation results for this. I’ll appropriate my <code>getlineplot()</code> function, but note that it can be better to explicitly handle different axis variables (e.g.&nbsp;<code>ndoors</code> and <code>doorswitch</code> here) with discrete code.</p>
@@ -368,7 +371,7 @@ getlineplot(lnd, ptitle = "Win Freq. by Switch Freq.",
             xlim = c(0, 1), ylim = c(0, 1), 
             xlab = "Switch frequency")
 dev.off()</code></pre>
-<p><img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_switchfreq_classicrules.png" alt="mh_switchfreq_classicrules" align="center" width="500"></p>
+<p><img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_switchfreq_classicrules.png" alt="mh_switchfreq_classicrules" align="center" width="100%/"></p>
 <p><strong>Figure 5.</strong> Simulation results from varying switch frequency using only classic Monty Hall rules/parameters (function defaults).</p>
 <p>The resulting plot shows a clear linear win fraction increase with switch frequency, maxing out at the now-familiar mean of about 0.667.</p>
 </section>

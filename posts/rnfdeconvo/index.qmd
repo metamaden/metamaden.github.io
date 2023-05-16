@@ -102,7 +102,7 @@ I accomplished this using a simple .R script.
 
 Diagram of `r-nf` parameter update
 
-<img src="https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/_posts/media/r-nf_params-diagram.png" alt = "Diagram of how parameters are written in the proposed `r-nf` system."  width="680" height="135">
+<img src="https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/posts/media/r-nf_params-diagram.png" alt = "Diagram of how parameters are written in the proposed `r-nf` system."  width="680" height="135">
 
 ## An `r-nf` solution for parameter management
 
@@ -113,7 +113,7 @@ adding a row in this table, resaving, and running `Rscript /rscript/r-nf_write-p
 
 The contents of `workflow_table.csv` could look something like this:
 
-<img src="https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/_posts/media/workflow_table.JPG" alt = "AI-generated image (made using Canva Text-to-Image).">
+<img src="https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/posts/media/workflow_table.JPG" alt = "AI-generated image (made using Canva Text-to-Image).">
 
 Note the use of `$launchDir`. This is syntax for NextFlow that points to the current working directory. After writing 
 to `params.config`, the contents of this workflow table look like:
@@ -177,7 +177,7 @@ new processes with new parameters, the metadata table needs to be updated with n
 
 An example parameter metadata table:
 
-<img src="https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/_posts/media/params_metadata.JPG" alt = "AI-generated image (made using Canva Text-to-Image).">
+<img src="https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/posts/media/params_metadata.JPG" alt = "Example parameter metadata table image.">
 
 ## Aggregating benchmark outputs into a results table
 
@@ -197,7 +197,7 @@ overwritten.
 
 Excerpt from a results table:
 
-<img src="https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/_posts/media/results_table.JPG" alt = "AI-generated image (made using Canva Text-to-Image).">
+<img src="https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/posts/media/results_table.JPG" alt = "Example results table image." width = 100%>
 
 ## Simplifying workflow development with standard process definitions
 

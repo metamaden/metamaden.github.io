@@ -136,7 +136,7 @@ Let's now plot the win frequency distributions across the 3 runs. Note I've stor
     mtext("Number of Simulations", side = 2, outer = T)
     dev.off()
 
-<img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_3runs.png" alt="drawing" align="center" width="1800"/>
+<img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_3runs.png" alt="drawing" align="center" width=100%/>
 
 **Figure 1.** Composite histograms of Monty Hall simulation runs using classic parameters. At left is smallest run (5 simulations of 2 games, 10 games total), middle is intermediate run (100 simulations and games, 10,000 total games), right is largest run (1,000 simulations and games, 1,000,000 games total).
 
@@ -185,7 +185,7 @@ To generate the plots, I've wrapped code into the utility functions `getggdat()`
     getprettyplots(lnd, "Varying door count")
     dev.off()
 
-<img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_ndoors_3plots.png" alt="mh_ndoors_3plots" align="center" width="1800"/>
+<img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_ndoors_3plots.png" alt="mh_ndoors_3plots" align="center" width=100%/>
 
 **Figure 2.** Three ways to visualize simulated win fraction distributions across door various quantities. Left, violin plots. Middle, ridge plots. Right, line plot of distribution means (lines) and standard deviation confidences (grey ribbon).
 
@@ -200,7 +200,7 @@ I've allowed for two types of line plot overlays with the `ribbontype` argument.
     grid.arrange(pclassic1, pclassic2, top = "Ribbon overlay comparison", ncol = 2)
     dev.off()
 
-<img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_2lineplots.png" alt="mh_2lineplots" align="center" width="900"/>
+<img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_2lineplots.png" alt="mh_2lineplots" align="center" width=100%/>
 
 **Figure 3.** Line plot comparison showing 2 ways of visualizing win fraction distributions with door quantity. Left, grey confidence ribbon calculated using standard deviation. Right, confidences calculated from observed distribution minima and maxima.
 
@@ -245,7 +245,7 @@ All runs completed in about 1 minute. The composite plot can now generated from 
                  bottom = "Number of Doors", left = "Win Fraction")
     dev.off()
 
-<img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_switchfreq.png" alt="mh_switchfreq" align="center" width="1500"/>
+<img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_switchfreq.png" alt="mh_switchfreq" align="center" width=100%/>
 
 **Figure 4.** Composite line plots of ten simulation sets varying player switch frequency/fraction and door counts. Top row, first run to fifth run varying switch frequnecy from 0% to 40%. Bottom row, sixth run to final run varying switch frequency from 50% to 90%.
 
@@ -267,7 +267,7 @@ Increasing the switch frequency under classical rules should show progressive wi
                 xlab = "Switch frequency")
     dev.off()
 
-<img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_switchfreq_classicrules.png" alt="mh_switchfreq_classicrules" align="center" width="500"/>
+<img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_switchfreq_classicrules.png" alt="mh_switchfreq_classicrules" align="center" width=100%/>
 
 **Figure 5.** Simulation results from varying switch frequency using only classic Monty Hall rules/parameters (function defaults).
 
