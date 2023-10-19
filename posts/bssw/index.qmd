@@ -1,7 +1,7 @@
 ---
 title: "My 2018 proposal for the Better Scientific Software Fellowship"
 author: "Sean K. Maden"
-date: "2018-11-01"
+date: "2018-11-12"
 categories:
   - science
   - software
