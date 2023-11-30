@@ -13,6 +13,7 @@ website:
       - text: "Home"
         file: index.qmd
       - publications.qmd
+      - reproducibility.qmd
       - posts.qmd
       - about.qmd
 
