@@ -3,8 +3,7 @@ title: "About"
 image: SeanMadenProfile1.jpg
 ---
 
-Sean Maden is a bioinformatics researcher with expertise in transcriptomics, epigenomics, and 
-informatics analysis. He earned his Ph.D. in Computational Biology from the Department of Biomedical Engineering 
+Sean Maden is a Senior Bioinformatician with expertise in transcriptomics, high-dimensional analysis, and machine learning. He earned his Ph.D. in Computational Biology from the Department of Biomedical Engineering 
 at Oregon Health & Science University. 
 
 Sean is interested in open-access research projects for data science. He develops 
@@ -18,3 +17,26 @@ other resources (e.g.
 [geoarraydigest](https://github.com/metamaden/geoarraydigest), [methyPre](https://github.com/metamaden/methyPre), 
 [cgageR](https://github.com/metamaden/cgageR), and 
 [cgmappeR](https://github.com/metamaden/cgmappeR)) for research.
+
+links:
+    - icon: twitter
+      text: twitter
+      href: https://twitter.com/MadenSean
+    - icon: github
+      text: Github
+      href: https://github.com/metamaden
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/feed/
+    - icon: researchgate
+      text: ResearchGate
+      href: https://www.researchgate.net/profile/Sean-Maden
+    - icon: googlescholar
+      text: GoogleScholar
+      href: https://scholar.google.com/citations?user=tI9CzMgAAAAJ&hl=en
+    - icon: orcid
+      text: ORCID
+      href: https://orcid.org/0000-0002-2212-4894
+    - icon: bluesky
+      text: BlueSky
+      href: https://bsky.app/profile/metamaden.bsky.social
