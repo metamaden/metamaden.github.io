@@ -5,7 +5,8 @@ project:
 website:
   title: "Sean K. Maden"
   description: "Professional website for Sean K. Maden, Ph.D."
-  twitter-card: true
+  twitter-card:
+    creator: "@MadenSean"
   navbar:
     background: primary
     search: true
