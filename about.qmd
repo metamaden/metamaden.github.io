@@ -41,3 +41,22 @@ other resources (e.g.
 [geoarraydigest](https://github.com/metamaden/geoarraydigest), [methyPre](https://github.com/metamaden/methyPre), 
 [cgageR](https://github.com/metamaden/cgageR), and 
 [cgmappeR](https://github.com/metamaden/cgmappeR)) for research.
+
+## Education
+
+Johns Hopkins Bloomberg School of Public Health | Baltimore, MD
+Postdoc in Dept. of Biostatistics | June 2022 - present 
+
+Oregon Health & Science University | Portland, OR
+PhD in Biomedical Engineering/Computational Biology | June 2018 - June 2022
+
+Reed College | Portland, OR
+B.A in Biology/Population Genetics | Sept 2007 - May 2011
+
+## Experience
+
+Fred Hutch | Data Analyst Assistant | Oct 2015 - June 2018
+
+Fred Hutch | Bioinformatics Intern | April - Oct 2015
+
+University of Washington | Laboratory Assistant | Jan 2013 - Oct 2013
