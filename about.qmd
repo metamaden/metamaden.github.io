@@ -42,6 +42,8 @@ other resources (e.g.
 [cgageR](https://github.com/metamaden/cgageR), and 
 [cgmappeR](https://github.com/metamaden/cgmappeR)) for research.
 
+Application materials, including Resume, CV, and publications are available from [Google Drive](https://drive.google.com/drive/folders/1794q4RkhrtI0Z6u9Pj2ZLNXGfLuqL_Q8).
+
 ## Education
 
 Johns Hopkins Bloomberg School of Public Health | Baltimore, MD
