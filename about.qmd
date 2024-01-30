@@ -1,24 +1,9 @@
 ---
 title: "About"
-image: SeanMadenProfile1.jpg
----
-
-Sean Maden is a Senior Bioinformatician with expertise in transcriptomics, high-dimensional analysis, and machine learning. He earned his Ph.D. in Computational Biology from the Department of Biomedical Engineering 
-at Oregon Health & Science University. 
-
-Sean is interested in open-access research projects for data science. He develops 
-R/Bioconductor software packages (e.g. [recountmethylation](https://www.bioconductor.org/packages/release/bioc/html/recountmethylation.html) 
-and [lute](https://github.com/metamaden/lute)), 
-analysis workflows (e.g.
-[recountmethylation_instance](https://github.com/metamaden/recountmethylation_instance) 
-and [r-nf_deconvolution](https://github.com/metamaden/r-nf_deconvolution)), 
-and 
-other resources (e.g. 
-[geoarraydigest](https://github.com/metamaden/geoarraydigest), [methyPre](https://github.com/metamaden/methyPre), 
-[cgageR](https://github.com/metamaden/cgageR), and 
-[cgmappeR](https://github.com/metamaden/cgmappeR)) for research.
-
-links:
+about:
+    template: jolla
+    image: SeanMaden.jpg
+    links:
     - icon: twitter
       text: twitter
       href: https://twitter.com/MadenSean
@@ -39,4 +24,20 @@ links:
       href: https://orcid.org/0000-0002-2212-4894
     - icon: bluesky
       text: BlueSky
-      href: https://bsky.app/profile/metamaden.bsky.social
+      href: https://bsky.app/profile/metamaden.bsky.social 
+---
+
+Sean Maden is a Senior Bioinformatician with expertise in transcriptomics, high-dimensional analysis, and machine learning. He earned his Ph.D. in Computational Biology from the Department of Biomedical Engineering 
+at Oregon Health & Science University. 
+
+Sean is interested in open-access research projects for data science. He develops 
+R/Bioconductor software packages (e.g. [recountmethylation](https://www.bioconductor.org/packages/release/bioc/html/recountmethylation.html) 
+and [lute](https://github.com/metamaden/lute)), 
+analysis workflows (e.g.
+[recountmethylation_instance](https://github.com/metamaden/recountmethylation_instance) 
+and [r-nf_deconvolution](https://github.com/metamaden/r-nf_deconvolution)), 
+and 
+other resources (e.g. 
+[geoarraydigest](https://github.com/metamaden/geoarraydigest), [methyPre](https://github.com/metamaden/methyPre), 
+[cgageR](https://github.com/metamaden/cgageR), and 
+[cgmappeR](https://github.com/metamaden/cgmappeR)) for research.
