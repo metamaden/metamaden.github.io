@@ -1,8 +1,0 @@
----
-title: "Reproducible Research Resources"
-fontsize: 12pt
-csl: nature.csl
-nocite: '@*'
----
-
-Reproducibility is the ability to achieve the same results from the same code and data. It is an important quality for computational disciplines, and a it was recently observed that computational research is subject to a reproducibility crisis. This page highlights some of the measures I have taken to make my own research as computationally reproducible as possible. Please feel free to reuse them with proper attribution to the citation source (e.g. either the primary publication or the repo version).
