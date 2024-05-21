@@ -1,3 +1,7 @@
+---
+permalink: /index.html
+---
+
 # README.md
 
 Personal website and blog for Sean Maden.
