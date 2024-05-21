@@ -1,0 +1,165 @@
+<h1 class="title">Run R package checks with a shell script</h1>
+<p class="date">August 13, 2021</p>
+
+<p>While checks are crucial to R package development, running them from command line can quickly become repetitive. I’ve written a shell script, <a href="https://gist.github.com/metamaden/14f6b5717e2934c118ffa9edfa45e765"><code>rpackagecheck.sh</code></a>, that runs the standard steps to checking an R package. The script uses <code>R CMD ...</code> to install, build, and check packages with any combination of the three major check types. This script can help discourage accidents, such as running check on a directory rather than a <code>.tar.gz</code> file, and ultimately expedite your development workflow.</p>
+<section id="r-package-checks" class="level1">
+<h1>R package checks</h1>
+<p>If you’ve submitted an R package on CRAN or Bioconductor, you’re familiar with the barrage of checks an R package needs to pass before it can be published. The three most common check types are supported in the <code>rpackagecheck.sh</code> script detailed below. These are the standard <code>R CMD CHECK</code>, Bioconductor’s <code>R CMD BiocCheck</code>, and CRAN’s <code>R CMD CHECK --as-cran</code>. For specific check requirements, consult the developer documentation for the repo to which you’re submitting (e.g.&nbsp;<a href="https://cran.r-project.org/web/packages/submission_checklist.html">here</a> for CRAN and <a href="https://www.bioconductor.org/developers/package-guidelines/#checkingenv">here</a> for Bioconductor).</p>
+</section>
+<section id="running-the-script" class="level1">
+<h1>Running the script</h1>
+<p>When you’re ready to run one or several checks on your package, you can simply run the script from command line.</p>
+<p>With the script <a href="https://gist.github.com/metamaden/14f6b5717e2934c118ffa9edfa45e765"><code>rpackagecheck.sh</code></a> in the current directory and the package folder located at <code>path/to/package</code>, run:</p>
+<pre><code>sh rpackagecheck.sh -p path/to/package  -v -r</code></pre>
+<p>This example would install the package, build it with vignettes per the <code>-v</code> flag, then run <code>R CMD CHECK</code> per the <code>-r</code> flag.</p>
+</section>
+<section id="the-full-script" class="level1">
+<h1>The full script</h1>
+<p>The full <a href="https://gist.github.com/metamaden/14f6b5717e2934c118ffa9edfa45e765"><code>rpackagecheck.sh</code></a> script is as follows:</p>
+<pre><code>#!/usr/bin/env sh
+
+# Author: Sean Maden
+#
+# Script to install, build, and check R packages during development. Can perform
+# one of 3 check types (R CHECK with and without '--as-cran', or BiocCheck).
+# 
+# Flags:
+# -v : Build vignettes (otherwise use `... --no-build-vignettes`)
+# -r : Run `R CMD CHECK ...`
+# -b : Run `R BiocCheck ...`
+# -c : Run CRAN check (e.g. `R CMD CHECK --as-cran ...`)
+# 
+# Returns:
+# Builds the package, generates tarball containing the built binaries and check
+# logs.
+
+#------------
+# parse flags
+#------------
+# initialize flag variables
+packagepath=
+buildvignettes=0
+rcheck=0
+bioccheck=0
+crancheck=0
+
+# parse provided flags
+while getopts vrbchp: name; do
+    case "$name" in
+        'v')    buildvignettes=1;;
+        'r')    rcheck=1;;
+        'b')    bioccheck=1;;
+        'c')    crancheck=1;;
+        'p')    packagepath=$OPTARG;;
+        \?)     echo "Invalid option provided: -$OPTARG" &gt;&amp;2;;
+    esac
+done
+
+#-------------------------
+# package setup for checks
+#-------------------------
+# check package path existence
+if [ ! -d "$packagepath" ]; then
+    echo 'ERROR: invalid package path provided'
+    exit 1
+fi
+
+# prep the package
+R CMD INSTALL $packagepath
+
+# parse buildvignettes flag
+if [ $buildvignettes == 0 ]; then
+    echo 'Skipping vignette builds...'
+    R CMD BUILD $packagepath --no-build-vignettes
+else
+    echo 'Building vignettes...'
+    R CMD BUILD $packagepath
+fi
+
+# prep the tar path
+packagename=$(basename $packagepath)
+# get the version from description text
+vers=$(sed '2q;d' $packagepath'/DESCRIPTION') 
+vf=${vers:9}
+tarpath=$packagename'_'$vf'.tar.gz' # detect the tar file
+
+#---------------------
+# run specified checks
+#---------------------
+if [ ! $rcheck == 0 ]; then
+    echo 'Running `R CMD CHECK`...'
+    R CMD CHECK $tarpath
+fi
+if [ ! $bioccheck == 0 ]; then
+    echo 'Running `R CMD BiocCheck`...'
+    R CMD BiocCheck $tarpath
+fi
+if [ ! $crancheck == 0 ]; then
+    echo 'Running `R CMD CHECK --as-cran`...'
+    R CMD CHECK --as-cran $tarpath
+fi</code></pre>
+</section>
+<section id="script-anatomy" class="level1">
+<h1>Script anatomy</h1>
+<p>The script handles several flags described in its docstrings:</p>
+<pre><code># Flags:
+# -v : Build vignettes (otherwise use `... --no-build-vignettes`)
+# -r : Run `R CMD CHECK ...`
+# -b : Run `R BiocCheck ...`
+# -c : Run CRAN check (e.g. `R CMD CHECK --as-cran ...`)</code></pre>
+<p>Each flag, such as <code>-v</code>, has a corresponding variable, such as <code>buildvignettes</code>. The default variable values are first defined as:</p>
+<pre><code>packagepath=
+buildvignettes=0
+rcheck=0
+bioccheck=0
+crancheck=0</code></pre>
+<p>Variables <code>buildvignettes</code>, <code>rcheck</code>, <code>bioccheck</code>, and <code>crancheck</code> act like switches, where a value of 0 = off and 1 = on. The unassigned <code>packagepath</code> variable will store the user-provided path to the package’s directory.</p>
+<p>The flag variables will update according to the user-provided flags. Variable update is handled with <code>getopts</code> as shown:</p>
+<pre><code>while getopts vrbchp: name; do
+    case "$name" in
+        'v')    buildvignettes=1;;
+        'r')    rcheck=1;;
+        'b')    bioccheck=1;;
+        'c')    crancheck=1;;
+        'p')    packagepath=$OPTARG;;
+        \?)     echo "Invalid option provided: -$OPTARG" &gt;&amp;2;;
+    esac
+done</code></pre>
+<p>The package path is provided after <code>-p</code>, e.g.&nbsp;<code>-p ./my/package/path</code>. This is achieved by setting <code>packagepath=$OPTARG</code>, where <code>$OPTARG</code> is the user-provided path to an R package. Providing any additional flags sets the corresponding variables to 1. This ensures the corresponding step is run rather than skipped.</p>
+<p>For example, providing a flag <code>-v -r -b</code> will build the vignettes (per <code>-v</code>), run <code>R CMD CHECK</code> (per <code>-r</code>), then finally run <code>R CMD BiocCheck</code> (per <code>-b</code>). Providing the flags in the format <code>-vrb</code> is also supported.</p>
+<p>Before installation, the existence of the provided package path is checked in an if/then statement:</p>
+<pre><code>if [ ! -d "$packagepath" ]; then
+    echo 'ERROR: invalid package path provided'
+    exit 1
+fi</code></pre>
+<p>If the path is valid, the script proceeds to install and build the package:</p>
+<pre><code>R CMD INSTALL $packagepath
+if [ $buildvignettes -gt 0 ]; then
+    R CMD BUILD $packagepath
+else
+    R CMD BUILD $packagepath --no-build-vignettes
+fi</code></pre>
+<p>If the <code>-v</code> flag was provided, the build includes any vignettes. I included this parameter because I prefer to hold off on building any vignettes until the rest of the package successfully passes checks. This is because vignette builds can take awhile, and errors from vignette builds frequently reflect issues with the package code.</p>
+<p>Building the package produces a <code>tar.gz</code>-compressed file. This file has a predictable file name structure, which the script automatically produces as shown:</p>
+<pre><code># prep the tar path
+packagename=$(basename $packagepath)
+# get the version from description text
+vers=$(sed '2q;d' $packagepath'/DESCRIPTION') 
+vf=${vers:9}
+tarpath=$packagename'_'$vf'.tar.gz' # detect the tar file</code></pre>
+<p>With <code>sed</code>, the package version is stripped from the DESCRIPTION file in the package directory and used to make the new file name. For instance, if the package name was “newpackage” and the version was “1.0.0”, the new file name would be <code>newpackage_1.0.0.tar.gz</code>.</p>
+<p>Finally, run anywhere from 0 to 3 total checks on the new package file using <code>R CMD ...</code>:</p>
+<pre><code>if [ ! $rcheck -gt 0 ]; then
+    R CMD CHECK $tarpath
+fi
+if [ ! $bioccheck -gt 0 ]; then
+    R CMD BiocCheck $tarpath
+fi
+if [ ! $crancheck -gt 0 ]; then
+    R CMD CHECK --as-cran $tarpath
+fi</code></pre>
+<p>The results are printed to the console and stored in subdirectories of a new directory with the <code>.Rcheck</code> extension.</p>
+</section>
+<section id="conclusions" class="level1">
+<h1>Conclusions</h1>
+<p>This post described the <a href="https://gist.github.com/metamaden/14f6b5717e2934c118ffa9edfa45e765"><code>rpackagecheck.sh</code></a> shell script, including how to run it from command line and how each part of the script works. Some background about the types of R package checks developers frequently use was also provided. Implementing a repetetive task in a script can save you time and help you to avoid errors, leaving more mental overhead to focus on package development.</p>

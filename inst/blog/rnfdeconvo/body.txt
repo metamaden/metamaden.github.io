@@ -1,0 +1,206 @@
+<h1 class="title">Better benchmark workflows, and why you should use R with NextFlow</h1>
+<p class="date">February 17, 2023</p>
+
+<p>As workflow technologies continue to be updated and improved, their learning materials become more robust, and their support communities grow, there will be fewer barriers to using them to streamline day-to-day development routines, especially when dealing with complex parallel tasks. Yet relatively few learning resources cover the management of standard benchmarking tasks using workflows. Even fewer provide solutions for specific domains like bioinformatics and the R programming language. In this post, I attempted to address this issue with several solutions arrived at after considerable brainstorming, research, trial-and-error, and conversing with my stellar computational bioscience colleagues. I ultimately found that not only <em>can</em> R be used with NextFlow for benchmarking, but there are many domains where this probably <em>should</em> be the standard approach.</p>
+<section id="workflows-and-nextflow-background" class="level2">
+<h2 class="anchored" data-anchor-id="workflows-and-nextflow-background">Workflows and NextFlow background</h2>
+<p>There are many different technologies and syntaxes for workflows, some of which are domain specific. One core unifying concept is that workflow technologies enable the rendering of complex recipies consisting of programmatic tasks. A key benefit of workflows is they enable deployment of these recipes at scale and in parallel, with robust automated messaging, logging, and file management. NextFlow is the workflow technology of focus for this blog. This is a widely used workflow language which I find has exceptional documentation, tutorials, and dedicated communities across many different domains.</p>
+<p>Some key NextFlow nomenclature include the “process”, or the individual step in a workflow. Processes may be defined either in the main workflow script or a separate file with .nf extension that is loaded as a module. Each process typically includes an input channel, an output channel, and a task. Channels are another key concept. These are the different data streams in and out of a process, which are specified in the process definition. For example, when several processes are called for a workflow, the input channel of a downstream process may be the output channel of its immediate upstream process. Another important concept for purposes of this post is parameters. These are variables specified in a file with the .config extension, which can be read and utilized in the main workflow script. An outline of additional concepts covered is located at the end of this post.</p>
+</section>
+<section id="r-programming-and-the-r-nf-tag" class="level2">
+<h2 class="anchored" data-anchor-id="r-programming-and-the-r-nf-tag">R programming and the <code>r-nf</code> tag</h2>
+<p>This post focuses on implementation of R for workflows. Alongside Python, R is a key programming language for performing research, analytics, reporting, visualization, and data science in general. It is widely used in both academia and industry for many data-driven fields. Many R libraries are hosted on CRAN, a general repository for R packages. The open-access, open-source software ecosystem and support community for the R language is particularly robust in bioinformatics, genomics, and related areas. This is largely thanks to Bioconductor, a curated repository of R packages generally focused on tasks for computational biosciences. See the end of this post for a list of the key R concepts covered. To borrow from the nomenclature of other workflows, I have adopted the <code>r-nf</code> tag for naming workflows and resources showing implementation of R and NextFlow (maybe it will catch on?).</p>
+</section>
+<section id="an-r-nf-implementation-for-deconvolution" class="level2">
+<h2 class="anchored" data-anchor-id="an-r-nf-implementation-for-deconvolution">An <code>r-nf</code> implementation for deconvolution</h2>
+<p>It is often instructive to show the implementation of key ideas by example. Throughout this post I will reference examples from a benchmarking workflow I am developing, called <code>r-nf_deconvolution</code>. While it is a work in progress, this resource shows many of the below concepts in action. You can access this workflow right now at the <a href="https://github.com/metamaden/r-nf_deconvolution/tree/metamaden_blog"><code>r-nf_deconvolution</code></a> repo. See the repo ReadMe for setup instructions.</p>
+<p>The example repo tackles a problem called deconvolution. Briefly, deconvolution is the problem of estimating or predicting pure signals from signal mixtures. It is widely used in transciptomics to quantify cell type proportions using cell type-specific gene expression from sequencing data. There are many available deconvolution methods in the literature (e.g.&nbsp;see <a href="https://github.com/metamaden/awesome-deconvolution"><code>awesome_deconvolution</code></a> repo), and more are being published each year. This makes it important to have a standard approach for testing deconvolution methods in either standard reference data or using novel experimental data. The <code>r-nf_deconvolution</code> workflow is meant to facilitate the systematic benchmarking of deconvolution methods using transcriptomics data.</p>
+</section>
+<section id="pipelines-and-benchmarks-as-tall-and-wide-tasks" class="level2">
+<h2 class="anchored" data-anchor-id="pipelines-and-benchmarks-as-tall-and-wide-tasks">Pipelines and benchmarks as “tall” and “wide” tasks</h2>
+<p>While many resources cover workflow solutions for programmatic pipelines, far fewer focus on tasks for benchmarks. To be clear, this discussion concerns running benchmarks by leveraging a workflow technology (e.g.&nbsp;comparing multiple functions using a single workflow technology). This is not to be confused with benchmarks of workflow technologies themselves (e.g.&nbsp;comparing different workflow technologies). I will loosely consider “benchmarks” and “pipelines” to be example workflow tasks or instances of workflows.</p>
+<p>To compare and contrast these tasks, we may borrow the “wide” and “tall” table descriptors commonly used in data science to compare table formats according to their dimensions. Generally speaking, benchmarks are “wide” tasks with fewer discrete processes but many parameters and parameter states per process. Consider a benchmark workflow with a single process testing a single analysis task. This step could feasibly have 5 or even more input channels, including 1 channel for the filepath of the input dataset, 1 channel for the particular function to use for the task, and 3 channels for parameters with many possible states. These could include data normalization strategy (quantile, batch, etc.), the summary statistic (mean, median, variance, etc), and significance metric or threshold (pvalue or qvalue, 0.5 or 1e-3, etc.).</p>
+<p>By contrast, production-ready pipelines are “tall”; they use many workflow processes with fewer parameters and parameter states per process. Consider, for instance, an RNA-seq processing pipeline that does (1) quality control; (2) alignment to a reference genome; (3) expression normalization; (4) annotation of genes. Each of these steps could be readily defined as a process, and there would likely be certain flags that need to change for a specific data type (e.g.&nbsp;paired- versus single-end reads). But we can expect a standard approach for a given data type rather than needing to optimize across many parameters in a large search space for each new dataset.</p>
+<p>As an aside, a lot of iteration and optimization does go in to developing a production-ready pipeline or testing a new method’s behavior in an otherwise established pipeline. This, some tasks concerning pipeline development could be considered wide tasks. In such cases, we still need to manage many parameters and solve many of the same problems as for benchmark workflows. In other words, workflow solutions for benchmarks may overlap solutions for more general iterative tasks, and we should be mindful of when the same solution can be applied across these distinct use cases.</p>
+</section>
+<section id="managing-many-parameters-programmatically" class="level2">
+<h2 class="anchored" data-anchor-id="managing-many-parameters-programmatically">Managing many parameters programmatically</h2>
+<p>The first main issue for benchmark workflows is management of many parameters and parameter states. Specifically, we need to make it easy to inspect and change large sets of parameter states across runs. We also need to associate parameter values with the results of their runs. NextFlow parameters are set by editing a .config file recognized by the main .nf workflow script. Manually entering large parameter lists in a .config file would be too error-prone and labor intensive, so we need to be able to write the .config file automatically from a more convenient human-readable format, such as a flat .csv table. I accomplished this using a simple .R script.</p>
+<p>Diagram of <code>r-nf</code> parameter update</p>
+<p><img src="https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/posts/media/r-nf_params-diagram.png" alt="Diagram of how parameters are written in the proposed `r-nf` system." width="680" height="135"></p>
+</section>
+<section id="an-r-nf-solution-for-parameter-management" class="level2">
+<h2 class="anchored" data-anchor-id="an-r-nf-solution-for-parameter-management">An <code>r-nf</code> solution for parameter management</h2>
+<p>In <code>r-nf_deconvolution</code>, parameters are managed by changing entries in the <code>workflow_table.csv</code> file. Columns in this table correspond to the parameters for tested functions and any additional metadata. Table rows correspond to individual runs, making it easy to inspect how parameter states compare across many runs. Adding runs is as simple as adding a row in this table, resaving, and running <code>Rscript /rscript/r-nf_write-params.R</code>.</p>
+<p>The contents of <code>workflow_table.csv</code> could look something like this:</p>
+<p><img src="https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/posts/media/workflow_table.JPG" alt="AI-generated image (made using Canva Text-to-Image)."></p>
+<p>Note the use of <code>$launchDir</code>. This is syntax for NextFlow that points to the current working directory. After writing to <code>params.config</code>, the contents of this workflow table look like:</p>
+<pre><code>// Define parameters used in the main Nextflow script called main.nf
+
+params {
+    // GENERAL PARAMETERS
+
+    // Outdir paths
+    results_folder = "$launchDir/results"
+
+    // Modules dir
+    modulesdir = "$launchDir/modules"
+
+    // Rscript paths
+    predict_proportions_script = "$launchDir/rscript/deconvolution_predict-proportions.R"
+    analyze_results_script = "$launchDir/rscript/deconvolution_analyze-results.R"
+
+    // LIST CHANNEL INPUTS
+
+    sce_filepath = [
+        "$launchDir/data/sce_sc_10x_qc.rda", 
+        "$launchDir/data/sce_sc_CELseq2_qc.rda", 
+        "$launchDir/data/sce_sc_Dropseq_qc.rda", 
+        "$launchDir/data/sce_sc_Dropseq_qc.rda"
+    ]
+
+    decon_method = [
+        "nnls", 
+        "nnls", 
+        "nnls", 
+        "music"
+    ]
+    
+    decon_args = ["NA", "NA", "NA", "NA"]
+    
+    assay_name = ["counts", "counts", "counts", "logcounts"]
+    
+    true_proportions_path = [
+        "$launchDir/data/true_proportions_sce_sc_10x_qc.rda", 
+        "$launchDir/data/true_proportions_sce_sc_CELseq2_qc.rda", 
+        "$launchDir/data/true_proportions_sce_sc_Dropseq_qc.rda", 
+        "$launchDir/data/true_proportions_sce_sc_Dropseq_qc.rda"
+    ]
+    
+    celltype_variable = [
+        "cell_line_demuxlet", 
+        "cell_line_demuxlet", 
+        "cell_line_demuxlet", 
+        "cell_line_demuxlet"
+    ]
+}</code></pre>
+<p>In the above approach, the table <code>params_metadata.csv</code> is used to determine what columns in the workflow table need to be written to the .config file. Each row in this table corresponds to a different column in the workflow table. Columns correspond to the label and a descriptor, so this file conveniently doubles as a data dictionary. If you add new processes with new parameters, the metadata table needs to be updated with new rows.</p>
+<p>An example parameter metadata table:</p>
+<p><img src="https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/posts/media/params_metadata.JPG" alt="Example parameter metadata table image."></p>
+</section>
+<section id="aggregating-benchmark-outputs-into-a-results-table" class="level2">
+<h2 class="anchored" data-anchor-id="aggregating-benchmark-outputs-into-a-results-table">Aggregating benchmark outputs into a results table</h2>
+<p>The next main issue is the aggregation of results across runs. While benchmarks compare results across discrete runs, results are not usually available until after workflow completion, and results are usually stored in a randomized file tree. Fortunately we can use NextFlow’s publish directory to help with this. The publish directory is a pre-specified path where we can copy the run results. After the workflow completes, we aggregate the results as well as perform any additional post-processing or analysis using a dedicated script.</p>
+<p><code>r-nf_deconvolution</code> includes another .R script for aggregating results and writing a new results table. When the workflow completes, we can run <code>Rscript /rscript/r-nf_gather-results.R</code> to generate this table. This gather script inspects the publish directory for outputs and binds these together as rows in the table. It also performs several analyses <em>across</em> run data, such as calculating root mean squared errors within cell types and across all runs and cell types for a given deconvolution method. The final results are written to a new file with the character string stem <code>results_table_*</code>, and a timestamp is added so old results tables aren’t automatically overwritten.</p>
+<p>Excerpt from a results table:</p>
+<p><img src="https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/posts/media/results_table.JPG" alt="Example results table image." width="100%"></p>
+</section>
+<section id="simplifying-workflow-development-with-standard-process-definitions" class="level2">
+<h2 class="anchored" data-anchor-id="simplifying-workflow-development-with-standard-process-definitions">Simplifying workflow development with standard process definitions</h2>
+<p>I have described two issues for benchmark workflows and examples of their programmatic solutions. The third and final issue I want to address is how we can streamline the design of a benchmark workflow using a standard process definition that is flexible and robust. Here, a standard process should specify a publish directory as described above. The process task should focus on testing one discrete analysis task, such as a function or operation. The process task should perform a timed run of the desired operation and save the output and duration to a new results file. Ideally, the new filename has a predictable filename stem (e.g.&nbsp;“process1_results_*“) that can be globbed or recognized in the return channel. It is also useful to append a timestamp to the written file to avoid overwriting any existing results files.</p>
+<p>The process input channels should facilitate tests of the operation defined by its task. At a minimum, inputs should allow a data source (e.g.&nbsp;a filepath or data type) and a series of arguments/parameter values for each run. Finally, there should be a single output channel that globs the newly written filepath. This way, the results can be passed to a downstream process if desired. While you can define entire scripts within a process .nf file, I find it is less confusing to call a separate script from command line. This means the process .nf file and the script, say an .R file at a different location, can be worked on and unit tested separately. You can make an .R script command-line callable by using the argparse library to add a parser and arguments. Docstrings and argument defaults can also be easily added.</p>
+</section>
+<section id="example-standard-process" class="level2">
+<h2 class="anchored" data-anchor-id="example-standard-process">Example standard process</h2>
+<p>Returning to <code>r-nf_deconvolution</code>, the <code>modules</code> folder contains the .nf files defining processes for the workflow. These adhere to the standards discussed above. The definition for the <code>predict_proportions</code> process is contained at <code>/modules/predict_proportions.nf</code> and looks like:</p>
+<pre><code>#!/usr/bin/env nextflow
+
+// defines process to perform downsampling
+
+// set dsl version
+nextflow.enable.dsl=2
+
+process predict_proportions {
+    publishDir("$params.results_folder", mode: "copy", overwrite: false)
+
+    input:
+        val sce_filepath
+        val deconvolution_method
+        val assay_name
+        val celltype_variable
+    output:
+        path("deconvolution_results_*")
+
+    script:
+    """
+    Rscript $params.predict_proportions_script -r $sce_filepath -d $deconvolution_method 
+    -a $assay_name -c $celltype_variable
+    """
+}</code></pre>
+<p>Reading from top to bottom, we find: the shebang and DSL version specified in the header, the process definition with its name, and the contents of the process contained by the <code>{}</code> curly braces. The process defines the publish directory path from parameters, followed by the input channel definitions (filepath and several arguments), the output channel as a glob for newly saved results files, and the task itself. The task is simply a command line call to the Rscript application, with the .R script path and flags declared from the input channel definitions.</p>
+<p>The following exceprt is taken from the <code>deconvolution_analyze-results.R</code> script in the example repo. It shows how to use the argparse package to make an .R script command-line callable:</p>
+<pre><code>library(argparse)
+
+...
+
+#--------------
+# manage parser
+#--------------
+parser &lt;- ArgumentParser() # create parser object
+
+# data arguments
+parser$add_argument("-r", "--results_data", type="character",
+                    help = paste0("Results output data"))
+parser$add_argument("-t", "--true_proportions", type="character", 
+                    default="./data/true-proportions.rda",
+                    help = paste0("The filepath to the true proportions data."))
+
+# get parser object
+args &lt;- parser$parse_args()
+
+#----------
+# load data
+#----------
+# load results
+results.old.fpath &lt;- args$results_data
+results.old &lt;- read.csv(results.old.fpath)</code></pre>
+<p>After having loaded argparse with <code>library(argparse)</code>, we initialize a parser object with <code>ArgumentParser()</code> then add arguments to this object. Each argument corresponds to a flag that is command line callable, and ideally we should give the flag a short and long name, a helpful description, a variable class, and a default value. After parsing the user-provided arguments with <code>parse_args()</code> we can recover provided flags as variables to be used in the rest of the script.</p>
+</section>
+<section id="running-a-benchmark-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="running-a-benchmark-workflow">Running a benchmark workflow</h2>
+<p>Since we have now described several operations that need to be performed outside of the workflow proper, the script <code>/sh/r-nf.sh</code> has been provided to run everything sequentially. This simple shell script looks like:</p>
+<pre><code>#!/usr/bin/env sh
+
+# manage script paths
+rscript_dir=rscript
+write_param_script=r-nf_write-params.R
+gather_script=r-nf_gather-results.R
+
+# do r-nf run
+echo "updating params.config..."
+Rscript ./$rscript_dir/$write_param_script
+echo "running workflow..."
+nextflow run main.nf
+echo "gathering results table..."
+Rscript ./$rscript_dir/$gather_script</code></pre>
+<p>First, the file <code>params.config</code> is updated with the contents of <code>workflow_table.csv</code>. Second, the main NextFlow workflow is run by calling the script <code>main.nf</code>. Finally, the results are aggregated and saved to a new table.</p>
+</section>
+<section id="conclusions" class="level2">
+<h2 class="anchored" data-anchor-id="conclusions">Conclusions</h2>
+<p>This post covered some key issues for benchmarking with workflows. These included the need to manage many parameters programmatically, the need to link parameters with run results, and the utility of a robust and flexible standard process definition. These concepts were explored with an “<code>r-nf</code>” example that applies R and NextFlow to conduct a standard deconvolution method benchmark.</p>
+<p>The next step is to optimize the proposed <code>r-nf</code> solutions for more domain tasks, and to optimize workflow performance by comparing different technologies. There is also further work to dial in and formalize the above principles for benchmarks more generally, outside of bioinformatics and deconvolution. But it is already clear that not only is it <em>possible</em> to use R with NextFlow, you probably <em>should</em> use R with NextFlow in certain cases, such as for tasks which are highly iterative and parallel. Hopefully this post helped lower the barrier to entry for pursuing workflow implementations in your own benchmarking tasks.</p>
+</section>
+<section id="key-concepts-discussed" class="level2">
+<h2 class="anchored" data-anchor-id="key-concepts-discussed">Key concepts discussed</h2>
+<p>Key concepts for conducting benchmarks using NextFlow workflows:</p>
+<ul>
+<li><p><code>$launchDir</code> : The path of the working directory containing the main workflow script (e.g.&nbsp;<code>./main.nf</code>).</p></li>
+<li><p><code>publishDir()</code> : The publish directory. When specified in a process, results of the process task are copied here on run completion.</p></li>
+<li><p><code>includeConfig</code> : This is included in the <code>nextflow.config</code> file to load any external .config files with parameters. Once loaded, those parameters are usable as variables in the main workflow script.</p></li>
+</ul>
+<p>Key concepts pertaining to R programming and calling .R scripts::</p>
+<ul>
+<li><p><code>Rscript</code> : The main application used for running .R scripts from command line (e.g.&nbsp;with <code>Rscript ./rscript/scriptname.R</code>).</p></li>
+<li><p><code>argparse</code> : An R library developed in Python that makes .R scripts command line callable.</p></li>
+<li><p><code>Sys.time()</code> : Base R function for getting the current time. This was used to time the duration of benchmark operations and to append timestamps to filenames to avoid overwritting existing files.</p></li>
+</ul>
+</section>
+<section id="further-reading" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading">Further reading</h2>
+<ul>
+<li><p><a href="https://github.com/metamaden/r-nf_deconvolution/tree/metamaden_blog"><code>r-nf_deconvolution</code></a> : Main example repo showcasing how to use R with NextFlow. Shows how to implement the above concepts in the context of benchmarking single-cell RNA-seq deconvolution algorithms.</p></li>
+<li><p><a href="https://github.com/metamaden/awesome_r-nf"><code>awesome_r-nf</code></a> : An index of implementations of R using NextFlow workflows (work in progress).</p></li>
+<li><p><a href="https://nextflow.io/"><code>nextflow.io</code></a> : Main NextFlow website, including extensive documentation and helpful tutorials.</p></li>
+<li><p><a href="https://nf-co.re/"><code>nf-core</code></a> : Key resource for NextFlow workflows.</p></li>
+<li><p><a href="https://github.com/nextflow-io/awesome-nextflow"><code>awesome-nextflow</code></a> : An index of example NextFlow workflows. Includes several bioinformatics/omics data processing pipelines.</p></li>
+</ul>

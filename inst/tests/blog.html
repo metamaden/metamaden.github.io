@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Multiple Pages as Tabs</title>
+
+    <!--begin tab container-->
+    <div class="tab-container">
+        
+        <a href = "home.html"><button class="tab-button">Home</button></a>
+        
+        <a href="resume.html"><button class="tab-button">Resume</button></a>
+
+        <a href="portfolio.html"><button class="tab-button">Portfolio</button></a>
+        
+        <a href = "blog.html"><button class="tab-button">Blog</button></a>
+    </div>
+    <!--end tab container-->
+    <div style="border-bottom: 2px solid black;"></div>
+
+</head>
+<body>
+    <p><br></p>
+
+    <!--begin blog post preview container-->
+    <div class="blog-post-preview-container">
+        <!--begin blog preview-->
+        <p><br></p>
+        <h1>Post title</h1><h2>1/1/23</h2>
+        <button class="blog-button" background-color="white">Preview</button>
+        <div class="blog-content">
+        <p>Preview text paragraph</p>
+            <a href="inst/blog/testblog/index.html">
+                <button class="tab-button">Read</button>
+            </a>
+        </div>
+        <script>
+            // Add event listener to toggle content with animation
+            const collapsible = document.querySelector('.blog-button');
+            const content = document.querySelector('.blog-content');
+            collapsible.addEventListener('click', () => {
+                content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
+            });
+        </script>
+        <!--end blog preview-->
+
+        <!--begin blog preview-->
+        <p><br></p>
+        <h1>My 2018 proposal for the Better Scientific Software Fellowship</h1><h2>11/12/18</h2>
+        <button class="blog-button" background-color="white">Preview</button>
+        <div class="blog-content">
+        <p>Preview text paragraph</p>
+            <a href="inst/blog/testblog/index.html">
+                <button class="tab-button">Read</button>
+            </a>
+        </div>
+        <script>
+            // Add event listener to toggle content with animation
+            const collapsible = document.querySelector('.blog-button');
+            const content = document.querySelector('.blog-content');
+            collapsible.addEventListener('click', () => {
+                content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
+            });
+        </script>
+        <!--end blog preview-->
+
+    </div>
+    <!--end blog post preview-->
+
+
+</body>
+
+<footer>
+    <p><br></p>
+    <div style="border-bottom: 2px solid black;"></div>
+    <ul>
+        <a href="mailto:maden.sean@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/sean-maden-phd-41623640/">LinkedIn</a>
+        <a href="https://twitter.com/MadenSean">X/Twitter</a>
+        <a href="https://bsky.app/profile/metamaden.bsky.social">BlueSky</a>
+        <a href="https://orcid.org/0000-0002-2212-4894">
+        ORCID</a>
+    </ul>
+</footer>
+
+</html>
