@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Multiple Pages as Tabs</title>
+
+    <!--begin tab container-->
+    <div class="tab-container">
+        
+        <a href = "home.html"><button class="tab-button">Home</button></a>
+        
+        <a href="resume.html"><button class="tab-button">Resume</button></a>
+
+        <a href="portfolio.html"><button class="tab-button">Portfolio</button></a>
+        
+        <a href = "blog.html"><button class="tab-button">Blog</button></a>
+    </div>
+    <!--end tab container-->
+    <div style="border-bottom: 2px solid black;"></div>
+
+</head>
+<body>
+    <p><br></p>
+
+    <!--begin blog post preview container-->
+    <div class="blog-post-preview-container">
+        <!--begin rnfdeconvo blog preview-->
+        <p><br></p>
+        <a href="inst/blog/rnfdeconvo/index.html">
+        <h1>(2/17/23) Better benchmark workflows, and why you should use R with NextFlow</h1></a>
+        <h2>Tags: <i>workflows, nextflow, parallelization, benchmarks, R, algorithms, deconvolution, high-throughput, data science</i></h2>
+        <button class="blog-button" background-color="white">Preview</button>
+        <div class="blog-content">
+        <p>As workflow technologies continue to be updated and improved, their learning materials become more robust, and their support communities grow, there will be fewer barriers to using them to streamline day-to-day development routines, especially when dealing with complex parallel tasks. Yet relatively few learning resources cover the management of standard benchmarking tasks using workflows. Even fewer provide solutions for specific domains like bioinformatics and the R programming language. In this post, I attempted to address this issue with several solutions arrived at after considerable brainstorming, research, trial-and-error, and conversing with my stellar computational bioscience colleagues. I ultimately found that not only <em>can</em> R be used with NextFlow for benchmarking, but there are many domains where this probably <em>should</em> be the standard approach.</p>
+            <a href="inst/blog/rnfdeconvo/index.html">
+                <button class="tab-button">Read</button>
+            </a>
+        </div>
+        <!--end rnfdeconvo blog preview-->
+
+        <!--begin rcheckbash blog preview-->
+        <p><br></p>
+        <a href="inst/blog/rcheckbash/index.html">
+        <h1>(10/13/21) Run R package checks with a shell script</h1></a>
+        <h2>Tags: <i>developers, command-line, bash, scripting, R, checks, tests, automation</i></h2>
+        <button class="blog-button" background-color="white">Preview</button>
+        <div class="blog-content">
+        <p>While checks are crucial to R package development, running them from command line can quickly become repetitive. I’ve written a shell script, <a href="https://gist.github.com/metamaden/14f6b5717e2934c118ffa9edfa45e765"><code>rpackagecheck.sh</code></a>, that runs the standard steps to checking an R package. The script uses <code>R CMD ...</code> to install, build, and check packages with any combination of the three major check types. This script can help discourage accidents, such as running check on a directory rather than a <code>.tar.gz</code> file, and ultimately expedite your development workflow.</p>
+            <a href="inst/blog/rcheckbash/index.html">
+                <button class="tab-button">Read</button>
+            </a>
+        </div>
+        <!--end rcheckbash blog preview-->
+        
+        <!--begin montyhall blog preview-->
+        <p><br></p>
+        <a href="inst/blog/montyhall/index.html">
+        <h1>(2/13/20) Cracking the Monty Hall problem with brute force simulation</h1></a>
+        <h2>Tags: <i>simulations, algorithms, R, statistics, data science</i></h2>
+        <button class="blog-button" background-color="white">Preview</button>
+        <div class="blog-content">
+        <p>On a game show stage before you wait 3 closed doors, behind which have been deposited 2 goats and 1 prize, respectively. You are called on to pick a door to be opened to reveal either a goat or a prize. The host, Monty Hall, then reveals a goat behind one of the two remaining unpicked doors. You are then given the option to switch your door selection to the final unpicked door before the big reveal. What should you do?</p>
+            <a href="inst/blog/montyhall/index.html">
+                <button class="tab-button">Read</button>
+            </a>
+        </div>
+        <!--end montyhall blog preview-->
+        
+        <!--begin bssw blog preview-->
+        <p><br></p>
+        <a href="inst/blog/bssw/index.html">
+        <h1>(11/12/18) My 2018 proposal for the Better Scientific Software Fellowship</h1></a>
+        <h2>Tags: <i>computer-science, software, research, fellowships, funding, grants</i></h2>
+        <button class="blog-button" background-color="white">Preview</button>
+        <div class="blog-content">
+        <p>I wanted to share my proposal for the <a href="https://bssw.io/fellowship">2018 Better Scientific Software (BSSw) Fellowship</a>. BSSw aims to increase and preserve integrity and standards for publishing computer code in science, and their fellowship program recognizes and supports advocates of this cause. You may or may not be aware that we currently lack standard ways of referencing published code in science as independently citable units. Furthermore, vital source code for experiments can be distributed in many places, including supplemental materials sections behind paywalls, personal websites that may become inaccessible or go offline over time, and repositories on GitHub or elsewhere that may not include inherent and persistent identifiers. I propose using an autocompilation technology to aggregate published scientific computer code and code metadata into a new database, called Pubsrc. This will enable novel assessments of scientific code use, including automatic generation of dependency usage networks, tracking the impact of newly discovered software bugs throughout research, and making scientific code independently citable. I hope you enjoy reading my proposal, and please share or tweet this post if you support this cause.</p>
+            <a href="inst/blog/bssw/index.html">
+                <button class="tab-button">Read</button>
+            </a>
+        </div>
+        <!--end bssw blog preview-->
+        
+        <p><br></p>
+        <script>
+            // Add event listener to toggle content with animation
+            const collapsibleButtons = document.querySelectorAll('.blog-button');
+            collapsibleButtons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
+                });
+            });
+        </script>
+    </div>
+    <!--end blog post preview container-->
+
+
+</body>
+
+<footer>
+    <p><br></p>
+    <div style="border-bottom: 2px solid black;"></div>
+    <ul>
+        <a href="mailto:maden.sean@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/sean-maden-phd-41623640/">LinkedIn</a>
+        <a href="https://twitter.com/MadenSean">X/Twitter</a>
+        <a href="https://bsky.app/profile/metamaden.bsky.social">BlueSky</a>
+        <a href="https://orcid.org/0000-0002-2212-4894">
+        ORCID</a>
+        <p><br>&copy; 2024 Sean Maden. All rights reserved.</p>
+    </ul>
+</footer>
+
+</html>
