@@ -4,19 +4,24 @@
 .tab-container {
     display: inline-block;
     position: relative;
+    background-color: #9c9ba3;
     justify-content: center;
     padding: 1px;
+    background-color: #9c9ba3;
+    box-shadow: 4px 4px 4px rgba(1, 1, 1, 0.5);
 }
 /*<!--end manage tab-container->*/
 
 /*<!--begin tab-button>*/
 .tab-button {
-    background-color: black;
-    color: white;
+    background-color: #242526;
+    color: #9c9ba3;
+    /*color: #FFFFFF;*/
     border: none;
     vertical-align: middle;
     position: relative;
     max-width: 30%;
+    min-width: 10%;
     padding: 10px 20px;
     margin: 5px;
     cursor: pointer;
@@ -25,10 +30,8 @@
     outline: 2px solid black;
     box-shadow: 4px 4px 4px rgba(1, 1, 1, 0.5);
     &:hover {
-        transform: scale(1.06);
-        .tab-content {
-            display: flex;
-        }
+        color: #FFFFFF;
+        transform: scale(1.01);
     }
   }
 /*<!--end tab-button>*/
@@ -40,6 +43,7 @@
     border: 1px solid #ddd;
     border-radius: 5px;
     width: 80%;
+    min-width: 70%;
     max-width: 800px;
     margin-top: 20px;
     justify-content: center;
@@ -48,7 +52,7 @@
 
 /*begin scroll container mgmt*/
 div.scroll-container {
-    background-color: #333;
+    background-color: #9c9ba3;
     overflow: auto;
     white-space: nowrap;
     padding: 2px;
@@ -64,13 +68,20 @@ div.scroll-container > .item > img {
 /*end scroll container mgmt*/
 
 
-/*begin blog post preview container styles*/
-.blog-post-preview-container {
+/*begin index.html div content*/
+.twitter-container {
     padding: 10px;
     border: 1px solid #ddd;
     margin-bottom: 10px;
+    box-shadow: 4px 4px 4px rgba(1, 1, 1, 0.5);
 }
-/*end blog post preview container styles*/
+.gh-container {
+    padding: 1px;
+    /*border: 1px solid #ddd;*/
+    /*margin-bottom: 5px;*/
+    /*box-shadow: 4px 4px 4px rgba(1, 1, 1, 0.5);*/
+}
+/*end index.html div content*/
 
 /*begin blog post styles*/
 .blog-post {
@@ -98,14 +109,14 @@ div.scroll-container > .item > img {
 }
 .blog-content {
             padding: 0 18px;
-            background-color: white;
+            background-color: #606061;
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.2s ease-out;
         }
 .blog-button {
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: #9c9ba3;
     border: none;
     vertical-align: middle;
     position: relative;
@@ -117,7 +128,8 @@ div.scroll-container > .item > img {
     border-radius: 5px;
     outline: 2px solid black;
     &:hover {
-        transform: scale(1.06);
+        color: white;
+        transform: scale(1.01);
         .tab-content {
             display: flex;
         }
@@ -146,13 +158,13 @@ html {
     scroll-behavior: smooth;
 }
 img {
-    max-width: 90%;
+    max-width: 75%;
+    min-width: 35%;
     height: auto;
     width: auto\\9;
 }
 body {
-    /*background-color: #09B0DA;*/
-    background-image: white;
+    background-color: #c6c6cc;
     font-family: Helvetica;
     overflow: visible;
 }
@@ -161,15 +173,16 @@ head {
 }
 footer {
     font-family: Helvetica;
+    box-shadow: 4px 4px 4px rgba(1, 1, 1, 0.5);
 }
 
 /*change link color*/
 a, a:hover, a:active, a:visited {
-    color: black;
+    color: #9c9ba3;
     font-size: 16px;
     font-family: Helvetica;
     &:hover {
-        font-size: 18px;
+        color: white;
     }
 }
 
