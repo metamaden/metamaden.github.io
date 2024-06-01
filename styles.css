@@ -71,9 +71,7 @@ div.scroll-container > .item > img {
 /*begin index.html div content*/
 .twitter-container {
     padding: 10px;
-    border: 1px solid #ddd;
     margin-bottom: 10px;
-    box-shadow: 4px 4px 4px rgba(1, 1, 1, 0.5);
 }
 .gh-container {
     padding: 1px;
@@ -162,18 +160,37 @@ img {
     min-width: 35%;
     height: auto;
     width: auto\\9;
+    color: black;
+    &:hover {
+        display: block;
+        color: white;
+  }
 }
+
+.image-container {
+    display: none;
+    border: 1px solid #000;
+    height: 30px;
+    width: 290px;
+    margin-left: 10px;
+  }
+  a:hover + .image-container {
+    display: block;
+  }
+
 body {
+    border: 1px solid #ddd;
     background-color: #c6c6cc;
     font-family: Helvetica;
     overflow: visible;
+    box-shadow: 4px 4px 4px rgba(1, 1, 1, 0.5);
 }
 head {
     font-family: Helvetica;
+    box-shadow: 4px 4px 4px rgba(1, 1, 1, 0.5);
 }
 footer {
     font-family: Helvetica;
-    box-shadow: 4px 4px 4px rgba(1, 1, 1, 0.5);
 }
 
 /*change link color*/
