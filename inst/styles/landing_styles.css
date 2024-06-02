@@ -15,9 +15,9 @@ landing animations container
     transition-timing-function: ease;
     transition-delay:1s;
     &:hover{
-        transform: scale(1.03);
+        transform: scale(1.1);
         width:450px;
-        height:500px;
+        height:600px;
     }
     transition: width 2s;
 }
