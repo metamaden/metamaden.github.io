@@ -226,11 +226,11 @@ img {
 }
 
 body {
-    border: 1px solid #ddd;
+    hieght: 150%;
+    width: 100%;
     background-color: #c6c6cc;
     font-family: Helvetica;
     overflow: visible;
-    box-shadow: 4px 4px 4px rgba(1, 1, 1, 0.5);
 }
 
 /*
