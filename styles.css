@@ -157,7 +157,7 @@ div.scroll-container > .item > img {
 }
 .blog-content {
             padding: 0 18px;
-            background-color: #606061;
+            background-color: #f5f5f5;
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.2s ease-out;
