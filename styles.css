@@ -36,9 +36,9 @@ header blank container
     border: none;
     vertical-align: middle;
     position: relative;
-    max-width: 30%;
-    min-width: 10%;
-    padding: 10px 20px;
+    max-width: 18%;
+    min-width: 12%;
+    padding: 5px 5px;
     margin: 2px;
     cursor: pointer;
     font-size: 16px;
@@ -124,8 +124,10 @@ div.scroll-container > .item > img {
     padding: 10px;
     margin-bottom: 10px;
 }
-.gh-container {
-    padding: 1px;
+.container {
+    display: inline-block;
+    position: relative;
+    justify-content: center;
 }
 /*end index.html div content*/
 
