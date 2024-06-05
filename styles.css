@@ -93,8 +93,9 @@ header blank container
 /*begin scroll container mgmt*/
 div.portfolio-box {
     width: 100%; 
+    max-height: 200%;
+    max-width: 100%;
     height: 520px; 
-    border: 1.5px solid black;
 }
 div.scroll-container {
     border: 1.5px solid black;
@@ -104,6 +105,9 @@ div.scroll-container {
     padding: 10px;
     height: 220px;
     width: 85%;
+    width: 100%; 
+    max-height: 30%;
+    max-width: 80%;
 }
 div.scroll-container img {
     padding: 10px;
@@ -122,9 +126,6 @@ div.scroll-container > .item > img {
 }
 .gh-container {
     padding: 1px;
-    /*border: 1px solid #ddd;*/
-    /*margin-bottom: 5px;*/
-    /*box-shadow: 4px 4px 4px rgba(1, 1, 1, 0.5);*/
 }
 /*end index.html div content*/
 
@@ -203,8 +204,8 @@ html {
     scroll-behavior: smooth;
 }
 img {
-    /*max-width: 75%;*/
-    /*min-width: 35%;*/
+    max-width: 100%;
+    max-height: 100%;*/
     height: auto;
     width: auto\\9;
     color: black;
@@ -215,15 +216,12 @@ img {
 }
 
 .image-container {
-    display: none;
+    display: block;
     border: 1px solid #000;
     height: 30px;
     width: 290px;
     margin-left: 10px;
-  }
-  a:hover + .image-container {
-    display: block;
-  }
+}
 
 body {
     border: 1px solid #ddd;
