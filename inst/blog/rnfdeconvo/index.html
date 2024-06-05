@@ -60,13 +60,11 @@
     <h2 class="anchored" data-anchor-id="managing-many-parameters-programmatically">Managing many parameters programmatically</h2>
     <p>The first main issue for benchmark workflows is management of many parameters and parameter states. Specifically, we need to make it easy to inspect and change large sets of parameter states across runs. We also need to associate parameter values with the results of their runs. NextFlow parameters are set by editing a .config file recognized by the main .nf workflow script. Manually entering large parameter lists in a .config file would be too error-prone and labor intensive, so we need to be able to write the .config file automatically from a more convenient human-readable format, such as a flat .csv table. I accomplished this using a simple .R script.</p>
     <p>Diagram of <code>r-nf</code> parameter update</p>
-    <p><img src="https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/posts/media/r-nf_params-diagram.png" alt="Diagram of how parameters are written in the proposed `r-nf` system." width="680" height="135"></p>
+    <p><img src="../../media/img/blog/rnf_params-diagram.png" alt="Diagram of how parameters are written in the proposed `r-nf` system." width="680" height="135"></p>
     </section>
     <section id="an-r-nf-solution-for-parameter-management" class="level2">
     <h2 class="anchored" data-anchor-id="an-r-nf-solution-for-parameter-management">An <code>r-nf</code> solution for parameter management</h2>
     <p>In <code>r-nf_deconvolution</code>, parameters are managed by changing entries in the <code>workflow_table.csv</code> file. Columns in this table correspond to the parameters for tested functions and any additional metadata. Table rows correspond to individual runs, making it easy to inspect how parameter states compare across many runs. Adding runs is as simple as adding a row in this table, resaving, and running <code>Rscript /rscript/r-nf_write-params.R</code>.</p>
-    <p>The contents of <code>workflow_table.csv</code> could look something like this:</p>
-    <p><img src="https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/posts/media/workflow_table.JPG" alt="AI-generated image (made using Canva Text-to-Image)."></p>
     <p>Note the use of <code>$launchDir</code>. This is syntax for NextFlow that points to the current working directory. After writing to <code>params.config</code>, the contents of this workflow table look like:</p>
     <pre><code>// Define parameters used in the main Nextflow script called main.nf
 
@@ -119,14 +117,14 @@
     }</code></pre>
     <p>In the above approach, the table <code>params_metadata.csv</code> is used to determine what columns in the workflow table need to be written to the .config file. Each row in this table corresponds to a different column in the workflow table. Columns correspond to the label and a descriptor, so this file conveniently doubles as a data dictionary. If you add new processes with new parameters, the metadata table needs to be updated with new rows.</p>
     <p>An example parameter metadata table:</p>
-    <p><img src="https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/posts/media/params_metadata.JPG" alt="Example parameter metadata table image."></p>
+    <p><img src="../../media/img/blog/rnf_params-metadata.JPG" alt="Example parameter metadata table image."></p>
     </section>
     <section id="aggregating-benchmark-outputs-into-a-results-table" class="level2">
     <h2 class="anchored" data-anchor-id="aggregating-benchmark-outputs-into-a-results-table">Aggregating benchmark outputs into a results table</h2>
     <p>The next main issue is the aggregation of results across runs. While benchmarks compare results across discrete runs, results are not usually available until after workflow completion, and results are usually stored in a randomized file tree. Fortunately we can use NextFlow’s publish directory to help with this. The publish directory is a pre-specified path where we can copy the run results. After the workflow completes, we aggregate the results as well as perform any additional post-processing or analysis using a dedicated script.</p>
     <p><code>r-nf_deconvolution</code> includes another .R script for aggregating results and writing a new results table. When the workflow completes, we can run <code>Rscript /rscript/r-nf_gather-results.R</code> to generate this table. This gather script inspects the publish directory for outputs and binds these together as rows in the table. It also performs several analyses <em>across</em> run data, such as calculating root mean squared errors within cell types and across all runs and cell types for a given deconvolution method. The final results are written to a new file with the character string stem <code>results_table_*</code>, and a timestamp is added so old results tables aren’t automatically overwritten.</p>
     <p>Excerpt from a results table:</p>
-    <p><img src="https://raw.githubusercontent.com/metamaden/metamaden.github.io/master/posts/media/results_table.JPG" alt="Example results table image." width="100%"></p>
+    <p><img src="../../media/img/blog/rnf_results-table.JPG" alt="Example results table image." width="100%"></p>
     </section>
     <section id="simplifying-workflow-development-with-standard-process-definitions" class="level2">
     <h2 class="anchored" data-anchor-id="simplifying-workflow-development-with-standard-process-definitions">Simplifying workflow development with standard process definitions</h2>
