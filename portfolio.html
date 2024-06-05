@@ -17,10 +17,10 @@
     <!--begin tab container-->
     <div class="tab-container">
         <h2>Sean K. Maden, Ph.D.
-            <a href = "home.html"><button class="tab-button">Home</button></a>
-            <a href="resume.html"><button class="tab-button">Resume</button></a>
-            <a href="portfolio.html"><button class="tab-button">Portfolio</button></a>
-            <a href = "blog.html"><button class="tab-button">Blog</button></a>
+            <a href = "home.html"><button class="tab-button2">Home</button></a>
+            <a href="resume.html"><button class="tab-button2">Resume</button></a>
+            <a href="portfolio.html"><button class="tab-button2">Portfolio</button></a>
+            <a href = "blog.html"><button class="tab-button2">Blog</button></a>
         </h2>
     </div>
     <!--end tab container-->
@@ -32,75 +32,95 @@
 
     <!--begin lute content-->
     <p><br></p>
-    <div style="width: 100%; height: 485px; border: 1px solid black;">
-    <h1>lute</h1>
-    R/Bioconductor software package
+    <div class="portfolio-box">
+    <h1><b>lute</b></h1>
+    <i>2023, R/Bioconductor software package</i>
+    <p>The lute R package supports bulk transcriptomics deconvolution experiments. It gets its name from the word "deconvolute," the problem of predicting cell amounts from cell mixtures. Users can use the lute() function to select for markers and perform deconvolution either with or without a cell size scale factor normalization (see ?lute for details). For normalizations, data may be incorporated from the cellScaleFactor package and passed to the s argument for transformation of cell reference expression data prior to deconvolution.</p>
+
+    <a href = "https://bioconductor.org/packages/release/bioc/html/lute.html"><button class="tab-button" align = "horizontal">Bioconductor</button></a>
+    <a href = "https://github.com/metamaden/lute"><button class="tab-button" align = "horizontal">GitHub</button></a>
+    <a href = "https://www.biorxiv.org/content/10.1101/2024.04.04.588105v1"><button class="tab-button" align = "horizontal">Manuscript</button></a>
+
     <div class="scroll-container">
-    <img src="inst/media/img/lute1_hexsticker.jpg" alt="lute hexsticker" style = "height: 100%;">
-    <img src="inst/media/img/lute2_diagram.jpg" alt="lute R package diagram" style = "height: 100%;">
-    <img src="inst/media/img/lute3_scatterplot1.jpg" alt="Neuron nuclei proportions across samples and rescale condition" style = "height: 100%;">
-    <img src="inst/media/img/lute4_boxplot1.jpg" alt="Absolute errors in neuron nuclei proportions across samples" style = "height: 100%;">
-</div>
-<a href = "https://bioconductor.org/packages/release/bioc/html/lute.html"><button class="tab-button" align = "horizontal">Bioconductor</button></a>
-<a href = "https://github.com/metamaden/lute"><button class="tab-button" align = "horizontal">GitHub</button></a>
-<a href = "https://www.biorxiv.org/content/10.1101/2024.04.04.588105v1"><button class="tab-button" align = "horizontal">Manuscript</button></a>
-</div>
-<!--end lute content-->
+        <img src="inst/media/img/lute1_hexsticker.jpg" alt="lute hexsticker" style="height: 200px;width: 200px">
+        <img src="inst/media/img/lute2_diagram.jpg" alt="lute R package diagram" style = "height: 200px;">
+        <img src="inst/media/img/lute3_scatterplot1.jpg" alt="Neuron nuclei proportions across samples and rescale condition" style = "height: 200px;">
+        <img src="inst/media/img/lute4_boxplot1.jpg" alt="Absolute errors in neuron nuclei proportions across samples" style = "height: 200px;">
+    </div>
+    
+    </div>
+    <!--end lute content-->
 
     <!--begin recountmethylation content-->
     <p><br></p>
-    <div style="width: 100%; height: 485px; border: 1px solid black;">
+    <div class="portfolio-box">
     <h1>recountmethylation</h1>
-    R/Bioconductor software package
+    <i>R/Bioconductor software package</i>
+    <p>Resources for cross-study analyses of public DNAm array data from NCBI GEO repo, produced using Illumina's Infinium HumanMethylation450K (HM450K) and MethylationEPIC (EPIC) platforms. Provided functions enable download, summary, and filtering of large compilation files. Vignettes detail background about file formats, example analyses, and more. Note the disclaimer on package load and consult the main manuscripts for further info.</p>
+
+    <a href = "https://bioconductor.org/packages/release/bioc/html/recountmethylation.html"><button class="tab-button" align = "horizontal">Bioconductor</button></a>
+    <a href = "https://github.com/metamaden/recountmethylation"><button class="tab-button" align = "horizontal">GitHub</button></a>
+    <a href = "https://doi.org/10.1093/nargab/lqab025"><button class="tab-button" align = "horizontal">Manuscript1</button></a>
+    <a href = "https://academic.oup.com/bioinformaticsadvances/article/3/1/vbad020/7048688?login=false"><button class="tab-button" align = "horizontal">Manuscript2</button></a>
+
     <div class="scroll-container">
     <img src="inst/media/img/remeth1_hexsticker.jpg" alt="recountmethylation hexsticker" style = "height: 100%;">
     <img src="inst/media/img/remeth2_diagram.jpg" alt="recountmethylation diagram" style = "height: 100%;">
-</div>
-<a href = "https://bioconductor.org/packages/release/bioc/html/recountmethylation.html"><button class="tab-button" align = "horizontal">Bioconductor</button></a>
-<a href = "https://github.com/metamaden/recountmethylation"><button class="tab-button" align = "horizontal">GitHub</button></a>
-<a href = "https://doi.org/10.1093/nargab/lqab025"><button class="tab-button" align = "horizontal">Manuscript1</button></a>
-<a href = "https://academic.oup.com/bioinformaticsadvances/article/3/1/vbad020/7048688?login=false"><button class="tab-button" align = "horizontal">Manuscript2</button></a>
-</div>
+    </div>
+    
+    </div>
     <!--end recountmethylation content-->
 
     <!--begin cgmappeR content-->
     <p><br></p>
-    <div style="width: 100%; height: 485px; border: 1px solid black;">
+    <div style="width: 100%; height: 580px; border: 1px solid black;">
     <h1>cgmappeR</h1>
-    Shiny dashboard
+    <i>R/Shiny dashboard</i>
+    <p>An R/Shiny dashboard to map and visualize cytosine-guanine (CG/CpG) dinucleotides and microarray-targeted probes. Map and visualize genomic CpGs, plot your own input DNA methylation microarry data, query genes and gene-proximal regions, generate high-quality ideograms, and export CpG sequence, CpG coordinates, and probe annotations from custom genome views.</p>
+    
+    <a href = "https://github.com/metamaden/cgmappeR"><button class="tab-button" align = "horizontal">GitHub</button></a>
+
     <div class="scroll-container">
     <img src="inst/media/img/cgmap1_dash.JPG" alt="cgmappeR dashboard" style = "height: 100%;">
     <img src="inst/media/img/cgmap2_tracks1.JPG" alt="cgmappeR genome view track" style = "height: 100%;">
     <img src="inst/media/img/cgmap3_table1.JPG" alt="cgmappeR genome feature table" style = "height: 100%;">
-</div>
-<a href = "https://github.com/metamaden/cgmappeR"><button class="tab-button" align = "horizontal">GitHub</button></a>
-</div>
-    <!--end cgmappeR content-->
+    </div>
+    
+    </div>
+        <!--end cgmappeR content-->
 
-<!--begin r-nf-deconvolution content-->
+    <!--begin r-nf-deconvolution content-->
     <p><br></p>
-    <div style="width: 100%; height: 485px; border: 1px solid black;">
+    <div style="width: 100%; height: 580px; border: 1px solid black;">
     <h1>r-nf_deconvolution</h1>
-    Nextflow workflow
+    <i>Nextflow workflow</i>
+    <p>Deconvolution NextFlow workflow using R and Rscripts. Scripts provided in the sh and yml folders show which dependencies are required and how to install them. For most runs, you will at minimum need a recent version of NextFlow, R, and the nnls, SummarizedExperiment, and SingleCellExperiment libraries, with additional required dependencies for other deconvolution methods besides the non-negative least squares (NNLS) method. You can use the provided .yml file to set up a conda virtual environment.</p>
+
+    <a href = "https://github.com/metamaden/r-nf_deconvolution"><button class="tab-button" align = "horizontal">GitHub</button></a>
+    <a href = "inst/blog/rnfdeconvo/index.html"><button class="tab-button" align = "horizontal">Blog</button></a>
+
     <div class="scroll-container">
     <img src="inst/media/img/cgmap2_tracks1.JPG" alt="cgmappeR genome view track" style = "height: 100%;">
-</div>
-<a href = "https://github.com/metamaden/r-nf_deconvolution"><button class="tab-button" align = "horizontal">GitHub</button></a>
-<a href = "inst/blog/rnfdeconvo/index.html"><button class="tab-button" align = "horizontal">Blog</button></a>
-</div>
+    </div>
+    
+    </div>
     <!--end r-nf_deconvolution content-->
 
-<!--begin gad content-->
+    <!--begin gad content-->
     <p><br></p>
-    <div style="width: 100%; height: 485px; border: 1px solid black;">
+    <div style="width: 100%; height: 580%px; border: 1px solid black;">
     <h1>geoarraydigest (GAD)</h1>
-    Python applet
+    <i>Python applet</i>
+    <p>Resource for summarizing and tracking new array samples published to NCBI's Gene Expression Omnibus (GEO) database. Geo Array Digest (GAD) resource is an automated messaging service that monitors available of public array datasets made available in GEO database. The GAD service was constructed by scheduling queries to the GEO API using the Entrez Programming Utilities software. Automated status updates to the GAD Bot Twitter account are made using the twitteR R package in a snakemake workflow. It is maintained by Sean Maden, PhD (GitHub: metamaden, Twitter: @MadenSean).</p>
+    
+    <a href = "https://github.com/metamaden/geoarraydigest"><button class="tab-button" align = "horizontal">GitHub</button></a>
+    <a href = "https://twitter.com/gadbot1"><button class="tab-button" align = "horizontal">X/Twitter</button></a>
+    <a href = "https://metamaden.github.io/geoarraydigest/"><button class="tab-button" align = "horizontal">Website</button></a>
+
     <div class="scroll-container">
     <img src="inst/media/img/gad1_profile.jpg" alt="gad profile picture" style = "height: 100%;">
-</div>
-<a href = "https://github.com/metamaden/geoarraydigest"><button class="tab-button" align = "horizontal">GitHub</button></a>
-<a href = "https://twitter.com/gadbot1"><button class="tab-button" align = "horizontal">X/Twitter</button></a>
-<a href = "https://metamaden.github.io/geoarraydigest/"><button class="tab-button" align = "horizontal">Website</button></a>
+    </div>
+    
     <!--end gad content-->
 
 
