@@ -1,5 +1,16 @@
 /* styles.css */
 
+/*
+header blank container
+*/
+.blank-header-container {
+    display: inline-block;
+    position: relative;
+    background-color: #c6c6cc;
+    height: 80px;
+    width: 100%;
+}
+
 /*<!--begin manage tab-container->*/
 .tab-container {
     display: inline-block;
@@ -7,7 +18,12 @@
     background-color: #9c9ba3;
     justify-content: center;
     padding: 1px;
-    background-color: #9c9ba3;
+    /*height: 65px;*/
+    /*width: 95px;*/
+    min-height: 60%;
+    min-width: 80%;
+    background-color: #c6c6cc;
+    outline: 1px solid white;
     box-shadow: 4px 4px 4px rgba(1, 1, 1, 0.5);
 }
 /*<!--end manage tab-container->*/
@@ -23,7 +39,7 @@
     max-width: 30%;
     min-width: 10%;
     padding: 10px 20px;
-    margin: 5px;
+    margin: 2px;
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
@@ -185,10 +201,32 @@ body {
     overflow: visible;
     box-shadow: 4px 4px 4px rgba(1, 1, 1, 0.5);
 }
+
+/*
+page styles
+*/
+.content {
+    padding: 16px;
+}
+
+/*
+header styles
+*/
 head {
     font-family: Helvetica;
+    background: white;
+    width: 100%;
+    background-color: #c6c6cc;
     box-shadow: 4px 4px 4px rgba(1, 1, 1, 0.5);
 }
+.sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+}
+
+
+
 footer {
     font-family: Helvetica;
 }
