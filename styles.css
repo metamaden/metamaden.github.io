@@ -51,28 +51,6 @@ header blank container
         transform: scale(1.01);
     }
   }
-.tab-button2 {
-    background-color: #242526;
-    color: #9c9ba3;
-    /*color: #FFFFFF;*/
-    border: none;
-    vertical-align: middle;
-    position: relative;
-    max-width: 30%;
-    min-width: 10%;
-    padding: 10px 20px;
-    margin: 2px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    outline: 2px solid black;
-    box-shadow: 4px 4px 4px rgba(1, 1, 1, 0.5);
-    z-index: 2;
-    &:hover {
-        color: #FFFFFF;
-        transform: scale(1.01);
-    }
-  }
 /*<!--end tab-button>*/
 
 /*<!--begin tab-content->*/
