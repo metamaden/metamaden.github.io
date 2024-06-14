@@ -2,44 +2,80 @@
 <html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<div id = "content">
 <!--begin header content-->
 <head>
     <!--begin blank container-->
+    <link rel="stylesheet" href="resume_styles.css">
     <link rel="stylesheet" href="styles.css">
-    <div class="blank-header-container"></div>
-    <!--end blank container-->
-</head>
-<head class="sticky">
-    <div class = 'sticky'>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Sean K. Maden, Ph.D.</title>
-    <!--begin tab container-->
-    <div class="tab-container">
-        <h2>Sean K. Maden, Ph.D.
-            <a href = "home.html"><button class="tab-button">Home</button></a>
-            <a href="resume.html"><button class="tab-button">Resume</button></a>
-            <a href="portfolio.html"><button class="tab-button">Portfolio</button></a>
-            <a href = "blog.html"><button class="tab-button">Blog</button></a>
-        </h2>
+    
+    <div class="sticky">
+        <div class="row">
+          <div class="column2">
+            Sean K Maden
+          </div>
+          <div class="column2">
+              <a href = "index.html">Title</a>
+              <a href="javascript:void(0)" class="openbtn" onclick="openNav()">
+              Menu
+              </a>
+          </div>
+        </div>
     </div>
-    <!--end tab container-->
-    </div>
+    <!--<div class = "sticky-back"></div>-->
 </head>
 <!--end header content-->
 
 <body>
-    <p><br></p>
-    <h1>Resume</h1>
-    <p><br></p>
-    <div class="pdf-container">
-    <iframe src="inst/media/pdf/Maden_Resume.pdf" height="500%" width="100%"></iframe>
-    <a href="inst/media/pdf/Maden_Resume.pdf" download="Maden_Resume.pdf"><button class="tab-button">Download</button></a>
-<a href = "https://www.overleaf.com/read/ybgcmkjxspms#87f331"><button class="tab-button">Overleaf</button></a>
+    <!-- begin side navigation menu -->
+    <div class="wrapper">
+        <div id="mySidenav" class="sidenav">
+            <p><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a><br></p>
+            <a href = "home.html">Home</a>
+            <a href="resume.html">Resume</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href = "blog.html">Blog</a>
+            <a href = "blog.html">Presentations</a>
+            <a href = "blog.html">Teaching</a>
+            <a href = "blog.html">Further</a>
+            <p><br></p>
+            <a href="mailto:maden.sean@gmail.com">Email</a>
+            <a href="https://github.com/metamaden">GitHub</a> <!--GitHub-->
+            <a href="https://www.linkedin.com/in/sean-maden-41623640/">LinkedIn</a> <!--LinkedIn-->
+            <a href="https://twitter.com/MadenSean">X/Twitter</a> <!--X/Twitter-->
+            <a href="https://bsky.app/profile/metamaden.bsky.social">BlueSky</a> <!--BlueSky-->
+            <a href="https://orcid.org/0000-0002-2212-4894"> <!--ORCID-->
+            ORCID</a>
+            <p>&copy; 2024 Sean Maden. All rights reserved.</p>
+        </div>
+    </div>
+    <!-- end side navigation menu -->
 
-</div>
+    <div class="resumecontainer">
+        <h1>Resume</h1>
+        <iframe src="inst/media/pdf/Maden_Resume.pdf" height="350px" width="100%"></iframe>
+        <a href="inst/media/pdf/Maden_Resume.pdf" download="Maden_Resume.pdf">
+            <button class="tab-button">Download .pdf</button>
+        </a>
+        <a href="inst/media/doc/Maden_Resume.docx" download="Maden_Resume.docx">
+            <button class="tab-button">Download .docx</button>
+        </a>
+        <a href = "https://www.overleaf.com/read/ybgcmkjxspms#87f331">
+            <button class="tab-button">Overleaf</button>
+        </a>
+        <p><br></p>
 
+        <h1>Curriculum Vitae</h1>
+        <iframe src="inst/media/pdf/Maden_Curriculum-Vitae.pdf" height="350px" width="100%"></iframe>
+        <a href="inst/media/pdf/Maden_Curriculum-Vitae.pdf" download="Maden_Curriculum-Vitae.pdf">
+            <button class="tab-button">Download .pdf</button>
+        </a>
+        <a href="inst/media/doc/Maden_Curriculum-Vitae.docx" download="Maden_Curriculum-Vitae.docx">
+            <button class="tab-button">Download .docx</button>
+        </a>
+        <p><br></p>
+    </div>
+    <script src="scripts.js"></script>
 </body>
 
 <!--Begin footer content-->
@@ -58,5 +94,7 @@
     </ul>
 </footer>
 <!--End footer content-->
+
+</div>
 
 </html>
