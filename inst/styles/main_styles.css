@@ -1,0 +1,50 @@
+
+
+/*
+landing animations container
+*/
+.landing-container {
+    display: inline-block;
+    position: relative;
+    background-color: #000000;
+    justify-content: center;
+    padding: 2px;
+    background-color: #000000;
+    box-shadow: 4px 4px 4px rgba(1, 1, 1, 0.5);
+    transition: width 2s;
+    transition-timing-function: ease;
+    transition-delay:1s;
+    &:hover{
+        transform: scale(1.01);
+    }
+    transition: width 2s;
+}
+.landing-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 80%;
+    min-width: 70%;
+    max-width: 800px;
+    margin-top: 20px;
+    justify-content: center;
+}
+html {
+    min-height: 100%;
+  }
+body {
+	background: linear-gradient(#9c9ba3, #FFFFFF);
+	background-color: #93B874;
+    text-align: center; /* Center horizontally */
+    min-height: 100vh; /* Ensure full viewport height */
+}
+/*change link color*/
+a, a:hover, a:active, a:visited {
+    color: #9c9ba3;
+    font-size: 16px;
+    font-family: Helvetica;
+    &:hover {
+        color: white;
+    }
+}

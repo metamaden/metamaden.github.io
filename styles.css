@@ -1,106 +1,128 @@
-/* styles.css */
-
 /*
-header blank container
+styles.css
+
+Author: Sean Maden
+
+Main website styles. Includes styles for header, body, footer, menu, links, and basic elements.
+
+Additional styles for pages stored at `./inst/styles/*`.
+
 */
-.blank-header-container {
-    display: inline-block;
-    position: relative;
-    background-color: #c6c6cc;
-    height: 80px;
-    width: 100%;
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 250px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: hsla(241, 54%, 35%, 1); /* Black background color */
+    /*border: 0.5px solid white;*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
-/*<!--begin manage tab-container->*/
-.tab-container {
-    display: inline-block;
-    position: relative;
-    background-color: #9c9ba3;
-    justify-content: center;
-    padding: 1px;
-    /*height: 65px;*/
-    /*width: 95px;*/
-    min-height: 60%;
-    min-width: 80%;
-    background-color: #c6c6cc;
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffb5fb;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.sidenav-open-container {
+    z-index:0;
+    position: fixed;
+    /*background-color: #101357;
     outline: 1px solid white;
-    box-shadow: 4px 4px 4px rgba(1, 1, 1, 0.5);
-}
-/*<!--end manage tab-container->*/
-
-/*<!--begin tab-button>*/
-.tab-button {
-    background-color: #242526;
-    color: #9c9ba3;
-    /*color: #FFFFFF;*/
-    border: none;
-    vertical-align: middle;
-    position: relative;
-    max-width: 18%;
-    min-width: 12%;
-    padding: 5px 5px;
-    margin: 2px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    outline: 2px solid black;
-    box-shadow: 4px 4px 4px rgba(1, 1, 1, 0.5);
-    z-index: 1;
-    &:hover {
-        color: #FFFFFF;
-        transform: scale(1.01);
-    }
-  }
-/*<!--end tab-button>*/
-
-/*<!--begin tab-content->*/
-.tab-content {
-    display: none;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 80%;
-    min-width: 70%;
-    max-width: 800px;
-    margin-top: 20px;
+    box-shadow: 4px 4px 4px rgba(1, 1, 1, 0.5);*/
     justify-content: center;
-    z-index: 2;
+    width: 45px;
+    height: 25px;
+    /**/bottom: 30px;
+    left: 30px;/**/
+    position: fixed;
 }
-/*<!--end tab-content->*/
-
-/*begin scroll container mgmt*/
-div.portfolio-box {
-    width: 100%; 
-    max-height: 200%;
-    max-width: 100%;
-    height: 520px; 
-}
-div.scroll-container {
-    border: 1.5px solid black;
-    background-color: #9c9ba3;
-    overflow: auto;
-    white-space: nowrap;
+.sticky {
     padding: 10px;
-    height: 220px;
-    width: 85%;
-    width: 100%; 
-    max-height: 30%;
-    max-width: 80%;
+    width: 300px;
+    height: 17px;
+    z-index: 0;
+    top: 0;
+    /*bottom: 30px;*/
+    left: 30px;
+    position: fixed;
+    /*background-color: #101357;*/
+    background-color: hsla(241, 54%, 35%, 1);
+    outline: 1px solid white;
+    box-shadow: 4px 4px 4px rgba(1, 1, 1, 0.5);/**/
 }
-div.scroll-container img {
-    padding: 10px;
+.sticky-back {
+    padding: 20px;
+    width: 100%;
+    height: 100px;
+    z-index: -1;
+    top: 0;
+    left: 58px;
+    /*bottom: 30px;
+    left: 30px;*/
+    position: fixed;
+    /*background-color: #101357;*/
+    background-color: hsla(241, 54%, 35%, 0.9);
 }
-div.scroll-container > .item > img {
-    height: 100%;
-    object-fit: cover;
+.name {
+    font-size: 20px;
 }
-/*end scroll container mgmt*/
+.openbtn {
+    left: 10px;
+    position: flex;
+    align: center;
+}
 
+.title {
+    left: 100px;
+}
+
+.column {
+  float: left;
+  width: 35%;
+}
+.column2 {
+  float: left;
+  width: 40%;
+  padding: 5px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 /*begin index.html div content*/
 .twitter-container {
     padding: 10px;
     margin-bottom: 10px;
+}
+.pdf-container {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
 }
 .container {
     display: inline-block;
@@ -109,146 +131,53 @@ div.scroll-container > .item > img {
 }
 /*end index.html div content*/
 
-/*begin blog post styles*/
-.blog-post {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-.blog-post h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-.blog-post .date {
-    font-size: 14px;
-    color: #888;
-}
-.blog-post .excerpt {
-    margin-top: 10px;
-}
-.blog-post img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
-}
-.blog-content {
-            padding: 0 18px;
-            background-color: #f5f5f5;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-        }
-.blog-button {
-    background-color: black;
-    color: #9c9ba3;
-    border: none;
-    vertical-align: middle;
-    position: relative;
-    max-width: 30%;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    outline: 2px solid black;
-    &:hover {
-        color: white;
-        transform: scale(1.01);
-        .tab-content {
-            display: flex;
-        }
-    }
-  }
-/*end blog post preview styles*/
-
 /* color/style */
-/*html, body {border: none;}*/
-* {
-    margin: 2px;
-    padding: 10px;
-    border: 1;
-    border-color: solid black;
-    box-sizing: border-box;
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left 0.5s;
+    padding: 20px;
 }
-form {
-    display: table;
-    width: 100%;
-    text-align: center;
+#wrapper.toggled #page-content-wrapper {
+    margin-left: 220px; /* Width of the sidebar */
 }
-button > img {
-    height: 100%;
+.wrapper {
+    display: flex;
 }
-html {
-    scroll-behavior: smooth;
-}
-img {
-    max-width: 100%;
-    max-height: 100%;*/
-    height: auto;
-    width: auto\\9;
-    color: black;
-    &:hover {
-        display: block;
-        color: white;
-  }
+#content {
+    flex-grow: 1;
+    padding: 40px;
+    /*background-color: #101357;*/
+    background-color: hsla(241, 54%, 35%, 0.7);
+    margin-left: 0px;
+    margin-top: 0;
+    top: 0;
 }
 
-.image-container {
-    display: block;
-    border: 1px solid #000;
-    height: 30px;
-    width: 290px;
-    margin-left: 10px;
+.bodymain {
+    /*background-color: #101357;*/
+    background-color: hsla(241, 54%, 35%, 0.9);
 }
 
 body {
     hieght: 150%;
     width: 100%;
-    background-color: #c6c6cc;
+    /*background-color: #c6c6cc;*/
+    background-color: hsla(241, 54%, 35%, 0.9);
     font-family: Helvetica;
+    color: #39a0ca;
     overflow: visible;
-}
-
-/*
-page styles
-*/
-.content {
-    padding: 16px;
-}
-
-/*
-header styles
-*/
-head {
-    font-family: Helvetica;
-    background: white;
-    width: 100%;
-    background-color: #c6c6cc;
-    box-shadow: 4px 4px 4px rgba(1, 1, 1, 0.5);
-}
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 2;
-}
-
-
-
-footer {
-    font-family: Helvetica;
+    background-image: url("./inst/media/jpg/bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /*change link color*/
 a, a:hover, a:active, a:visited {
-    color: #9c9ba3;
+    color: #ffb5fb;
     font-size: 16px;
     font-family: Helvetica;
     &:hover {
         color: white;
     }
 }
-
-
