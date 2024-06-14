@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<div id = "content">
 <!--begin header content-->
 <head>
     <!--begin blank container-->
     <link rel="stylesheet" href="../../../styles.css">
-    <div class="blank-header-container"></div>
-    <!--end blank container-->
-</head>
-<head class="sticky">
-    <div class = 'sticky'>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Sean K. Maden, Ph.D.</title>
-    <!--begin tab container-->
-    <div class="tab-container">
-        <h2>Sean K. Maden, Ph.D.
-            <a href = "../../../home.html"><button class="tab-button">Home</button></a>
-            <a href="../../../resume.html"><button class="tab-button">Resume</button></a>
-            <a href="../../../portfolio.html"><button class="tab-button">Portfolio</button></a>
-            <a href = "../../../blog.html"><button class="tab-button">Blog</button></a>
-        </h2>
+    <div class="sticky">
+        <div class="row">
+          <div class="column2">
+            Sean K Maden
+          </div>
+          <div class="column2">
+              <a href = "../../../index.html">Title</a>
+              <a href="javascript:void(0)" class="openbtn" onclick="openNav()">
+              Menu
+              </a>
+          </div>
+        </div>
     </div>
-    <!--end tab container-->
-    </div>
+    <!--<div class = "sticky-back"></div>-->
 </head>
 <!--end header content-->
-
 <body>
     <p><br></p>
     <h1>Run R package checks with a shell script</h1>
@@ -194,7 +188,7 @@
     <section id="conclusions" class="level1">
     <h2>Conclusions</h2>
     <p>This post described the <a href="https://gist.github.com/metamaden/14f6b5717e2934c118ffa9edfa45e765"><code>rpackagecheck.sh</code></a> shell script, including how to run it from command line and how each part of the script works. Some background about the types of R package checks developers frequently use was also provided. Implementing a repetetive task in a script can save you time and help you to avoid errors, leaving more mental overhead to focus on package development.</p>
-
+    <script src="../../../scripts.js"></script>
 </body>
 
 <footer>
@@ -210,5 +204,7 @@
         <p><br>&copy; 2024 Sean Maden. All rights reserved.</p>
     </ul>
 </footer>
+
+</div>
 
 </html>

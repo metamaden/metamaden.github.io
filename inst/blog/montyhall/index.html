@@ -1,30 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<div id = "content">
 <!--begin header content-->
 <head>
     <!--begin blank container-->
     <link rel="stylesheet" href="../../../styles.css">
-    <div class="blank-header-container"></div>
-    <!--end blank container-->
-</head>
-<head class="sticky">
-    <div class = 'sticky'>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Sean K. Maden, Ph.D.</title>
-    <!--begin tab container-->
-    <div class="tab-container">
-        <h2>Sean K. Maden, Ph.D.
-            <a href = "../../../home.html"><button class="tab-button">Home</button></a>
-            <a href="../../../resume.html"><button class="tab-button">Resume</button></a>
-            <a href="../../../portfolio.html"><button class="tab-button">Portfolio</button></a>
-            <a href = "../../../blog.html"><button class="tab-button">Blog</button></a>
-        </h2>
+    <div class="sticky">
+        <div class="row">
+          <div class="column2">
+            Sean K Maden
+          </div>
+          <div class="column2">
+              <a href = "../../../index.html">Title</a>
+              <a href="javascript:void(0)" class="openbtn" onclick="openNav()">
+              Menu
+              </a>
+          </div>
+        </div>
     </div>
-    <!--end tab container-->
-    </div>
+    <!--<div class = "sticky-back"></div>-->
 </head>
 <!--end header content-->
 
@@ -264,7 +259,7 @@
     <h1>Conclusions and analysis extensions</h1>
     <p>I’ve explored simulations of the Monty Hall problem using a brute force approach. By exploring changes in win frequency across varying problem conditions, I’ve proven that switching doors will tend to increase player win frequency. I quantitatively investigated how always switching doors improves win frequency as door quantity increases, and visualized results to reinforce intuition from the many-doors mnemonic device. I also investigated how player switch frequency modifies win frequency gain or loss across door quantities. This showed recurrent asymptotic win frequency gain or loss, and how win frequency starts to improve with increase door quantity when the player switches over half the time.</p>
     <p>This brute force simulation approach is one of many possible ways of sloving and exploring the Monty Hall problem. An alternate approach implementing <a href="https://en.wikipedia.org/wiki/Bayesian_statistics">Bayesian models</a> could lead to further insights. There are several other game conditions that could also be explored, such as increasing the total number of doors with prizes. Ultimately, I hope this investigation provided some useful code and a framework for investigating new problems through simulation.</p>
-
+    <script src="../../../scripts.js"></script>
 </body>
 
 <footer>
@@ -280,5 +275,6 @@
         <p><br>&copy; 2024 Sean Maden. All rights reserved.</p>
     </ul>
 </footer>
+</div>
 
 </html>

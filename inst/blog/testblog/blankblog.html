@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<div id = "content">
+<!--begin header content-->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <!--begin blank container-->
     <link rel="stylesheet" href="../../../styles.css">
-    <title>Multiple Pages as Tabs</title>
-
-    <!--begin tab container-->
-    <div class="tab-container">
-        
-        <a href = "../../../home.html"><button class="tab-button">Home</button></a>
-        
-        <a href = "../../../resume.html"><button class="tab-button">Resume</button></a>
-
-        <a href = "../../../portfolio.html"><button class="tab-button">Portfolio</button></a>
-        
-        <a href = "../../../blog.html"><button class="tab-button">Blog</button></a>
+    <div class="sticky">
+        <div class="row">
+          <div class="column2">
+            Sean K Maden
+          </div>
+          <div class="column2">
+              <a href = "../../../index.html">Title</a>
+              <a href="javascript:void(0)" class="openbtn" onclick="openNav()">
+              Menu
+              </a>
+          </div>
+        </div>
     </div>
-    <!--end tab container-->
-    <div style="border-bottom: 2px solid black;"></div>
-
+    <!--<div class = "sticky-back"></div>-->
 </head>
+<!--end header content-->
 <body>
     <p><br></p>
     <h1>_title_</h1>
@@ -36,6 +37,7 @@
     <h3>_section-name_</h3>
     <p>Third paragraph</p>
     <p><br></p>
+    <script src="../../../scripts.js"></script>
 </body>
 
 <footer>
@@ -51,5 +53,6 @@
         <p><br>&copy; 2024 Sean Maden. All rights reserved.</p>
     </ul>
 </footer>
+</div>
 
 </html>

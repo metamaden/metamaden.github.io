@@ -7,30 +7,25 @@
 <meta name="dcterms.date" content="2018-11-01">
 <!--end post metadata-->
 
+<div id = "content">
 <!--begin header content-->
 <head>
     <!--begin blank container-->
     <link rel="stylesheet" href="../../../styles.css">
-    <div class="blank-header-container"></div>
-    <!--end blank container-->
-</head>
-<head class="sticky">
-    <div class = 'sticky'>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Sean K. Maden, Ph.D.</title>
-    <!--begin tab container-->
-    <div class="tab-container">
-        <h2>Sean K. Maden, Ph.D.
-            <a href = "../../../home.html"><button class="tab-button">Home</button></a>
-            <a href="../../../resume.html"><button class="tab-button">Resume</button></a>
-            <a href="../../../portfolio.html"><button class="tab-button">Portfolio</button></a>
-            <a href = "../../../blog.html"><button class="tab-button">Blog</button></a>
-        </h2>
+    <div class="sticky">
+        <div class="row">
+          <div class="column2">
+            Sean K Maden
+          </div>
+          <div class="column2">
+              <a href = "../../../index.html">Title</a>
+              <a href="javascript:void(0)" class="openbtn" onclick="openNav()">
+              Menu
+              </a>
+          </div>
+        </div>
     </div>
-    <!--end tab container-->
-    </div>
+    <!--<div class = "sticky-back"></div>-->
 </head>
 <!--end header content-->
 
@@ -52,6 +47,7 @@
     <p>My Response: The problems I seek to solve are: (1) insufficient attribution of scientific code to its authors, because no resource tracks usages of published scripts or software tools (independent from any associated journal article) across the scientific literature; (2) bugs in software can invalidate analyses in scientific papers, but it is difficult to track the papers impacted by bugs; (3) a software and its versions can disappear from the internet, making reliant scientific results challenging or impossible to reproduce. To solve these problems, I propose to develop PubSrc, an open-access resource to crawl scientific papers for computer code. Code, along with affiliated release dates and version information, will be made queryable independently from their original publication or website. PubSrc will thereby empower web searches to rapidly obtain lists of scientific papers that use software, by version and platform. Importantly, PubSrc will recognize that scripts and software themselves have software dependencies, and it will plot dependencies across papers, scripts, and software. In these ways, PubSrc will address problems (1) and (2). To address problem (3), PubSrc will automatically archive source codes of open-source software by crawling scientific papers. To achieve my goals, I plan on involving my PhD adviser Abhinav Nellore and former collaborators on PubCode, especially Ben Busby at NIH/NLM; the $25K will be used for travel and protected time to work on this project.</p>
     <h3>Prompt: What impact do you foresee from your efforts?</h3>
     <p>My Response: I anticipate the following positive developments from PubSrc: (1) Sets of scripts that were previously not recognized as independent units of scientific work (e.g., custom scripts for analyses accompanying a lab’s paper) will bear unique identities permitting (a) assessing their impact across the literature, (b) pinpointing bugs and other errors due to software dependencies, and (c) citability, whether or not these scripts were collected and assigned a DOI through other resources like, for example, Figshare. (2) Software developers who resolve bugs will be able to find and therefore apprise authors of scientific works whose results may be affected. Moreover, authors of scientific literature will be able to readily search for any bugs resolved since their papers came out. (3) Over time, results from papers that depend on scientific software will likely become more reproducible, independent of software availability outside PubSrc. We anticipate, in some cases, that code will not be open-source and only executables will be available. Indexing these may be permitted or limited by law. Further, some executables may depend on a particular computing environment for proper execution. A clear next step for PubSrc would then be to archive executables and/or make software containers available for reproduction of scientific results.</p>
+    <script src="../../../scripts.js"></script>
 </body>
 <footer>
     <p><br></p>
@@ -66,4 +62,5 @@
         <p><br>&copy; 2024 Sean Maden. All rights reserved.</p>
     </ul>
 </footer>
+</div>
 </html>
