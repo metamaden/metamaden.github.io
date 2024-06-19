@@ -18,7 +18,8 @@ CSS styles for presentations HTML page, including carousels, links, and text.
 .slider,
 .slider_enar2024,
 .slider_bioc2023,
-.slider_bioc2021 {
+.slider_bioc2021,
+.slider_aacr2016 {
   position: relative;
   width: 960px;/*height: 400px;*/
   height: 650px;
@@ -35,7 +36,8 @@ CSS styles for presentations HTML page, including carousels, links, and text.
 .slider-controls,
 .slider-controls_enar2024,
 .slider-controls_bioc2023,
-.slider-controls_bioc2021 {
+.slider-controls_bioc2021,
+.slider-controls_aacr2016 {
   position: absolute;
   bottom: 0px;
   left: 50%;
@@ -51,7 +53,8 @@ CSS styles for presentations HTML page, including carousels, links, and text.
 .slider input[type="radio"],
 .slider_enar2024 input[type="radio"],
 .slider_bioc2023 input[type="radio"],
-.slider_bioc2021 input[type="radio"] {
+.slider_bioc2021 input[type="radio"],
+.slider_aacr2016 input[type="radio"] {
   position: absolute;
   top: 0;
   left: 0;
@@ -64,7 +67,8 @@ CSS styles for presentations HTML page, including carousels, links, and text.
 .slider-controls label,
 .slider-controls_enar2024 label,
 .slider-controls_bioc2023 label,
-.slider-controls_bioc2021 label {
+.slider-controls_bioc2021 label,
+.slider-controls_aacr2016 label {
   display: inline-block;
   border: none;
   height: 20px;
@@ -82,7 +86,8 @@ CSS styles for presentations HTML page, including carousels, links, and text.
 .slides,
 .slides_enar2024,
 .slides_bioc2023,
-.slides_bioc2021 {
+.slides_bioc2021,
+.slides_aacr2016 {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -96,7 +101,8 @@ CSS styles for presentations HTML page, including carousels, links, and text.
 .slide,
 .slide_enar2024,
 .slide_bioc2023,
-.slide_bioc2021 {
+.slide_bioc2021,
+.slide_aacr2016 {
   position: absolute;
   top: 0;
   left: 0;
@@ -115,7 +121,8 @@ CSS styles for presentations HTML page, including carousels, links, and text.
 .slide-content,
 .slide-content_enar2024,
 .slide-content_bioc2023,
-.slide-content_bioc2021 {
+.slide-content_bioc2021,
+.slide-content_aacr2016 {
   width: 100%;
   height: 100%;
   max-width: 90%;
@@ -126,7 +133,8 @@ CSS styles for presentations HTML page, including carousels, links, and text.
 .slide-title,
 .slide-title_enar2024,
 .slide-title_bioc2023,
-.slide-title-bioc2021 {
+.slide-title-bioc2021,
+.slide-title-aacr2016 {
   margin-bottom: 5px;
   font-size: 36px;
 }
@@ -134,7 +142,8 @@ CSS styles for presentations HTML page, including carousels, links, and text.
 .slide-text,
 .slide-text_enar2024,
 .slide-text_bioc2023,
-.slide-text_bioc2021 {
+.slide-text_bioc2021,
+.slide-text_aacr2016 {
   margin-bottom: 20px;
   margin-left: 20px;
   margin-right: 20px;
@@ -145,7 +154,8 @@ CSS styles for presentations HTML page, including carousels, links, and text.
 .slide-link,
 .slide-link_enar2024,
 .slide-link_bioc2023,
-.slide-link_bioc2021 {
+.slide-link_bioc2021,
+.slide-link_aacr2016 {
   display: inline-block;
   padding: 2px 2px;
   color: #fff;
@@ -163,10 +173,11 @@ CSS styles for presentations HTML page, including carousels, links, and text.
 .slide-image img,
 .slide-image_enar2024 img,
 .slide-image_bioc2023 img,
-.slide-image_bioc2021 img {
-  max-width: 70%;
+.slide-image_bioc2021 img,
+.slide-image_aacr2016 img {
+  max-width: 60%;
   object-fit: cover;
-  padding: 5px;
+  padding: 2px;
   z-index: 0;
 }
 
@@ -186,7 +197,13 @@ CSS styles for presentations HTML page, including carousels, links, and text.
 #slide_bioc2021_2:checked ~ .slider-controls_bioc2021 label[for="slide_bioc2021_2"],
 #slide_bioc2021_3:checked ~ .slider-controls_bioc2021 label[for="slide_bioc2021_3"],
 #slide_bioc2021_4:checked ~ .slider-controls_bioc2021 label[for="slide_bioc2021_4"],
-#slide_bioc2021_5:checked ~ .slider-controls_bioc2021 label[for="slide_bioc2021_5"] {
+#slide_bioc2021_5:checked ~ .slider-controls_bioc2021 label[for="slide_bioc2021_5"]
+#slide_aacr2016_1:checked ~ .slider-controls_aacr2016 label[for="slide_aacr2016_1"],
+#slide_aacr2016_2:checked ~ .slider-controls_aacr2016 label[for="slide_aacr2016_2"],
+#slide_aacr2016_3:checked ~ .slider-controls_aacr2016 label[for="slide_aacr2016_3"],
+#slide_aacr2016_4:checked ~ .slider-controls_aacr2016 label[for="slide_aacr2016_4"],
+#slide_aacr2016_5:checked ~ .slider-controls_aacr2016 label[for="slide_aacr2016_5"],
+#slide_aacr2016_6:checked ~ .slider-controls_aacr2016 label[for="slide_aacr2016_6"] {
   background-color: #ff4081;
 }
 #slideN:checked ~ .slidesN .slide:nth-child(0),
@@ -204,7 +221,13 @@ CSS styles for presentations HTML page, including carousels, links, and text.
 #slide_bioc2021_2:checked ~ .slides_bioc2021 .slide_bioc2021:nth-child(2),
 #slide_bioc2021_3:checked ~ .slides_bioc2021 .slide_bioc2021:nth-child(3),
 #slide_bioc2021_4:checked ~ .slides_bioc2021 .slide_bioc2021:nth-child(4),
-#slide_bioc2021_5:checked ~ .slides_bioc2021 .slide_bioc2021:nth-child(5) {
+#slide_bioc2021_5:checked ~ .slides_bioc2021 .slide_bioc2021:nth-child(5),
+#slide_aacr2016_1:checked ~ .slides_aacr2016 .slide_aacr2016:nth-child(1),
+#slide_aacr2016_2:checked ~ .slides_aacr2016 .slide_aacr2016:nth-child(2),
+#slide_aacr2016_3:checked ~ .slides_aacr2016 .slide_aacr2016:nth-child(3),
+#slide_aacr2016_4:checked ~ .slides_aacr2016 .slide_aacr2016:nth-child(4),
+#slide_aacr2016_5:checked ~ .slides_aacr2016 .slide_aacr2016:nth-child(5),
+#slide_aacr2016_6:checked ~ .slides_aacr2016 .slide_aacr2016:nth-child(6) {
   transform: translatex(0);
   opacity: 1;
 }
@@ -223,7 +246,13 @@ CSS styles for presentations HTML page, including carousels, links, and text.
 #slide_bioc2021_2:not(checked) ~ .slides_bioc2021 .slide_bioc2021:nth-child(2),
 #slide_bioc2021_3:not(checked) ~ .slides_bioc2021 .slide_bioc2021:nth-child(3),
 #slide_bioc2021_4:not(checked) ~ .slides_bioc2021 .slide_bioc2021:nth-child(4),
-#slide_bioc2021_5:not(checked) ~ .slides_bioc2021 .slide_bioc2021:nth-child(5) {
+#slide_bioc2021_5:not(checked) ~ .slides_bioc2021 .slide_bioc2021:nth-child(5),
+#slide_aacr2016_1:not(checked) ~ .slides_aacr2016 .slide_aacr2016:nth-child(1),
+#slide_aacr2016_2:not(checked) ~ .slides_aacr2016 .slide_aacr2016:nth-child(2),
+#slide_aacr2016_3:not(checked) ~ .slides_aacr2016 .slide_aacr2016:nth-child(3),
+#slide_aacr2016_4:not(checked) ~ .slides_aacr2016 .slide_aacr2016:nth-child(4),
+#slide_aacr2016_5:not(checked) ~ .slides_aacr2016 .slide_aacr2016:nth-child(5),
+#slide_aacr2016_6:not(checked) ~ .slides_aacr2016 .slide_aacr2016:nth-child(6) {
   animation-name: swap-out;
   animation-duration: 300ms;
   animation-timing-function: linear;
