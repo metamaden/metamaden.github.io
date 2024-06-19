@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--
+
+Example new presentation section:
+
+variables:
+NEW_PRESENTATION_NAME : 
+PRESENTATION_URL :
+PRESENTATION_LABEL : 
+_TAG_ :
+IMAGE_PATH1 :
+SLIDE1_TITLE :
+SLIDE1_TEXT :
+IMAGE_PATH2 :
+SLIDE2_TITLE :
+SLIDE2_TEXT :
+SLIDES_LINK :
+LINK_LABEL :
+
+<div class="slide-content-title"><h2><center>NEW_PRESENTATION_NAME</center></h2></div>
+    <center>
+      <a href="PRESENTATION_URL">PRESENTATION_LABEL</a>
+    </center>
+    <div class="slider_TAG">
+      <input type="radio" name="toggle_TAG" id="slide_TAG_1" checked>
+      <input type="radio" name="toggle_TAG" id="slide_TAG_2">
+      <div class="slider-controls_TAG">
+        <label for="slide_TAG_1"></label>
+        <label for="slide_TAG_2"></label>
+      </div>
+
+      <ul class="slides_TAG">
+        <li class="slide_TAG">
+          <div class="slide-content_TAG">
+            <center>
+              <p class="slide-image_TAG">
+                <img src="IMAGE_PATH1" alt="stuff" width=80%>
+              </p>
+              <h3 class="slide-title_TAG">SLIDE1_TITLE</h3>
+            </center>
+            <p class="slide-text_TAG">SLIDE1_TEXT</p>
+            <a href="SLIDES_LINK" class="slide-link_TAG">LINK_LABEL</a>
+          </div>
+        </li>
+        <li class="slide_TAG">
+          <div class="slide-content_TAG">
+            <center>
+              <p class="slide-image_TAG">
+                <img src="IMAGE_PATH2" alt="stuff" width=80%>
+              </p>
+              <h3 class="slide-title_TAG">SLIDE2_TITLE</h3>
+            </center>
+            <p class="slide-text_TAG">SLIDE2_TEXT</p>
+            <a href="SLIDES_LINK" class="slide-link_TAG">LINK_LABEL</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+-->
+
+<div id="content">
+<!--begin header content-->
+<head>
+    <!--begin blank container-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./inst/styles/presentations_styles.css">
+    <div class="sticky">
+        <div class="row">
+          <div class="column2">
+            Sean K Maden
+          </div>
+          <div class="column2">
+              <a href = "index.html">Title</a>
+              <a href="javascript:void(0)" class="openbtn" onclick="openNav()">
+              Menu
+              </a>
+          </div>
+        </div>
+    </div>
+    <!--<div class = "sticky-back"></div>-->
+</head>
+<!--end header content-->
+
+<body>
+    <!-- begin side navigation menu -->
+    <div class="wrapper">
+        <div id="mySidenav" class="sidenav">
+            <p><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a><br></p>
+            <a href = "home.html">Home</a>
+            <a href="resume.html">Resume</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href = "blog.html">Blog</a>
+            <a href = "presentations.html">Presentations</a>
+            <a href = "blog.html">Teaching</a>
+            <a href = "blog.html">Further</a>
+            <p><br></p>
+            <a href="mailto:maden.sean@gmail.com">Email</a>
+            <a href="https://github.com/metamaden">GitHub</a> <!--GitHub-->
+            <a href="https://www.linkedin.com/in/sean-maden-41623640/">LinkedIn</a> <!--LinkedIn-->
+            <a href="https://twitter.com/MadenSean">X/Twitter</a> <!--X/Twitter-->
+            <a href="https://bsky.app/profile/metamaden.bsky.social">BlueSky</a> <!--BlueSky-->
+            <a href="https://orcid.org/0000-0002-2212-4894"> <!--ORCID-->
+            ORCID</a>
+            <p>&copy; 2024 Sean Maden. All rights reserved.</p>
+        </div>
+    </div>
+    <!-- end side navigation menu -->
+
+    <div class="page-title"><h2>Presentations</h2></div>
+   
+    <!--start new image carousel-->
+    
+    <div class="slide-content-title"><h2><center>ENAR Spring Meeting 2024</center></h2></div>
+    <center>
+      <a href="https://whova.com/embedded/session/6qvMwH4qoLVF67ZSlHyxxCdzpoMouTX1cJpjCq6H5UQ%3D/3648552/?widget=primary" class="slide-link">ENAR2024</a>
+      <a href="https://zenodo.org/records/10794438" class="slide-link">Zenodo</a>
+      <a href="https://www.youtube.com/watch?v=RFYPetR_uEU&t=12s" class="slide-link">YouTube</a>
+      <a href="https://www.bioconductor.org/packages/devel/bioc/html/lute.html" class="slide-link">Software</a>
+    </center>
+    <div class="slider_enar2024">
+      <input type="radio" name="toggle_enar2024" id="slide_enar2024_1" checked>
+      <input type="radio" name="toggle_enar2024" id="slide_enar2024_2">
+      <input type="radio" name="toggle_enar2024" id="slide_enar2024_3">
+      <input type="radio" name="toggle_enar2024" id="slide_enar2024_4">
+      <input type="radio" name="toggle_enar2024" id="slide_enar2024_5">
+      <input type="radio" name="toggle_enar2024" id="slide_enar2024_6">
+      <div class="slider-controls_enar2024">
+        <label for="slide_enar2024_1"></label>
+        <label for="slide_enar2024_2"></label>
+        <label for="slide_enar2024_3"></label>
+        <label for="slide_enar2024_4"></label>
+        <label for="slide_enar2024_5"></label>
+        <label for="slide_enar2024_6"></label>
+      </div>
+
+      <ul class="slides_enar2024">
+        <li class="slide_enar2024">
+          <div class="slide-content_enar2024">
+            <center>
+              <p class="slide-image_enar2024">
+                <img src="./inst/media/slides/presentations_enar2024/Slide1.JPG" alt="stuff" width=80%>
+              </p>
+              <h3 class="slide-title_enar2024">Title/Intro</h3>
+            </center>
+            <p class="slide-text_enar2024">Presents results of bulk transcriptomics deconvolution and single-nucleus RNA-seq analysis of human dorsolateral prefrontal cortex, completed during a Postdoctoral Research Fellowship with Johns Hopkins Biostatistics.</p>
+            <a href="https://zenodo.org/records/10794438" class="slide-link_enar2024">Zenodo</a>
+          </div>
+        </li>
+        <li class="slide_enar2024">
+          <div class="slide-content_enar2024">
+            <center>
+              <p class="slide-image_enar2024">
+                <img src="./inst/media/slides/presentations_enar2024/Slide3.JPG" alt="stuff" width=80%>
+              </p>
+              <h3 class="slide-title_enar2024">Deconvolution review</h3>
+            </center>
+            <p class="slide-text_enar2024">Recent topics in bulk transcriptomics deconvolution, reviewed in out recent Genome Biology article (Maden et al 2023).</p>
+            <a href="https://zenodo.org/records/10794438" class="slide-link_enar2024">Zenodo</a>
+            <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-023-03123-4" class="slide-link_enar2024">Maden et al. Genome Biol. 2023</a>
+          </div>
+        </li>
+        <li class="slide_enar2024">
+
+          <div class="slide-content_enar2024">
+            <center>
+              <p class="slide-image_enar2024">
+                <img src="./inst/media/slides/presentations_enar2024/Slide9.JPG" alt="stuff" width=80%>
+              </p>
+              <h3 class="slide-title_enar2024">Novel cortex data</h3>
+            </center>
+            <p class="slide-text_enar2024">Novel human cortex orthogonal assay dataset for bulk transcriptomics deconvolution algorithm benchmarks, published in our recent manuscript (Huuki-Meyers et al 2024).</p>
+            <a href="https://zenodo.org/records/10794438" class="slide-link_enar2024">Zenodo</a>
+            <a href="https://www.biorxiv.org/content/10.1101/2024.02.09.579665v2" class="slide-link_enar2024">Huuki-Meyers et al. BioArxiv 2024.</a>
+          </div>
+        </li>
+        <li class="slide_enar2024">
+          <div class="slide-content_enar2024">
+            <center>
+              <p class="slide-image_enar2024">
+                <img src="./inst/media/slides/presentations_enar2024/Slide11.JPG" alt="stuff" width=80%>
+              </p>
+              <h3 class="slide-title_enar2024">Pseudobulk simulations</h3>
+            </center>
+            <p class="slide-text_enar2024">Pseudobulk results in novel cortex data. Shows neuron predictions for two-cell type predictions. Also outlined in recent software vignettes, and recent manuscript (Maden et al 2024).</p>
+            <a href="https://zenodo.org/records/10794438" class="slide-link_enar2024">Zenodo</a>
+            <a href="https://bioconductor.org/packages/release/bioc/vignettes/lute/inst/doc/lute_pseudobulk_example.html" class="slide-link_enar2024">Vignette</a>
+            <a href="https://www.biorxiv.org/content/10.1101/2024.04.04.588105v1" class="slide-link_enar2024">Maden et al. BioArxiv 2024.</a>
+          </div>
+        </li>
+        <li class="slide_enar2024">
+          <div class="slide-content_enar2024">
+            <center>
+              <p class="slide-image_enar2024">
+                <img src="./inst/media/slides/presentations_enar2024/Slide13.JPG" alt="stuff" width=80%>
+              </p>
+              <h3 class="slide-title_enar2024">The lute R package</h3>
+            </center>
+            <p class="slide-text_enar2024">The lute deconvolution framework and software for deconvolution experiments. Available now on Bioconductor, and described in our recent publication (Maden et al 2024)</p>
+            <a href="https://zenodo.org/records/10794438" class="slide-link_enar2024">Zenodo</a>
+            <a href="https://bioconductor.org/packages/release/bioc/html/lute.html" class="slide-link_enar2024">Bioconductor</a>
+            <a href="https://www.biorxiv.org/content/10.1101/2024.04.04.588105v1" class="slide-link_enar2024">Maden et al. BioArxiv 2024.</a>
+          </div>
+        </li>
+        <li class="slide_enar2024">
+          <div class="slide-content_enar2024">
+            <center><img src="./inst/media/slides/presentations_enar2024/Slide15.JPG" alt="stuff" width=80%>
+            <h3 class="slide-title_enar2024">Thanks and acknowledgements</center></h3>
+            <p class="slide-text_enar2024">This work was made possible by the efforts of Prof. Stephanie Hicks and our "deconvo group" collaborators at the Lieber Institute for Brain Development.</p>
+            <a href="https://zenodo.org/records/10794438" class="slide-link_enar2024">Zenodo</a>
+            <p class="slide-image_enar2024">
+          </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--end new image carousel-->
+    
+    <!--start new image carousel-->
+    <div class="slide-content-title"><h2><center>Bioc 2023 Short Talk, RNA-seq</center></h2></div>
+    <center>
+      <a href="https://bioc2023.bioconductor.org/abstracts/paper37/" class="slide-link">Bioc2023</a>
+      <a href="https://docs.google.com/presentation/d/1ChmvvMr-5Uxk6dswGph7p7ECbMU0W34DGhAaC3A-ask/edit" class="slide-link">Slides</a>
+      <a href="https://www.youtube.com/watch?v=_IfxERk5kfM&list=PL0033Dj_s-B50eWXiQMSIELk2uw1ooH9-&index=2" class="slide-link">YouTube</a>
+      <a href="https://www.bioconductor.org/packages/devel/bioc/html/lute.html" class="slide-link">Software</a>
+    </center>
+    
+    <div class="slider_bioc2023">
+      <input type="radio" name="toggle_bioc2023" id="slide_bioc2023_1" checked>
+      <input type="radio" name="toggle_bioc2023" id="slide_bioc2023_2">
+      <input type="radio" name="toggle_bioc2023" id="slide_bioc2023_3">
+      <input type="radio" name="toggle_bioc2023" id="slide_bioc2023_4">
+      <div class="slider-controls_bioc2023">
+        <label for="slide_bioc2023_1"></label>
+        <label for="slide_bioc2023_2"></label>
+        <label for="slide_bioc2023_3"></label>
+        <label for="slide_bioc2023_4"></label>
+      </div>
+      <ul class="slides_bioc2023">
+        <li class="slide_bioc2023">
+          <div class="slide-content_bioc2023">
+            <center>
+              <p class="slide-image_bioc2023">
+              <img src="./inst/media/slides/presentations_bioc2023/Slide1.JPG" alt="stuff" width=80%>
+              </p>
+              <h3 class="slide-title_bioc2023">Title/Intro</h3>
+            </center>
+            <p class="slide-text_bioc2023">Introduction to lute, deconvolution software developed for Postdoctoral Research Fellowship with Johns Hopkins Biostatistics.</p>
+            <a href="https://docs.google.com/presentation/d/1ChmvvMr-5Uxk6dswGph7p7ECbMU0W34DGhAaC3A-ask/edit" class="slide-link_bioc2023">Slides</a>
+          </div>
+        </li>
+        <li class="slide_bioc2023">
+          <div class="slide-content_bioc2023">
+            <center>
+              <p class="slide-image_bioc2023">
+              <img src="./inst/media/slides/presentations_bioc2023/Slide2.JPG" alt="stuff" width=80%>
+              <h3 class="slide-title_bioc2023">Deconvolution formula</h3>
+            </p>
+            </center>
+            <p class="slide-text_bioc2023">Mathematical representation of reference-based bulk transcriptomics deconvolution as a matrix product problem. Illustrates the product operation to adjust for bias from cell type-specific size divergence.</p>
+            <a href="https://docs.google.com/presentation/d/1ChmvvMr-5Uxk6dswGph7p7ECbMU0W34DGhAaC3A-ask/edit" class="slide-link">Slides</a>
+          </div>
+        </li>
+        <li class="slide_bioc2023">
+          <div class="slide-content_bioc2023">
+            <center>
+              <p class="slide-image_bioc2023">
+                <img src="./inst/media/slides/presentations_bioc2023/Slide4.JPG" alt="stuff" width=80%>
+              </p>
+              <h3 class="slide-title_bioc2023">Multi-subject references</h3>
+            </center>
+            <p class="slide-text_bioc2023">Description of multi-subject references for deconvolution, and increasing availability of algorithm benchmark datasets across tissues and conditions.</p>
+            <a href="https://docs.google.com/presentation/d/1ChmvvMr-5Uxk6dswGph7p7ECbMU0W34DGhAaC3A-ask/edit" class="slide-link_bioc2023">Slides</a>
+          </div>
+        </li>
+        <li class="slide_bioc2023">
+          <div class="slide-content_bioc2023">
+            <center>
+              <p class="slide-image_bioc2023">
+                <img src="./inst/media/slides/presentations_bioc2023/Slide7.JPG" alt="stuff" width=80%>
+              </p>
+              <h3 class="slide-title_bioc2023">Framework software</h3>
+            </center>
+            <p class="slide-text_bioc2023">Describes novel generics, methods, and classes introduced in the lute software framework for deconvolution, and illustrates supported deconvolution algorithm relationships.</p>
+            <a href="https://docs.google.com/presentation/d/1ChmvvMr-5Uxk6dswGph7p7ECbMU0W34DGhAaC3A-ask/edit" class="slide-link_bioc2023">Slides</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--end new image carousel-->
+
+    <!--begin new image carousel-->
+    <div class="slide-content-title">
+      <center>
+        <i>Accessing, querying, and analyzing public DNAm array data compilations with recountmethylation</i><br>
+        Conference: Bioc2021, Package Demo/Workshop<br>
+        Date: 8/4/21<br>
+        Location: Remote<br>
+      </center>
+    </div>
+    <center>
+      <a href="https://bioc2021.bioconductor.org/posts/paper106/" class="slide-link">Bioc2021</a>
+      <a href="https://www.youtube.com/watch?v=nTysBp4fvaw" class="slide-link">YouTube</a>
+      <a href="https://docs.google.com/presentation/d/1ozoTWCbAd-fHvmEbZ-W4M840EuyPRoaOMESIw3m4ZHU/edit?usp=sharing" class="slide-link">Slides</a>
+      <a href="https://bioconductor.org/packages/release/bioc/html/recountmethylation.html" class="slide-link">Bioconductor</a>
+      <a href="https://github.com/metamaden/recountmethylation_bioc2021" class="slide-link">GitHub</a>
+    </center>
+    <div class="slider_bioc2021">
+      <input type="radio" name="toggle_bioc2021" id="slide_bioc2021_1" checked>
+        <input type="radio" name="toggle_bioc2021" id="slide_bioc2021_2">
+        <input type="radio" name="toggle_bioc2021" id="slide_bioc2021_3">
+        <input type="radio" name="toggle_bioc2021" id="slide_bioc2021_4">
+        <input type="radio" name="toggle_bioc2021" id="slide_bioc2021_5">
+      <div class="slider-controls_bioc2021">
+          <label for="slide_bioc2021_1"></label>
+          <label for="slide_bioc2021_2"></label>
+          <label for="slide_bioc2021_3"></label>
+          <label for="slide_bioc2021_4"></label>
+          <label for="slide_bioc2021_5"></label>
+      </div>
+
+      <ul class="slides_bioc2021">
+        <!---->
+        <li class="slide_bioc2021">
+          <div class="slide-content_bioc2021">
+            <center>
+              <p class="slide-image_bioc2021">
+                <img src="./inst/media/slides/ohsu_bioc2021/Slide1.JPG" alt="stuff" width=80%>
+              </p>
+              <h3 class="slide-title_bioc2021">Workshop intro</h3>
+            </center>
+            <p class="slide-text_bioc2021">Package demo/workshop presentation for recountmethylation. Shows how to access, query, and analyze public DNAm array data which were compiled from the NCBI GEO public records. Includes overview of the Illumina platforms, probe annotations, regular expressions, and data classes of importance.</p>
+            <a href="https://docs.google.com/presentation/d/1ozoTWCbAd-fHvmEbZ-W4M840EuyPRoaOMESIw3m4ZHU/edit?usp=sharing" class="slide-link">Slides</a>
+          </div>
+        </li>
+        <!---->
+        <!---->
+        <li class="slide_bioc2021">
+          <div class="slide-content_bioc2021">
+            <center>
+              <p class="slide-image_bioc2021">
+                <img src="./inst/media/slides/ohsu_bioc2021/Slide4.JPG" alt="stuff" width=80%>
+              </p>
+              <h3 class="slide-title_bioc2021">Array technologies</h3>
+            </center>
+            <p class="slide-text_bioc2021">Overview of different types of DNAm platforms, including Illumina's HM450K and EPIC BeadArray chips. Summarizes the probe annotation information and some facts about array dimensions and ways to handle IDAT-derived molecular signals.</p>
+            <a href="https://docs.google.com/presentation/d/1ozoTWCbAd-fHvmEbZ-W4M840EuyPRoaOMESIw3m4ZHU/edit?usp=sharing" class="slide-link">Slides</a>
+            <a href="https://bioconductor.org/packages/release/bioc/html/recountmethylation.html" class="slide-link">Bioconductor</a>
+          </div>
+        </li>
+        <!---->
+        <!---->
+        <li class="slide_bioc2021">
+          <div class="slide-content_bioc2021">
+            <center>
+              <p class="slide-image_bioc2021">
+                <img src="./inst/media/slides/ohsu_bioc2021/Slide6.JPG" alt="ETL/Data engineering" width=80%>
+              </p>
+              <h3 class="slide-title_bioc2021">ETL/Data engineering</h3>
+            </center>
+            <p class="slide-text_bioc2021">Details about the ETL processing pipeline developed to ingest, parse, harmonize, and analyze mined DNAm array and experiment data. Includes dependencies, R/Bioconductor packages, and some basic functions and data parsing steps of the ETL pipeline.</p>
+            <a href="https://docs.google.com/presentation/d/1ozoTWCbAd-fHvmEbZ-W4M840EuyPRoaOMESIw3m4ZHU/edit?usp=sharing" class="slide-link">Slides</a>
+            <a href="https://bioconductor.org/packages/release/bioc/html/recountmethylation.html" class="slide-link">Bioconductor</a>
+          </div>
+        </li>
+        <!---->
+        <!---->
+        <li class="slide_bioc2021">
+          <div class="slide-content_bioc2021">
+            <center>
+              <p class="slide-image_bioc2021">
+                <img src="./inst/media/slides/ohsu_bioc2021/Slide7.JPG" alt="Analytics decision tree" width=80%>
+              </p>
+              <h3 class="slide-title_bioc2021">Analytics decision tree</h3>
+            </center>
+            <p class="slide-text_bioc2021">Details decisionmaking process for high-dimensional analytics as a decision tree. Depicts the differences in desired data formats and outputs depending on programming language (R vs. Python) and analytics task (normalization, summary, etc.).</p>
+            <a href="https://docs.google.com/presentation/d/1ozoTWCbAd-fHvmEbZ-W4M840EuyPRoaOMESIw3m4ZHU/edit?usp=sharing" class="slide-link">Slides</a>
+            <a href="https://github.com/metamaden/recountmethylation_bioc2021" class="slide-link">GitHub</a>
+          </div>
+        </li>
+        <!---->
+        <!---->
+        <li class="slide_bioc2021">
+          <div class="slide-content_bioc2021">
+            <center>
+              <p class="slide-image_bioc2021">
+                <img src="./inst/media/slides/ohsu_bioc2021/Slide10.JPG" alt="Data science of DNAm" width=80%>
+              </p>
+              <h3 class="slide-title_bioc2021">Data science of DNAm</h3>
+            </center>
+            <p class="slide-text_bioc2021">Describes the process of continuous updates to recountmethylation from the NCBI GEO live public records database, including harmonization tasks and separate tasks for records, EHRs, and study metadata paired with published molecular data.</p>
+            <a href="https://docs.google.com/presentation/d/1ozoTWCbAd-fHvmEbZ-W4M840EuyPRoaOMESIw3m4ZHU/edit?usp=sharing" class="slide-link">Slides</a>
+            <a href="https://github.com/metamaden/recountmethylation_bioc2021" class="slide-link">GitHub</a>
+          </div>
+        </li>
+        <!---->
+      </ul>
+    </div>
+    <!--end new image carousel-->
+
+    <p><br><br><br><br><br></p>
+    <p><br><br><br><br><br></p>
+    <p><br><br><br><br><br></p>
+    <p><br><br><br><br><br></p>
+
+    <script src="scripts.js"></script>
+</body>
+
+<!--Begin footer content-->
+<footer>
+    <p><br></p>
+    <div style="border-bottom: 2px solid black;"></div>
+    <ul>
+        <a href="mailto:maden.sean@gmail.com">Email</a>
+        <a href="https://github.com/metamaden">GitHub</a> <!--GitHub-->
+        <a href="https://www.linkedin.com/in/sean-maden-41623640/">LinkedIn</a> <!--LinkedIn-->
+        <a href="https://twitter.com/MadenSean">X/Twitter</a> <!--X/Twitter-->
+        <a href="https://bsky.app/profile/metamaden.bsky.social">BlueSky</a> <!--BlueSky-->
+        <a href="https://orcid.org/0000-0002-2212-4894"> <!--ORCID-->
+        ORCID</a>
+        <p><br>&copy; 2024 Sean Maden. All rights reserved.</p>
+    </ul>
+</footer>
+<!--End footer content-->
+</div>
+
+</html>
