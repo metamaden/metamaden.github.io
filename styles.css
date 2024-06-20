@@ -33,13 +33,13 @@ Additional styles for pages stored at `./inst/styles/*`.
     font-size: 16px;
     color: #ffb5fb;
     &:hover {
-        font-size: 12px;
+        font-size: 14px;
     }
     &:active {
-        font-size: 12px;
+        font-size: 14px;
     }
     &:visited {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
@@ -57,13 +57,13 @@ Additional styles for pages stored at `./inst/styles/*`.
     color: #ffb5fb;
     display: block;
     &:hover {
-        font-size: 12px;
+        font-size: 14px;
     }
     &:active {
-        font-size: 12px;
+        font-size: 14px;
     }
     &:visited {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
