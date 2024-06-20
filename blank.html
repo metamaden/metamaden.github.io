@@ -2,30 +2,25 @@
 <html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<div id = "content">
 <!--begin header content-->
 <head>
     <!--begin blank container-->
     <link rel="stylesheet" href="styles.css">
-    <div class="blank-header-container"></div>
-    <!--end blank container-->
-</head>
-<head class="sticky">
-    <div class = 'sticky'>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Sean K. Maden, Ph.D.</title>
-    <!--begin tab container-->
-    <div class="tab-container">
-        <h2>Sean K. Maden, Ph.D.
-            <a href = "home.html"><button class="tab-button">Home</button></a>
-            <a href="resume.html"><button class="tab-button">Resume</button></a>
-            <a href="portfolio.html"><button class="tab-button">Portfolio</button></a>
-            <a href = "blog.html"><button class="tab-button">Blog</button></a>
-        </h2>
+    <div class="sticky">
+        <div class="row">
+          <div class="column2">
+            Sean K Maden
+          </div>
+          <div class="column2">
+              <a href = "index.html">Title</a>
+              <a href="javascript:void(0)" class="openbtn" onclick="openNav()">
+              Menu
+              </a>
+          </div>
+        </div>
     </div>
-    <!--end tab container-->
-    </div>
+    <!--<div class = "sticky-back"></div>-->
 </head>
 <!--end header content-->
 
@@ -38,7 +33,7 @@
             <a href="resume.html">Resume</a>
             <a href="portfolio.html">Portfolio</a>
             <a href = "blog.html">Blog</a>
-            <a href = "presentations.html">Presentations</a>
+            <a href = "blog.html">Presentations</a>
             <a href = "blog.html">Teaching</a>
             <a href = "blog.html">Further</a>
             <p><br></p>
@@ -53,7 +48,7 @@
         </div>
     </div>
     <!-- end side navigation menu -->
-    <p><br></p>
+    <script src="scripts.js"></script>
 </body>
 
 <!--Begin footer content-->
@@ -72,5 +67,6 @@
     </ul>
 </footer>
 <!--End footer content-->
+</div>
 
 </html>
