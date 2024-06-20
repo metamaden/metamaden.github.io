@@ -17,21 +17,54 @@ Additional styles for pages stored at `./inst/styles/*`.
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: hsla(241, 54%, 35%, 1); /* Black background color */
-    /*border: 0.5px solid white;*/
+    background-color: hsla(241, 54%, 35%, 0.85); /* Black background color */
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
-/* The navigation menu links */
-.sidenav a {
-    padding: 8px 8px 8px 32px;
+.fa {
+    padding: 20px 2px 2px 20px;
+}
+.menu-link a {
+    transition: 0.5s;
+    padding: 20px 2px 2px 20px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
+    color: #ffb5fb;
+    &:hover {
+        font-size: 12px;
+    }
+    &:active {
+        font-size: 12px;
+    }
+    &:visited {
+        font-size: 12px;
+    }
+}
+
+/* The navigation menu links */
+.menu-sitemap {
+    pext-decoration: none;
     color: #ffb5fb;
     display: block;
-    transition: 0.3s;
+}
+.menu-sitemap a {
+    transition: 0.5s;
+    padding: 2px 2px 2px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #ffb5fb;
+    display: block;
+    &:hover {
+        font-size: 12px;
+    }
+    &:active {
+        font-size: 12px;
+    }
+    &:visited {
+        font-size: 12px;
+    }
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -43,15 +76,15 @@ Additional styles for pages stored at `./inst/styles/*`.
     position: absolute;
     top: 0;
     right: 25px;
-    font-size: 36px;
+    font-size: 40px;
     margin-left: 50px;
+    &:hover {
+        font-size: 40px;
+    }
 }
 .sidenav-open-container {
-    z-index:0;
+    z-index:1;
     position: fixed;
-    /*background-color: #101357;
-    outline: 1px solid white;
-    box-shadow: 4px 4px 4px rgba(1, 1, 1, 0.5);*/
     justify-content: center;
     width: 45px;
     height: 25px;
