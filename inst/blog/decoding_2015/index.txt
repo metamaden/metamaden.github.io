@@ -1,0 +1,13 @@
+Decoding the Biotech Job Listing Part 1: "Good Communication", Collaboration, and Coevolution
+
+(Originally featured on [Biotech-Careers.org](https://biotech-careers.org/articles/decoding-biotech-job-listing-part-1-good-communication-collaboration-and-coevolution))
+
+The requirements of "good communication skills" and "comfortable working in a multidisciplinary setting" on a biotech job listing are common, but what do these mean in practice? For work in biotech, there's often more than meets the eye in a job posting.
+
+Biotechnology is an inherently multidisciplinary field, now more so than ever. A single lab can employ personnel with myriad professional backgrounds who do work ranging from cell culture to computational biology. The interconnectedness of biotech provides many potential avenues for learning and career advancement. Even as an entry-level worker, the biotechnologist can rapidly expand her professional network through the sheer volume and variety of interactions that the field affords. Whether you work in the private, nonprofit, or government sectors, chances are you will find yourself interacting with personnel from other fields, in other labs, and even in other sectors.
+
+I work in a clinical lab that uses methylome arrays to study how changes in genome-wide methylation patterns can be used to determine cancer prognosis. Our outside collaborators, who work in the fields of Biostatistics, Genomics, and Public Health, reside in labs located everywhere from across campus, to Harvard and Stanford, to hospitals in Germany and China. 
+
+I recently had the pleasure of joining my labmates in sitting down with local Illumina representatives to discuss their newest generation of methylome array technology. In this face-to-face meeting, we discussed what changes were being made to the current standard arrays, what was being retained from prior array generations, and what the transition to this newer technology would mean for the field more broadly. 
+
+Interactions of these kinds, both with study collaborators and vendors, have been a mainstay of my time in research, which spans both academic and nonprofit sectors. Witnessing the benefits and challenges to collaborations between workers from varying disciplines with varying interests has furthered my appreciation of what work in biotech actually means. It's true that no biotech worker is an island. But from the company personnel who supply key equipment and software, to intellectual collaborators in labs both near and far, to the fiscal donors, grant funders and stakeholders; it's true no lab is an island, either.
