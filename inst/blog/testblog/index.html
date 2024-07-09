@@ -1,58 +1,73 @@
 <!DOCTYPE html>
-<!--begin post metadata-->
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.189">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta name="author" content="Sean K. Maden">
-<meta name="dcterms.date" content="2018-11-01">
-<!--end post metadata-->
 <html lang="en">
 
+<div id = "content">
 <!--begin header content-->
 <head>
     <!--begin blank container-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../../styles.css">
-    <div class="blank-header-container"></div>
-    <!--end blank container-->
-</head>
-<head class="sticky">
-    <div class = 'sticky'>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Sean K. Maden, Ph.D.</title>
-    <!--begin tab container-->
-    <div class="tab-container">
-        <h2>Sean K. Maden, Ph.D.
-            <a href = "../../../home.html"><button class="tab-button">Home</button></a>
-            <a href="../../../resume.html"><button class="tab-button">Resume</button></a>
-            <a href="../../../portfolio.html"><button class="tab-button">Portfolio</button></a>
-            <a href = "../../../blog.html"><button class="tab-button">Blog</button></a>
-        </h2>
+    <div class="sticky">
+        <div class="row">
+          <div class="column2">
+            Sean K Maden
+          </div>
+          <div class="column2">
+              <a href = "../../../index.html">Title</a>
+              <a href="javascript:void(0)" class="openbtn" onclick="openNav()">
+              Menu
+              </a>
+          </div>
+        </div>
     </div>
-    <!--end tab container-->
-    </div>
+    <!--<div class = "sticky-back"></div>-->
 </head>
 <!--end header content-->
-
 <body>
+    <!-- begin side navigation menu -->
+    <div class="wrapper">
+        <div id="mySidenav" class="sidenav">
+            <div class="menu-sitemap"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a><br>
+            <a href = "../../../home.html">Home</a><br>
+            <a href="../../../resume.html">Resume</a><br>
+            <a href="../../../portfolio.html">Portfolio</a><br>
+            <a href = "../../../blog.html">Blog</a><br>
+            <a href = "../../../presentations.html">Presentations</a><br>
+            <a href = "../../../blank.html">Teaching</a><br>
+            <a href = "../../../further.html">Further</a><br>
+            </div>
+            <div class="menu-link"><i class="fa fa-envelope"></i> <a href="mailto:maden.sean@gmail.com">Email</a></div>
+            <div class="menu-link"><i class="fa fa-github"></i> <a href="https://github.com/metamaden">GitHub</a></div> <!--GitHub-->
+            <div class="menu-link"><i class="fa fa-linkedin-square"></i> <a href="https://www.linkedin.com/in/sean-maden-41623640/">LinkedIn</a></div> <!--LinkedIn-->
+            <div class="menu-link"><i class="fa fa-twitter"></i> <a href="https://twitter.com/MadenSean">X/Twitter</a></div> <!--X/Twitter-->
+            <div class="menu-link"><i class="fa fa-cloud"></i> <a href="https://bsky.app/profile/metamaden.bsky.social">BlueSky</a></div> <!--BlueSky-->
+            <div class="menu-link"><i class="fa fa-book"></i> <a href="https://orcid.org/0000-0002-2212-4894"> <!--ORCID-->
+            ORCID</a></div>
+            <p>&copy; 2024 Sean Maden. All rights reserved.</p>
+        </div>
+    </div>
+    <!-- end side navigation menu -->
     <p><br></p>
-    <h1>Sean K. Maden - My 2018 proposal for the Better Scientific Software Fellowship</h1>
-    <h2><p class="date">November 12, 2018</p></h2>
+
     <p><br></p>
-    <p>I wanted to share my proposal for the <a href="https://bssw.io/fellowship">2018 Better Scientific Software (BSSw) Fellowship</a>. BSSw aims to increase and preserve integrity and standards for publishing computer code in science, and their fellowship program recognizes and supports advocates of this cause. You may or may not be aware that we currently lack standard ways of referencing published code in science as independently citable units. Furthermore, vital source code for experiments can be distributed in many places, including supplemental materials sections behind paywalls, personal websites that may become inaccessible or go offline over time, and repositories on GitHub or elsewhere that may not include inherent and persistent identifiers. I propose using an autocompilation technology to aggregate published scientific computer code and code metadata into a new database, called Pubsrc. This will enable novel assessments of scientific code use, including automatic generation of dependency usage networks, tracking the impact of newly discovered software bugs throughout research, and making scientific code independently citable. I hope you enjoy reading my proposal, and please share or tweet this post if you support this cause.</p>
-<hr>
-<p>Section: Experience</p>
-<p>Prompt: Describe your work relevant to scientific software.</p>
-<p>My Response: My main scientific mission is to reduce friction and latencies in data analysis. In my experience practicing bioinformatics, I grappled with the many difficulties surrounding analysis of genomics data, so I designed and implemented new scientific software to address them. I worked for 3 years in Prof.&nbsp;Bill Grady’s clinical epigenetics lab at Fred Hutch in Seattle, where I cultivated expertise in the epigenetics and molecular bases of gastroesophageal cancers, working my way from intern to Data Analysis Assistant. I collaborated with physicians, wet lab researchers, and fellow science analysts. My experiences led me to design and publish preprocessing and analysis workflows for methylation arrays, which probe chemical modifications to DNA that affect gene expression. I also developed a series of tools and resources to aid other researchers (see https://github.com/metamaden, in particular the methyPre, cgmappeR, and cgageR repositories). I further made intellectual contributions at an NIH hackathon event, where I pushed commits to the open-source PubCode project, a resource for indexing published scientific code (see project repository at https://github.com/NCBI-Hackathons/PubCode). These past efforts inspired the present BSSw fellowship proposal, as described below.</p>
-<p>Prompt: Describe your background and experience relevant to being a BSSw Fellow.</p>
-<p>My Response: The BSSw Fellowship supports preserving code functionality with proper versioning and documentation, and creating resources that aid researchers in doing code-based science effectively. I have extensive professional experience as a bioinformatician working with public data repositories and scientific code. This has enabled me to tackle systemic problems around code access, publication, and reuse for reproducing findings in computational science. At an NIH hackathon event, I contributed to PubCode, which aimed to index scientific software similar to how PubMed indexes journal articles in biomedical science. PubCode would have archived and made citable scientific code used in research papers. This is important: if a developer took down their code or its associated executables, portions of papers using them could become irreproducible. Moreover, when no publication is associated with software, authors may cite a GitHub or Bitbucket repository, or some other website lacking a persistent digital object identifier (DOI). This distributes citations across multiple resources, making it challenging to find all usages of a software package in the literature. Finally, when a publication uses new code, that code is often not released as standalone software. This means the code is not widely identified as an independently citable object. Bureaucratic issues at the NIH unfortunately prevented PubCode from realizing its full potential, and the project I propose here will subsume its ideas.</p>
-<p>Section: Proposed work and potential impact</p>
-<p>Prompt: What would you do as a BSSw Fellow?</p>
-<p>My Response: The problems I seek to solve are: (1) insufficient attribution of scientific code to its authors, because no resource tracks usages of published scripts or software tools (independent from any associated journal article) across the scientific literature; (2) bugs in software can invalidate analyses in scientific papers, but it is difficult to track the papers impacted by bugs; (3) a software and its versions can disappear from the internet, making reliant scientific results challenging or impossible to reproduce. To solve these problems, I propose to develop PubSrc, an open-access resource to crawl scientific papers for computer code. Code, along with affiliated release dates and version information, will be made queryable independently from their original publication or website. PubSrc will thereby empower web searches to rapidly obtain lists of scientific papers that use software, by version and platform. Importantly, PubSrc will recognize that scripts and software themselves have software dependencies, and it will plot dependencies across papers, scripts, and software. In these ways, PubSrc will address problems (1) and (2). To address problem (3), PubSrc will automatically archive source codes of open-source software by crawling scientific papers. To achieve my goals, I plan on involving my PhD adviser Abhinav Nellore and former collaborators on PubCode, especially Ben Busby at NIH/NLM; the $25K will be used for travel and protected time to work on this project.</p>
-<p>Prompt: What impact do you foresee from your efforts?</p>
-<p>My Response: I anticipate the following positive developments from PubSrc: (1) Sets of scripts that were previously not recognized as independent units of scientific work (e.g., custom scripts for analyses accompanying a lab’s paper) will bear unique identities permitting (a) assessing their impact across the literature, (b) pinpointing bugs and other errors due to software dependencies, and (c) citability, whether or not these scripts were collected and assigned a DOI through other resources like, for example, Figshare. (2) Software developers who resolve bugs will be able to find and therefore apprise authors of scientific works whose results may be affected. Moreover, authors of scientific literature will be able to readily search for any bugs resolved since their papers came out. (3) Over time, results from papers that depend on scientific software will likely become more reproducible, independent of software availability outside PubSrc. We anticipate, in some cases, that code will not be open-source and only executables will be available. Indexing these may be permitted or limited by law. Further, some executables may depend on a particular computing environment for proper execution. A clear next step for PubSrc would then be to archive executables and/or make software containers available for reproduction of scientific results.</p>
+    <h1>_title_</h1>
+    <h2>Sean Maden</h2>
+    <h2><p class="date">_month, day, year_</p></h2>
+    <img src="testblog_image1.jpg" style = "width: 50%;" align="float-left">
+    <p><br></p>
+    <p>First paragraph</p>
+    <br>
+    <h3>_section-name_</h3>
+    <p>Second paragraph</p>
+    <br>
+    <h3>_section-name_</h3>
+    <p>Third paragraph</p>
+    <p><br></p>
+
+    <script src="../../../scripts.js"></script>
+    
 </body>
+
 <footer>
     <p><br></p>
     <div style="border-bottom: 2px solid black;"></div>
@@ -63,6 +78,9 @@
         <a href="https://bsky.app/profile/metamaden.bsky.social">BlueSky</a>
         <a href="https://orcid.org/0000-0002-2212-4894">
         ORCID</a>
+        <p><br>&copy; 2024 Sean Maden. All rights reserved.</p>
     </ul>
 </footer>
+</div>
+
 </html>

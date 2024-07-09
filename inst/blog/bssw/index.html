@@ -11,6 +11,7 @@
 <!--begin header content-->
 <head>
     <!--begin blank container-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../../styles.css">
     <div class="sticky">
         <div class="row">
@@ -30,6 +31,31 @@
 <!--end header content-->
 
 <body>
+    <!-- begin side navigation menu -->
+    <div class="wrapper">
+        <div id="mySidenav" class="sidenav">
+            <div class="menu-sitemap"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a><br>
+            <a href = "../../../home.html">Home</a><br>
+            <a href="../../../resume.html">Resume</a><br>
+            <a href="../../../portfolio.html">Portfolio</a><br>
+            <a href = "../../../blog.html">Blog</a><br>
+            <a href = "../../../presentations.html">Presentations</a><br>
+            <a href = "../../../blank.html">Teaching</a><br>
+            <a href = "../../../further.html">Further</a><br>
+            </div>
+            <div class="menu-link"><i class="fa fa-envelope"></i> <a href="mailto:maden.sean@gmail.com">Email</a></div>
+            <div class="menu-link"><i class="fa fa-github"></i> <a href="https://github.com/metamaden">GitHub</a></div> <!--GitHub-->
+            <div class="menu-link"><i class="fa fa-linkedin-square"></i> <a href="https://www.linkedin.com/in/sean-maden-41623640/">LinkedIn</a></div> <!--LinkedIn-->
+            <div class="menu-link"><i class="fa fa-twitter"></i> <a href="https://twitter.com/MadenSean">X/Twitter</a></div> <!--X/Twitter-->
+            <div class="menu-link"><i class="fa fa-cloud"></i> <a href="https://bsky.app/profile/metamaden.bsky.social">BlueSky</a></div> <!--BlueSky-->
+            <div class="menu-link"><i class="fa fa-book"></i> <a href="https://orcid.org/0000-0002-2212-4894"> <!--ORCID-->
+            ORCID</a></div>
+            <p>&copy; 2024 Sean Maden. All rights reserved.</p>
+        </div>
+    </div>
+    <!-- end side navigation menu -->
+    <p><br></p>
+
     <p><br></p>
     <h1>My 2018 proposal for the Better Scientific Software Fellowship</h1>
     <h2>Sean Maden</h2>
@@ -47,6 +73,18 @@
     <p>My Response: The problems I seek to solve are: (1) insufficient attribution of scientific code to its authors, because no resource tracks usages of published scripts or software tools (independent from any associated journal article) across the scientific literature; (2) bugs in software can invalidate analyses in scientific papers, but it is difficult to track the papers impacted by bugs; (3) a software and its versions can disappear from the internet, making reliant scientific results challenging or impossible to reproduce. To solve these problems, I propose to develop PubSrc, an open-access resource to crawl scientific papers for computer code. Code, along with affiliated release dates and version information, will be made queryable independently from their original publication or website. PubSrc will thereby empower web searches to rapidly obtain lists of scientific papers that use software, by version and platform. Importantly, PubSrc will recognize that scripts and software themselves have software dependencies, and it will plot dependencies across papers, scripts, and software. In these ways, PubSrc will address problems (1) and (2). To address problem (3), PubSrc will automatically archive source codes of open-source software by crawling scientific papers. To achieve my goals, I plan on involving my PhD adviser Abhinav Nellore and former collaborators on PubCode, especially Ben Busby at NIH/NLM; the $25K will be used for travel and protected time to work on this project.</p>
     <h3>Prompt: What impact do you foresee from your efforts?</h3>
     <p>My Response: I anticipate the following positive developments from PubSrc: (1) Sets of scripts that were previously not recognized as independent units of scientific work (e.g., custom scripts for analyses accompanying a lab’s paper) will bear unique identities permitting (a) assessing their impact across the literature, (b) pinpointing bugs and other errors due to software dependencies, and (c) citability, whether or not these scripts were collected and assigned a DOI through other resources like, for example, Figshare. (2) Software developers who resolve bugs will be able to find and therefore apprise authors of scientific works whose results may be affected. Moreover, authors of scientific literature will be able to readily search for any bugs resolved since their papers came out. (3) Over time, results from papers that depend on scientific software will likely become more reproducible, independent of software availability outside PubSrc. We anticipate, in some cases, that code will not be open-source and only executables will be available. Indexing these may be permitted or limited by law. Further, some executables may depend on a particular computing environment for proper execution. A clear next step for PubSrc would then be to archive executables and/or make software containers available for reproduction of scientific results.</p>
+
+    </section>
+    <section id="further-reading" class="level2">
+    <h2 class="anchored" data-anchor-id="further-reading">Further reading</h2>
+    <blockquote>
+    <ul>
+    <li><p><b><a href="inst/blog/rnfdeconvo/index.html">Blog about better benchmark workflows, and why you should use R with NextFlow</a></b> : Blog about using R and NextFlow to perform deconvolution algorithm benchmarks.</p></li>
+    <li><p><b><a href="inst/blog/rcheckbash/index.html">Run R package checks with a shell script</p> : Blog about using a bash script to systematically run R package checks.</li>
+    <li><p><b><a href="inst/blog/montyhall/index.html">Cracking the Monty Hall problem with brute force simulation</a></b> : Blog about using brute force simulation to understand the Monty Hall problem.</p></li>
+    </ul>
+    </blockquote>
+
     <script src="../../../scripts.js"></script>
 </body>
 <footer>

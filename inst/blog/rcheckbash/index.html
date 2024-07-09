@@ -5,6 +5,7 @@
 <!--begin header content-->
 <head>
     <!--begin blank container-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../../styles.css">
     <div class="sticky">
         <div class="row">
@@ -23,10 +24,36 @@
 </head>
 <!--end header content-->
 <body>
+    <!-- begin side navigation menu -->
+    <div class="wrapper">
+        <div id="mySidenav" class="sidenav">
+            <div class="menu-sitemap"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a><br>
+            <a href = "../../../home.html">Home</a><br>
+            <a href="../../../resume.html">Resume</a><br>
+            <a href="../../../portfolio.html">Portfolio</a><br>
+            <a href = "../../../blog.html">Blog</a><br>
+            <a href = "../../../presentations.html">Presentations</a><br>
+            <a href = "../../../blank.html">Teaching</a><br>
+            <a href = "../../../further.html">Further</a><br>
+            </div>
+            <div class="menu-link"><i class="fa fa-envelope"></i> <a href="mailto:maden.sean@gmail.com">Email</a></div>
+            <div class="menu-link"><i class="fa fa-github"></i> <a href="https://github.com/metamaden">GitHub</a></div> <!--GitHub-->
+            <div class="menu-link"><i class="fa fa-linkedin-square"></i> <a href="https://www.linkedin.com/in/sean-maden-41623640/">LinkedIn</a></div> <!--LinkedIn-->
+            <div class="menu-link"><i class="fa fa-twitter"></i> <a href="https://twitter.com/MadenSean">X/Twitter</a></div> <!--X/Twitter-->
+            <div class="menu-link"><i class="fa fa-cloud"></i> <a href="https://bsky.app/profile/metamaden.bsky.social">BlueSky</a></div> <!--BlueSky-->
+            <div class="menu-link"><i class="fa fa-book"></i> <a href="https://orcid.org/0000-0002-2212-4894"> <!--ORCID-->
+            ORCID</a></div>
+            <p>&copy; 2024 Sean Maden. All rights reserved.</p>
+        </div>
+    </div>
+    <!-- end side navigation menu -->
+    <p><br></p>
+
     <p><br></p>
     <h1>Run R package checks with a shell script</h1>
     <h2>Sean Maden</h2>
     <h2><p class="date">August 13, 2021</p></h2>
+    
     <p>While checks are crucial to R package development, running them from command line can quickly become repetitive. I’ve written a shell script, <a href="https://gist.github.com/metamaden/14f6b5717e2934c118ffa9edfa45e765"><code>rpackagecheck.sh</code></a>, that runs the standard steps to checking an R package. The script uses <code>R CMD ...</code> to install, build, and check packages with any combination of the three major check types. This script can help discourage accidents, such as running check on a directory rather than a <code>.tar.gz</code> file, and ultimately expedite your development workflow.</p>
     <h2>R package checks</h2>
     <p>If you’ve submitted an R package on CRAN or Bioconductor, you’re familiar with the barrage of checks an R package needs to pass before it can be published. The three most common check types are supported in the <code>rpackagecheck.sh</code> script detailed below. These are the standard <code>R CMD CHECK</code>, Bioconductor’s <code>R CMD BiocCheck</code>, and CRAN’s <code>R CMD CHECK --as-cran</code>. For specific check requirements, consult the developer documentation for the repo to which you’re submitting (e.g.&nbsp;<a href="https://cran.r-project.org/web/packages/submission_checklist.html">here</a> for CRAN and <a href="https://www.bioconductor.org/developers/package-guidelines/#checkingenv">here</a> for Bioconductor).</p>
@@ -188,7 +215,19 @@
     <section id="conclusions" class="level1">
     <h2>Conclusions</h2>
     <p>This post described the <a href="https://gist.github.com/metamaden/14f6b5717e2934c118ffa9edfa45e765"><code>rpackagecheck.sh</code></a> shell script, including how to run it from command line and how each part of the script works. Some background about the types of R package checks developers frequently use was also provided. Implementing a repetetive task in a script can save you time and help you to avoid errors, leaving more mental overhead to focus on package development.</p>
+
+    </section>
+    <section id="further-reading" class="level2">
+    <h2 class="anchored" data-anchor-id="further-reading">Further reading</h2>
+    <blockquote>
+    <ul>
+    <li><p><b><a href="inst/blog/rnfdeconvo/index.html">Better benchmark workflows, and why you should use R with NextFlow</a></b> : Blog about using R and NextFlow to perform deconvolution algorithm benchmarks.</p></li>
+    <li><p><b><a href="inst/blog/montyhall/index.html">Cracking the Monty Hall problem with brute force simulation</a></b> : Blog about using brute force simulation to understand the Monty Hall problem.</p></li>
+    </ul>
+    </blockquote>
+
     <script src="../../../scripts.js"></script>
+
 </body>
 
 <footer>
