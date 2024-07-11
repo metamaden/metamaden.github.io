@@ -198,7 +198,8 @@ body {
     /*background-color: #c6c6cc;*/
     background-color: hsla(241, 54%, 35%, 0.9);
     font-family: Helvetica;
-    color: #39a0ca;
+    font-size: 18px;
+    color: #75d6da;
     overflow: visible;
     background-image: url("./inst/media/jpg/bg.jpg");
     background-size: cover;
