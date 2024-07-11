@@ -165,7 +165,7 @@
     mtext("Win Frequency", side = 1, outer = T)
     mtext("Number of Simulations", side = 2, outer = T)
     dev.off()</code></pre>
-    <p><img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_3runs.png" alt="drawing" align="center" width="100%/"></p>
+    <p><img src="../../media/img/blog/mh_3runs.png" alt="drawing" align="center" width="100%/"></p>
     <p><strong>Figure 1.</strong> Composite histograms of Monty Hall simulation runs using classic parameters. At left is smallest run (5 simulations of 2 games, 10 games total), middle is intermediate run (100 simulations and games, 10,000 total games), right is largest run (1,000 simulations and games, 1,000,000 games total).</p>
     <p>If you prefer to be more precise about the increase in distribution normality, we can apply the <a href="https://en.wikipedia.org/wiki/Shapiro%E2%80%93Wilk_test">Shapiro-Wilk Normality test</a> with <code>shapiro.test()</code> to test the null hypothesis that data were drawn from a normal distribution.</p>
     <pre><code># run normality tests
@@ -202,7 +202,7 @@
     <pre><code>png("mh_ndoors_3plots.png", width = 10, height = 4, units = "in", res = 400)
     getprettyplots(lnd, "Varying door count")
     dev.off()</code></pre>
-    <p><img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_ndoors_3plots.png" alt="mh_ndoors_3plots" align="center" width="100%/"></p>
+    <p><img src="../../media/img/blog/mh_ndoors_3plots.png" alt="mh_ndoors_3plots" align="center" width="100%/"></p>
     <p><strong>Figure 2.</strong> Three ways to visualize simulated win fraction distributions across door various quantities. Left, violin plots. Middle, ridge plots. Right, line plot of distribution means (lines) and standard deviation confidences (grey ribbon).</p>
     <p>Thus we have 3 ways of visualizing the win frequency distribution increase following increased door quantity. Interestingly, as door quantity increases, the standard deviation seems to contract slightly after the means show an asymptote, which reflects that win frequency increase becomes both higher and more certain at higher door quantities.</p>
     <p>I’ve allowed for two types of line plot overlays with the <code>ribbontype</code> argument. This allows for 2 types of confidence visualizations (the grey-colored ribbon overlay). Confidences can use either the standard deviation (if <code>sd</code>, the default), or the minimum and maximum win frequencies observed (if <code>minmax</code>). Let’s compare these below.</p>
@@ -212,7 +212,7 @@
     png("mh_2lineplots.png", width = 5, height = 3, units = "in", res = 400)
     grid.arrange(pclassic1, pclassic2, top = "Ribbon overlay comparison", ncol = 2)
     dev.off()</code></pre>
-    <p><img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_2lineplots.png" alt="mh_2lineplots" align="center" width="100%/"></p>
+    <p><img src="../../media/img/blog/mh_2lineplots.png" alt="mh_2lineplots" align="center" width="100%/"></p>
     <p><strong>Figure 3.</strong> Line plot comparison showing 2 ways of visualizing win fraction distributions with door quantity. Left, grey confidence ribbon calculated using standard deviation. Right, confidences calculated from observed distribution minima and maxima.</p>
     <p>Again, I’ll tend to use <code>sd</code> as it’s more useful to describe the underlying win fraction distributions being plotted.</p>
     </section>
@@ -250,7 +250,7 @@
                  ncol = 5, 
                  bottom = "Number of Doors", left = "Win Fraction")
     dev.off()</code></pre>
-    <p><img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_switchfreq.png" alt="mh_switchfreq" align="center" width="100%/"></p>
+    <p><img src="../../media/img/blog/mh_switchfreq.png" alt="mh_switchfreq" align="center" width="100%/"></p>
     <p><strong>Figure 4.</strong> Composite line plots of ten simulation sets varying player switch frequency/fraction and door counts. Top row, first run to fifth run varying switch frequnecy from 0% to 40%. Bottom row, sixth run to final run varying switch frequency from 50% to 90%.</p>
     <p>Across run sets of each door switch frequency, there’s a clear transition from an approximate negative power function (e.g.&nbsp;x ^ -1, top leftmost plot), to something approaching a fractional power function (e.g.&nbsp;x ^ 1/2, bottom rightmost plot). Note the win fraction only starts to show improvement with door quantity increase when the switch frequency is greater than 50% (bottom, second from leftmost plot), and that win fraction changes for a given switch frequency tend to always form asymptotes.</p>
     <p>Increasing the switch frequency under classical rules should show progressive win fraction increases. Let’s generate and visualize the simulation results for this. I’ll appropriate my <code>getlineplot()</code> function, but note that it can be better to explicitly handle different axis variables (e.g.&nbsp;<code>ndoors</code> and <code>doorswitch</code> here) with discrete code.</p>
@@ -267,7 +267,7 @@
                 xlim = c(0, 1), ylim = c(0, 1), 
                 xlab = "Switch frequency")
     dev.off()</code></pre>
-    <p><img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_switchfreq_classicrules.png" alt="mh_switchfreq_classicrules" align="center" width="100%/"></p>
+    <p><img src="../../media/img/blog/mh_switchfreq_classicrules.png" alt="mh_switchfreq_classicrules" align="center" width="100%/"></p>
     <p><strong>Figure 5.</strong> Simulation results from varying switch frequency using only classic Monty Hall rules/parameters (function defaults).</p>
     <p>The resulting plot shows a clear linear win fraction increase with switch frequency, maxing out at the now-familiar mean of about 0.667.</p>
     </section>
@@ -276,9 +276,9 @@
     <p>In data science, more tools in our toolkit means more options for tackling future problems. Here, I’ll illustrate how the <code>ggplot2</code> meta syntax can be readily leveraged to generate useful plot animations. I’ve written the <code>getprettygifs()</code> function using the <a href="https://cran.r-project.org/web/packages/gganimate/index.html"><code>gganimate</code></a> and <a href="https://cran.r-project.org/web/packages/magick/index.html"><code>magick</code></a> packages and helpful code provided <a href="https://github.com/thomasp85/gganimate/wiki/Animation-Composition">here</a> to generate animated gifs of some of the plots above. I’ll generate these gifs using the results stored in the <code>ldat</code> list.</p>
     <pre><code>getprettygif(ldat[[11]], plottype = "composite_ndoors", gifname = "mh_ndoors.gif")
     getprettygif(ldat, plottype = "lineplots_doorswitch", gifname = "mh_switchfreq.gif")</code></pre>
-    <p><img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_ndoors.gif" class="img-fluid"></p>
+    <p><img src="../../media/gif/mh_ndoors.gif" class="img-fluid"></p>
     <p><strong>Figure 6.</strong> Animation of win fraction distributions from varying door quantity with otherwise classic rules. Left is violin plot animation, right is line plot animation. Title describes the nearest frame displayed.</p>
-    <p><img src="https://raw.githubusercontent.com/metamaden/montyhall/master/plots/mh_switchfreq.gif" class="img-fluid"></p>
+    <p><img src="../../media/gif/mh_switchfreq.gif" class="img-fluid"></p>
     <p><strong>Figure 7.</strong> Animation of line plots showing win fraction distributions from varying player switch frequency and door quantities. Title describes the nearest frame displayed.</p>
     </section>
     <section id="conclusions-and-analysis-extensions" class="level1">
@@ -291,8 +291,8 @@
     <h2 class="anchored" data-anchor-id="further-reading">Further reading</h2>
     <blockquote>
     <ul>
-    <li><p><b><a href="inst/blog/rnfdeconvo/index.html">Blog about better benchmark workflows, and why you should use R with NextFlow</a></b> : Blog about using R and NextFlow to perform deconvolution algorithm benchmarks.</p></li>
-    <li><p><b><a href="inst/blog/rcheckbash/index.html">Run R package checks with a shell script</p> : Blog about using a bash script to systematically run R package checks.</li>
+    <li><p><b><a href="../rnfdeconvo/index.html">Using R with NextFlow</a></b> : Blog about using R and NextFlow to perform deconvolution algorithm benchmarks.</p></li>
+    <li><p><b><a href="../rcheckbash/index.html">Run R package checks with a shell script</a></b> : Blog about using a bash script to systematically run R package checks.</p></li>
     </ul>
     </blockquote>
 
