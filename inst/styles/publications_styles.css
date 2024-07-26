@@ -1,0 +1,45 @@
+/*
+resume_styles.css
+
+Author: Sean Maden
+
+Styles for resume and other application content display.
+
+*/
+
+#resumecontainer {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.citation-content {
+            padding: 0 18px;
+            background-color: black;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+.citation-button {
+    background-color: black;
+    color: #9c9ba3;
+    border: none;
+    vertical-align: middle;
+    position: relative;
+    max-width: 30%;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: 2px solid black;
+    &:hover {
+        color: white;
+        transform: scale(1.01);
+        .tab-content {
+            display: flex;
+        }
+    }
+  }
