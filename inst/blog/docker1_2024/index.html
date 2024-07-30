@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<div id = "content">
+<!--begin header content-->
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZY2SYLK7HN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZY2SYLK7HN');
+    </script>
+    <!--begin blank container-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../styles.css">
+    <div class="sticky">
+        <div class="row">
+          <div class="column2">
+            Sean K Maden
+          </div>
+          <div class="column2">
+              <a href = "../../../index.html">Title</a>
+              <a href="javascript:void(0)" class="openbtn" onclick="openNav()">
+              Menu
+              </a>
+          </div>
+        </div>
+    </div>
+    <!--<div class = "sticky-back"></div>-->
+</head>
+<!--end header content-->
+
+<body>
+    <!-- begin side navigation menu -->
+    <div class="wrapper">
+        <div id="mySidenav" class="sidenav">
+            <div class="menu-sitemap"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a><br>
+            <a href = "../../../home.html">Home</a><br>
+            <a href="../../../resume.html">Resume</a><br>
+            <a href="../../../portfolio.html">Portfolio</a><br>
+            <a href = "../../../blog.html">Blog</a><br>
+            <a href = "../../../presentations.html">Presentations</a><br>
+            <a href = "../../../blank.html">Teaching</a><br>
+            <a href = "../../../publications.html">Publications</a><br>
+            <a href = "../../../further.html">Further</a><br>
+            </div>
+            <div class="menu-link"><i class="fa fa-envelope"></i> <a href="mailto:maden.sean@gmail.com">Email</a></div>
+            <div class="menu-link"><i class="fa fa-github"></i> <a href="https://github.com/metamaden">GitHub</a></div> <!--GitHub-->
+            <div class="menu-link"><i class="fa fa-linkedin-square"></i> <a href="https://www.linkedin.com/in/sean-maden-41623640/">LinkedIn</a></div> <!--LinkedIn-->
+            <div class="menu-link"><i class="fa fa-twitter"></i> <a href="https://twitter.com/MadenSean">X/Twitter</a></div> <!--X/Twitter-->
+            <div class="menu-link"><i class="fa fa-cloud"></i> <a href="https://bsky.app/profile/metamaden.bsky.social">BlueSky</a></div> <!--BlueSky-->
+            <div class="menu-link"><i class="fa fa-book"></i> <a href="https://orcid.org/0000-0002-2212-4894"> <!--ORCID-->
+            ORCID</a></div>
+            <p>&copy; 2024 Sean Maden. All rights reserved.</p>
+        </div>
+    </div>
+    <!-- end side navigation menu -->
+    <p><br></p>
+
+    <p><br></p>
+    <h1>The case for containers in computation</h1>
+    <h2>Sean Maden</h2>
+    <h2><p class="date">July 30, 2024</p></h2>
+    <p><br></p>
+    <p>In this blog, we explore the following key questions:<p>
+
+        <ul>
+            <li>1. What are containers and why are they important for users, developers, and researchers?</li><br>
+            <li>2. In programming and computational reserch, what are the benefits of container use and risks of not using them?</li><br>
+            <li>3. How does familiarity with containers benefit your career; what projects and fields aleady make extensive use of this important technology?</li><br>
+        </ul>
+      </p>
+
+    <h3>1. Overview of container technologies</h3>
+    <h4>1a. Key definitions for container technologies</h4>
+
+    <p>Containerization is a means of bundling compute environment, including dependencies, with key software, data, and other deliverables for development. The key nomenclature includes the image and the container, where a container is simply a running instance of an image. The image is commonly a local instance or fork of a file, called a "Dockerfile", distributed most commonly on Docker Hub. Users can readily pull down Docker Hub images and run containers from a local image fork in just one or two lines of code.</p>
+
+    <p>If you do not program or develop software, don’t worry. Chances are you have worked with an operating system on your desktop, laptop, or mobile device (just as you are reading these words). Windows, Mac OS, and Linux are all examples of operating systems. Software such as Docker <a href = "#1-docker">1</a> allows seamless management of OS environments regardless of the type of OS you use most frequently. This flexibility also makes OS management systems a powerful resource for development in the cloud (below).</p>
+
+    <h4>1b. Defining software dependencies as container contents</h4>
+    
+    <p>A dependency is simply required software. Consider a hypothetical example of three software packages Z, Y, and X, where the first is dependent on the latter two. In other words, to be able to run software Z, you also need to run software Y and software X. Since each software is maintained independently, the version of each package is also important. Sometimes, newer versions could break dependent software (e.g. an update to Y breaks a critical function of Z).</p>
+    
+    <p>Dependency management can become time-consuming, especially if not incorporated early into a project. This is a key reason researchers published software names and versions in their methods and helps ensure their work is repeatable over time. Repeatable means the same results every time, a crucial feature of reproducible research (detailed in <a href="#reproducibility">Section 2c</a>, below). Here is where containerization really shines: instead of changing your native OS environment, or what you might rely on day-to-day, you can manage your own version of a container-producing image fork.</p>
+    
+    <p></p>
+    <p></p>
+
+    <h3>2. Benefits of using containers</h3>
+
+    <section id = "figure1">
+    <p><img src="../../media/jpg/figure1.JPG" alt="drawing" align="center" width="35%/"></p>
+    <p><em>Figure 1. Depiction of containment and instance uses for containers, respectively. Containment is the isolated call of a software from its container as part of a process (e.g. workflow or pipeline) that primarily takes place in the native environment. Instance use is to primarily call the containerized environment for the process. Yellow areas represent the native environment, green areas represent the containerized environment run on the native system, gray arrays represent the process of the working directory or active directory for the process.</em></p><br>
+    </section>
+
+    <h4>2a. Flexibility of code use and development environment</h4>
+    <p>Flexibility is among the key benefits of using containerization for software development. Flexibility cuts both ways for containers, because it means that both the native environment and containerized environment can be optimized for specific process steps. Some software requires that users have sudo access, and this can be a core limitation for utilization of containers in high-performance compute settings where users typically lack full sudo access. However, in a local environment or cloud environment where one has sudo access, the dependency can either be supported in the container itself or outside the container.</p>
+    <p>Processes that use containers could use either the native compute environment used to host the container (i.e. what I call “containment” in Figure 1, above) or the container environment (i.e. what I call “instance” use in Figure 1, above). Cases where I would prefer the former use would be to reproduce a specific scientific result, to unit test a specific older version of a package, or to use a specific dependency for a specific task in a workflow or pipeline. Cases where I would prefer the latter would be to prepare code for release or publication, to develop a new dependency hierarchy, or to run a continuous process outside of the native environment.</p>
+    <p></p>
+    <p></p>
+
+    <h4>2b. Modularity of code deployment and distribution</h4>
+    <p>The next benefit to using containers is their modularity. If you have previous experience developing software packages, you can relate to this in terms of how a fully loadable and documented package is greater than the sum of its parts and benefits from its adherence to common development standards. Containers serve as virtual environments that are isolated from their operating system, making them portable and modular. There are special considerations for working extensively with data in container environments. If you work with lots of data and intermediate files, you could work with your own data inside a container by transferring from your host environment. But beware: files including datasets and intermediate files do not persist in containers when they close. In other words, files vanish from the container environment and they need to be saved elsewhere for repeated access and use. Picture something like a kitchen tupperware or Prime delivery box; containers of this kind are developed for short-term storage of variable contents rather than long-term storage of specific contents.</p>
+    <p>Though this lack of data persistence may seem like a critical downside for container management software, it is more of a feature when we consider the mutability and flexibility of available cloud compute drives (a.k.a. “volumes”) which are typically tailored for specific purposes (e.g. either parse user account data or store order information), and less emphasis is placed on all-purpose volumes (e.g. parse user account data and store order information).</p>
+    <p></p>
+    <p></p>
+
+    <section id = "figure2">
+    <p><img src="../../media/jpg/figure2.JPG" alt="drawing" align="center" width="35%/"></p>
+    <p><em>Figure 2. Depiction of (left) reproducibility and (right) replicability, respectively. Reproducibility is the repetition of results with the same data and methods. Replicability is the repetition of results with the same methods but new data. White outlines represent methods and data schema, while purple represents key dataset information content components like the raw information (images, documents, etc.), processed elements (normalizations, merges, etc.), independent and dependent variables (variables, model hyperparameters, etc.), and analysis-derived results (summaries, predictions, outcomes, scores, trained models, etc.).</em></p><br>
+    </section>
+
+    <h3 id = "reproducibility">2c. Reproducibility of results from computational operations and workflows</h3>
+
+    <h4></h4>
+    
+    <p>Reproducibility (<a href = "#figure2">Figure 2</a>, above) is a key concept in the sciences, and in particular computational disciplines. Reproducibility means that a result can be repeated using the same code and dataset. It is related to the concept of replicability, which is to repeat the same result using identical methods with a different dataset. Scientific standards that encourage reproducibility often also encourage replicability, and they typically demand that data be made open-access or shareable at the time results are published. Many of the most high-profile scientific journals have explicit reproducibility instructions (<a href = "#2-reporting">2</a>, for example). This topic is so important that an entire Nature journal issue, called “Challenges in irreproducible research”, was devoted to the topic in October 2018 (<a href = "#3-challenges">3</a>), and more articles on the state of reproducibility, as well as calls for improving reproducibility standards in computational disciplines, are released every year (<a href = "#4-announcement">4</a> and <a href = "#5-heil">5</a>, for example). Given this motivation, let us focus on the concept of reproducibility as it pertains to developing and sharing code and software for science, or what you could think of as the “computational methods” for data-driven research.</p>
+
+    <p>Containers may be preferable to similar tools for ensuring consistent software behavior, customer experience, and reproducible projects. These include virtual environment tools (VE tools) like Python Virtual Environments, mamba, and conda. VE tools are flexible, convenient, and compatible with high-performance compute environments. But the decentralized availability of VE-enabled dependencies across many locations is a risk factor for server availability. Lacking standard naming conventions of dependencies can also limit tool discoverability and impede on brand recognition from the user perspective. By contrast, Docker Hub <a href = "#6-dockerhub">6</a> is centralized and reliable. It enables one-click or single-line commands to run an analysis or process, consistent with some of the highest standards for reproducibility (<a href = "#4-announcement">4</a> and <a href = "#5-heil">5</a>). Further, the DockerHub repository already includes many images of standard operating systems. Declaring these requires explicit statements of the software and its version as a “tag”, or version label, another key reproducible research practice when reporting methods.</p>
+    <p></p>
+    <p></p>
+
+    <h4 id = "users">2d. Usability of containers for individual projects</h4>
+    
+    <p>I used Dockerhub to develop images for several projects. In particular, I supported software that was only available from GitHub and not from a major bioinformatics repository such as Bioconductor <a href = "#7-bioconductor">7</a> or CRAN <a href = "#8-cran">8</a>. I developed images for a variety of software types, including an R/Bioconductor package, a Python package, a shiny dashboard, and an Entrez tools utility. You can view my available images by searching my username “madensean758” on Docker Hub.</p>
+    
+    <p>Working with containers is rewarding for researchers, developers, and users of all levels. They are accessible, and using them allows one to appreciate the flexibility of operating systems to run many different types of software. Another compelling reason to use containers is to build a stronger portfolio for data science, software engineering, web design, and related disciplines. As noted elsewhere, strong applications often feature portfolio items such as software, packages, demos, dashboards, and websites that show off specific skills, and containers allow one to ensure those pieces are supported and runnable over time. You may even consider developing your own container system (i.e. a “proto-Docker” system, see the <a href = "https://github.com/codecrafters-io/build-your-own-x?tab=readme-ov-file#build-your-own-docker">codecrafters-io/build-your-own-x</a> GH repo) as a portfolio piece itself, and then hosting your work with such as system. Ultimately, container systems are integral for cloud work (see Section 3b below) and their use separates GUI-centric thinking and reinforces an understanding of dependency management and computational reproducibility.</p>
+    
+    <p></p>
+    <p></p>
+
+    <h3>3. Dependency hierarchies for computation</h3>
+
+    <section id = "figure3">
+    <p><img src="../../media/jpg/figure3.JPG" alt="drawing" align="center" width="35%/"></p>
+    <p><em>Figure 3. Example dependency hierarchy. Hierarchy depicts relationship of (blue boxes) deconvolution algorithms as organized according to (yellow boxes) common shared features and tasks such as available experiment data types, data structures, transformation steps, and preprocessing methods (image panel from Figure 1 in <a href = "#9-maden">9</a>).</em></p><br>
+    </section>
+
+
+    <h4 id = "dependencyhierarchy">3a. Conceiving and acting on a dependency hierarchy</h4>
+    
+    <p>This brings us to something you might think of as a dependency hierarchy (<a href = "#figure3">Figure 3</a>, above). You see, if you run a niche software with many dependencies, chances are you would need to devise a new image. Popular software like Python v.3.10.1 is runnable from a container of its Docker Hub image, but this also requires C, JavaScript, and binaries to work. Thus image development often starts from a specific OS like Linux or one of its many great flavors. In short, the Linux type and version would be the new hierarchy’s basis.</p>
+    
+    <p>Fortunately, we often don’t need to spend tons of time conceiving new dependency hierarchies when working with containers. For software development in bioinformatics, projects such as Bioconductor and Bioconda projects have us covered here. When I developed new images for a variety of application types, recent Docker Hub image mirrors for both projects worked great. The Bioconda project supports bioinformatics dependencies and mirrors of popular software (<a href = "#10-bioconda">10</a> and <a href = "#11-gruning">11</a>). It may be preferable for certain command-line utilities, and I found it useful for running Entrez Query Utilities. Bioconductor is widely used in computational biology and adjacent fields for key analysis, visualization, and preprocessing. I used this to develop the Dockerfile for lute, an R/Bioconductor package for bulk transcriptomics deconvolution. During development, I added support for the lute dependency hierarchy after starting with the Bioconductor developer image as its basis. By analogy, if I was preparing pancakes for a brunch, the Bioconductor developer image would be like a pre-made mix that I used to prepare the batter, and the lute-specific dependency hierarchy would be key additions like spices and toppings.</p>
+    
+    <p>Standards and guidelines are improving over time for container use in bioinformatics and other fields (<a href = "#12-alessandri">12</a>-<a href = "#13-fay">13</a>, for example). Some great guides for domain-specific use are now available, such as the 10-step guide to supporting bioinformatics software from <a href = "#14-nust">14</a>.</p>
+
+
+
+    <h4 id = "reliability">3b. Reliability of access to Docker images from Docker Hub</h4>
+
+    <p>Among its strengths, Docker features the robust Docker Hub repositories as mentioned, very detailed documentation, and an active and supportive developer community. I recently found that Copilot is a great way to search solutions for Docker interactions. Another benefit is that Docker isn’t the only containerization software in town. Singularity is one of the major alternatives, and it can even be a better alternative because it supports greater admin privileges over Docker while essentially functioning the same way. There are even resources to begin developing and experimenting with your own custom containerization solutions.</p>
+
+    
+
+    <h4 id = "cloud">3c. Community support for updated images</h4>
+
+    <p>Containers promote sharing because they are modular and portable, and because of the aforementioned development hierarchy and robust online hubs. Through the tagging system, you can readily declare a new branch or fork. You can also readily set up solutions for a given software on differing OS environments, or differing programming language versions. Further, because of the ability to call their contents from your native environment as contained processes (<a href = "#figure1">Figure 1</a>, above), containers can be readily traced, tracked, and monitored. This becomes very important for cloud and DevOps tasks, and it is a good idea to familiarize yourself with containerized development environments if you are training in these or related disciplines. As cloud infrastructure continues to expand and technical innovations increase cloud capabilities, the hybrid GUI-programmer interfaces for Google Cloud, AWS, and Azure demand specific abstract knowledge about networked entities such as containers and container sets. Working with containers is a great step towards familiarization with cloud development concepts like CI/CD <a href = "#15-cicd">15</a>, microservices <a href = "#16-microservices">16</a>, and ETL <a href = "#17-etl">17</a>. Developing, sharing, and monitoring containers is a great practice to get into and relevant to these in-demand skills.</p>
+    
+    <p>If you are transitioning into DevOps, Data Engineering, Data Science, or a related field, chances are you will eventually need to work with cloud environments. Part-and-parcel with cloud environments is image utilization, container management systems such as Kubernetes (<a href = "#18-kubernetes">18</a>), which enable complex container deployment, management, and between-container networking. Towards mastery of such systems, familiarity with Docker is useful to internalize the core functions of images and containers and helps users understand the dynamism of dependency management.</p>
+
+    <h3>4. Conclusions</h3>
+
+    <p>I provided an overview of the Docker technology, including the definitions of images and containers, some of the development practices, basic use, advantages of containerization, and some of the key developer communities using containerization. Rather than an ad hoc chore to be delayed to the last minute, dependency management is crucial for reproducible research and enterprise development.</p>
+
+    <h4>4a. Further reading</h4>
+
+    <p>More of my writing on software development and dependency management:</p>
+
+    <ul>
+      <li>1. Maden. 2023. "Better benchmark workflows, and why you should use R with NextFlow". <a href = "https://metamaden.github.io/inst/blog/rnfdeconvo/index.html">metamaden.github.io/inst/blog/rnfdeconvo</a>.</li><br>
+      <li>2. Maden. 2021. "Run R package checks with a shell script". <a href = "https://metamaden.github.io/inst/blog/rcheckbash/index.html">metamaden.github.io/inst/blog/rcheckbash</a>.</li><br>
+    </ul>
+
+    <h4>4b. Works Cited</h4>
+    <ul>
+        <li id = "1-docker">1. "Docker Docs". <a href = "https://docs.docker.com/">docs.docker.com</a>.</li><br>
+        <li id = "2-reporting">2. Nature Portfolio. “Reporting Standards and Availability of Data, Materials, Code and Protocols.” <a href = "https://www.nature.com/nature-portfolio/editorial-policies/reporting-standards">nature.com/nature-portfolio/editorial-policies/reporting-standards</a>.</li><br>
+        <li id = "3-challenges">3. “Challenges in Irreproducible Research.” <a href = "https://www.nature.com/collections/prbfkwmwvz">nature.com/collections...</a>.</li><br>
+        <li id = "4-announcement">4. “Announcement: FAIR Data in Earth Science.” 2019. Nature 565 (7738): 134. <a href = "https://www.nature.com/articles/d41586-019-00075-3#:~:text=Nature%20backs%20the%20Enabling%20FAIR,deposit%20data%20in%20community%20repositories.&text=Nature%20and%20Scientific%20Data%20are,Earth%2C%20space%20and%20environmental%20sciences.">d41586-019-00075-3</a>.</li><br>
+        <li id = "5-heil">5. Heil, Benjamin J, Michael M Hoffman, Florian Markowetz, Su-In Lee, Casey S Greene, and Stephanie C Hicks. 2021. “Reproducibility Standards for Machine Learning in the Life Sciences.” Nat. Methods 18 (10): 1132–35. <a href = "https://www.nature.com/articles/s41592-021-01256-7">doi.org/10.1038/s41592-021-01256-7</a>.</li><br>
+        <li id = "6-dockerhub">6. Docker Hub. “Overview of Docker Hub.” <a href = "https://docs.docker.com/docker-hub/">docs.docker.com/docker-hub</a>.</li><br>
+        <li id = "7-bioconductor">7. Bioconductor. “Bioconductor - Home.” <a href = "https://www.bioconductor.org/">bioconductor.org</a>.</li><br>
+        <li id = "8-cran">8. CRAN. “The Comprehensive R Archive Network.” <a href = "https://cran.r-project.org/">cran.r-project.org</a>.</li><br>
+        <li id = "9-maden">9. Maden, Sean K., Louise A. Huuki-Myers, Sang Ho Kwon, Leonardo Collado-Torres, Kristen R. Maynard, and Stephanie C. Hicks. 2024. “Lute: Estimating the Cell Composition of Heterogeneous Tissue with Varying Cell Sizes Using Gene Expression.” bioRxiv. <a href = "https://doi.org/10.1101/2024.04.04.588105">doi.org/10.1101/2024.04.04.588105</a>.</li><br>
+        <li id = "10-bioconda">10. “Build System 2014; Bioconda Documentation — Bioconda.github.io.” <a href = "https://bioconda.github.io/contributor/build-system.html">bioconda.github.io/contributor...</a>.</li><br>
+        <li id = "11-gruning">11. Grüning, Björn, Ryan Dale, Andreas Sjödin, Brad A Chapman, Jillian Rowe, Christopher H Tomkins-Tinch, Renan Valieris, Johannes Köster, and Bioconda Team. 2018. “Bioconda: Sustainable and Comprehensive Software Distribution for the Life Sciences.” Nat. Methods 15 (7): 475–76. <a href = "https://www.nature.com/articles/s41592-018-0046-7">doi.org/10.1038/s41592-018-0046-7</a>.</li><br>
+        <li id = "12-alessandri">12. Alessandri, Simone, Maria L Ratto, Sergio Rabellino, Gabriele Piacenti, Sandro Gepiro Contaldo, Simone Pernice, Marco Beccuti, Raffaele A Calogero, and Luca Alessandri. 2024. “CREDO: A Friendly Customizable, REproducible, DOcker File Generator for Bioinformatics Applications.” BMC Bioinformatics 25 (1): 110. <a href = "https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-024-05695-9">doi.org/10.1186/s12859-024-05695-9</a>.</li><br>
+        <li id = "13-fay">13. Fay, Colin. “An Introduction to Docker for R Users — Colinfay.me.” <a href = "https://colinfay.me/docker-r-reproducibility/">colinfay.me/docker-r-reproducibility</a>.</li><br>
+        <li id = "14-nust">14. Nüst, Daniel, Vanessa Sochat, Ben Marwick, Stephen J Eglen, Tim Head, Tony Hirst, and Benjamin D Evans. 2020. “Ten Simple Rules for Writing Dockerfiles for Reproducible Data Science.” PLoS Comput. Biol. 16 (11): <a href = "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008316">e1008316</a>.</li><br>
+        <li id = "15-cicd">15. Amazon AWS Docs. “Understanding CI/CD - AWS Prescriptive Guidance.” <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-cicd-litmus/understanding-cicd.html#:~:text=Continuous%20integration%20and%20continuous%20delivery,change%20to%20the%20production%20environment">docs.aws.amazon.com/prescriptive-guidance/latest/strategy-cicd-litmus</a>.</li><br>
+        <li id = "16-microservices">16. Amazon AWS Docs. “What Are Microservices?” <a href = "https://aws.amazon.com/microservices/.">aws.amazon.com/microservices</a>.</li><br>
+        <li id = "17-etl">17. Amazon AWS Docs. “What Is ETL? - Extract Transform Load Explained.”  <a href = " https://aws.amazon.com/what-is/etl/">aws.amazon.com/what-is/etl/</a>.</li><br>
+        <li id = "18-kubernetes">18. “Production-Grade Container Orchestration — Kubernetes.io.” <a href = "https://kubernetes.io/">kubernetes.io</a>.</li><br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+“What Is ETL? - Extract Transform Load Explained - AWS — Aws.amazon.com.” https://aws.amazon.com/what-is/etl/.
+    </ul>
+
+    <script src="../../../scripts.js"></script>
+
+</body>
+
+<footer>
+    <p><br></p>
+    <div style="border-bottom: 2px solid black;"></div>
+    <ul>
+        <a href="mailto:maden.sean@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/sean-maden-phd-41623640/">LinkedIn</a>
+        <a href="https://twitter.com/MadenSean">X/Twitter</a>
+        <a href="https://bsky.app/profile/metamaden.bsky.social">BlueSky</a>
+        <a href="https://orcid.org/0000-0002-2212-4894">
+        ORCID</a>
+        <p><br>&copy; 2024 Sean Maden. All rights reserved.</p>
+    </ul>
+</footer>
+</div>
+
+</html>

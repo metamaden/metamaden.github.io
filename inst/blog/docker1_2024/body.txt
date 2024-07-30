@@ -1,0 +1,115 @@
+# The Case for Containers
+
+In this blog, we explore the following key questions: 1. What is container management software and why is it important? 2. How could container management fit into your programmer workflow? 3. What projects use containerization, and how can you benefit? 4. How does containerization mitigate risk over time and set trainees up for success in areas such as cloud development?
+
+# 1. Overview
+
+## 1a. Definition
+
+Containerization is a means of bundling compute environment, including dependencies, with key software, data, and other deliverables for development. The key nomenclature includes the image and the container, where a container is simply a running instance of an image. The image is commonly a local instance or fork of a file, called a Dockerfile, found most commonly on Dockerhub. Users can readily pull down Dockerhub images and run containers from a local image fork in just one or two lines of code.
+
+If you do not program or develop software, don’t worry. Chances are you have worked with an operating system on your desktop, laptop, or mobile device (just as you are reading these words). Windows, Mac OS, and Linux are all examples of operating systems. Software such as Docker (“Overview of Docker Hub — Docs.docker.com”) allows seamless management of OS environments regardless of the type of OS you use most frequently. This flexibility also makes OS management systems a powerful resource for development in the cloud (below).
+
+## 1b. Dependencies
+
+A dependency is simply required software. Consider a hypothetical example of three software packages Z, Y, and X, where the first is dependent on the latter two. In other words, to be able to run software Z, you also need to run software Y and software X. Since each software is maintained independently, the version of each package is also important. Sometimes, newer versions could break dependent software (e.g. an update to Y breaks a critical function of Z).
+
+Dependency management can become time-consuming, especially if not incorporated early into a project. This is a key reason researchers published software names and versions in their methods and helps ensure their work is repeatable over time. Repeatable means the same results every time, a crucial feature of reproducible research (detailed below). Here is where containerization really shines: instead of changing your native OS environment, or what you might rely on day-to-day, you can manage your own version of a container-producing image fork.
+
+# 2. Development benefits
+
+![*Figure 1*. Depiction of containment and instance uses for containers, respectively. Containment is the isolated call of a software from its container as part of a process (e.g. workflow or pipeline) that primarily takes place in the native environment. Instance use is to primarily call the containerized environment for the process. Yellow areas represent the native environment, green areas represent the containerized environment run on the native system, gray arrays represent the process of the working directory or active directory for the process.](figure2.JPG)
+
+## 2a. Flexibility
+
+Flexibility is among the key benefits of using containerization for software development. Flexibility cuts both ways for containers, because it means that both the native environment and containerized environment can be optimized for specific process steps. Software such as MongoDB requires that users have sudo access, and this can be a core limitation for utilization of containers in high-performance compute settings where users typically lack full sudo access. However, in a local environment or cloud environment where one has sudo access, the dependency can either be supported in the container itself or outside the container.
+
+Processes that use containers could use either the native compute environment used to host the container (i.e. what I call “containment” in Figure 1, above) or the container environment (i.e. what I call “instance” use in Figure 1, above). Cases where I would prefer the former use would be to reproduce a specific scientific result, to unit test a specific older version of a package, or to use a specific dependency for a specific task in a workflow or pipeline. Cases where I would prefer the latter would be to prepare code for release or publication, to develop a new dependency hierarchy, or to run a continuous process outside of the native environment.
+
+## 2b. Modularity
+
+The next benefit to using containers is their modularity. If you have previous experience developing software packages, you can relate to this in terms of how a fully loadable and documented package is greater than the sum of its parts and benefits from its adherence to common development standards. Containers serve as virtual environments that are isolated from their operating system, making them portable and modular. There are special considerations for working extensively with data in container environments. If you work with lots of data and intermediate files, you could work with your own data inside a container by transferring from your host environment. But beware: files including datasets and intermediate files do not persist in containers when they close. In other words, files vanish from the container environment and they need to be saved elsewhere for repeated access and use. Picture something like a kitchen tupperware or Prime delivery box; containers of this kind are developed for short-term storage of variable contents rather than long-term storage of specific contents.
+
+Though this lack of data persistence may seem like a critical downside for container management software, it is more of a feature when we consider the mutability and flexibility of available cloud compute drives (a.k.a. “volumes”) which are typically tailored for specific purposes (e.g. either parse user account data or store order information), and less emphasis is placed on all-purpose volumes (e.g. parse user account data and store order information).
+
+![*Figure 2. Depiction of (left) reproducibility and (right) replicability, respectively. Reproducibility is the repetition of results with the same data and methods. Replicability is the repetition of results with the same methods but new data. White outlines represent methods and data schema, while purple represents key dataset information content components like the raw information (images, documents, etc.), processed elements (normalizations, merges, etc.), independent and dependent variables (variables, model hyperparameters, etc.), and analysis-derived results (summaries, predictions, outcomes, scores, trained models, etc.).*](figure1.JPG)
+
+## 2c. Reproducibility {#reproducibility}
+
+Reproducibility (Figure 2, above) is a key concept in the sciences, and in particular computational disciplines. Reproducibility means that a result can be repeated using the same code and dataset. It is related to the concept of replicability, which is to repeat the same result using identical methods with a different dataset. Scientific standards that encourage reproducibility often also encourage replicability, and they typically demand that data be made open-access or shareable at the time results are published. Many of the most high-profile scientific journals have explicit reproducibility instructions (see “Reporting Standards and Availability of Data, Materials, Code and Protocols | Nature Portfolio — Nature.com”, for example). This topic is so important that an entire Nature journal issue, called “Challenges in irreproducible research”, was devoted to the topic in October 2018 (“Challenges in Irreproducible Research — Nature.com”), and more articles on the state of reproducibility, as well as calls for improving reproducibility standards in computational disciplines, are released every year (“Announcement: FAIR Data in Earth Science” (2019) and Heil et al. (2021), for example). Given this motivation, let us focus on the concept of reproducibility as it pertains to developing and sharing code and software for science, or what you could think of as the “computational methods” for data-driven research.
+
+Containers may be preferable to similar tools for ensuring consistent software behavior, customer experience, and reproducible projects. These include virtual environment tools (VE tools) like Python Virtual Environments, mamba, and conda. VE tools are flexible, convenient, and compatible with high-performance compute environments. But the decentralized availability of VE-enabled dependencies across many locations is a risk factor for server availability. Lacking standard naming conventions of dependencies can also limit tool discoverability and impede on brand recognition from the user perspective. By contrast, Dockerhub is centralized and reliable. It enables one-click or single-line commands to run an analysis or process, consistent with some of the highest standards for reproducibility (Heil et al. (2021), “An Introduction to Docker for R Users — Colinfay.me”). Further, the DockerHub repository already includes many images of standard operating systems. Declaring these requires explicit statements of the software and its version as a “tag”, or version label, another key reproducible research practice when reporting methods.
+
+## 2d. Users {#users}
+
+I used Dockerhub to develop images for several projects. In particular, I supported software that was only available from GitHub and not from a major bioinformatics repository such as CRAN (“The Comprehensive R Archive Network — Cran.r-Project.org”) or Bioconductor (“Bioconductor - Home — Bioconductor.org”). I developed images for a variety of software types, including an R/Bioconductor package, a Python package, a shiny dashboard, and an Entrez tools utility. You can view my available images by searching my username “madensean758” on Dockerhub.
+
+Working with containers is rewarding for researchers, developers, and users of all levels. They are accessible, and using them allows one to appreciate the flexibility of operating systems to run many different types of software. Another compelling reason to use containers is to build a stronger portfolio for data science, software engineering, web design, and related disciplines. As noted elsewhere, strong applications often feature portfolio items such as software, packages, demos, dashboards, and websites that show off specific skills, and containers allow one to ensure those pieces are supported and runnable over time. Related, you may even consider developing your own container system (i.e. a “proto-Docker” system, see) as a potfolio piece itself, and then hosting your work with such as system. Ultimately, container systems are integral for cloud work (see Section 3b below) and their use separates GUI-centric thinking and reinforces an understanding of dependency management and computational reproducibility.
+
+# 3. Hierarchy
+
+![*Figure 3. Example dependency hierarchy. Hierarchy depicts relationship of (blue boxes) as organized according to (yellow boxes) common shared features or tasks including data transformation, preprocessing, and coercion into suitable structures (image panel from @Maden2024.04.04.588105).*](figure4.JPG)
+
+## 3a. Hierarchy {#dependencyhierarchy}
+
+This brings us to something you might think of as a dependency hierarchy. You see, if you run a niche software with many dependencies, chances are you would need to devise a new image. Popular software like Python v.3.10.1 is runnable from a container of its Dockerhub image, but this also requires C, JavaScript, and binaries to work. Thus image development often starts from a specific OS like Linux or one of its many great flavors. In short, the Linux type and version would be the new hierarchy’s basis.
+
+Fortunately, we often don’t need to spend tons of time conceiving new dependency hierarchies when working with containers. For software development in bioinformatics, projects such as Bioconductor and Bioconda projects have us covered here. When I developed new images for a variety of application types, recent DockerHub images for both projects worked great. The Bioconda project supports bioinformatics dependencies and mirrors of popular software (Grüning et al. (2018),“Build System &#X2014; Bioconda Documentation — Bioconda.github.io”). It may be preferable for certain command-line utilities, and I found it useful for running Entrez Query Utilities. Bioconductor is widely used in computational biology and adjacent fields for key analysis, visualization, and preprocessing. I used this to develop the Dockerfile for lute, an R/Bioconductor package for bulk transcriptomics deconvolution. During development, I added support for the lute dependency hierarchy after starting with the Bioconductor developer image as its basis. By analogy, if I was preparing pancakes for a brunch, the Bioconductor developer image would be like a pre-made mix that I used to prepare the batter, and the lute-specific dependency hierarchy would be key additions like spices and toppings.
+
+Standards and guidelines are improving over time for container use in bioinformatics and other fields (“An Introduction to Docker for R Users — Colinfay.me” and Alessandri et al. (2024), for example). Some great guides for domain-specific use are now available, such as the 10-step guide to supporting bioinformatics software from Nüst et al. (2020).
+
+## 3b. Reliability {#reliability}
+
+Among its strengths, Docker features the robust Dockerhub repositories as mentioned, very detailed documentation, and an active and supportive developer community. I recently found that Copilot is a great way to search solutions for Docker interactions. Another benefit is that Docker isn’t the only containerization software in town. Singularity is one of the major alternatives, and it can even be a better alternative because it supports greater admin privileges over Docker while essentially functioning the same way. There are even resources to begin developing and experimenting with your own custom containerization solutions.
+
+## 3c. Community {#cloud}
+
+Containers promote sharing because they are modular and portable, and because of the aforementioned development hierarchy and robust online hubs. Through the tagging system, you can readily declare a new branch or fork. You can also readily set up solutions for a given software on differing OS environments, or differing programming language versions. Further, because of container isolation (Figure 1, above), they can be readily traced, tracked, and monitored. This becomes very important for DevOps and cloud development, and it is a good idea to think in terms of containerized development environments if you are training in these topics.
+
+Cloud infrastructure continues to expand, and technical innovations increase cloud capabilities. The hybrid GUI-programmer interfaces one encounters for Google Cloud, AWS, and Azure demand a specific level of attention and abstract knowledge. Working with containers is a great step towards familiarization with cloud development concepts like microservices (“What Are Microservices? | AWS — Aws.amazon.com”), CD/CI (“Understanding CI/CD - AWS Prescriptive Guidance — Docs.aws.amazon.com”), and ETL (“What Is ETL? - Extract Transform Load Explained - AWS — Aws.amazon.com”). Developing, sharing, and monitoring containers is a great practice to get into and relevant to these in-demand skills.
+
+If you are transitioning into DevOps, Data Engineering, Data Science, or a related field, chances are you will eventually need to work with cloud environments. Part-and-parcel with cloud environments is image utilization, container management systems such as Kubernetes (“Production-Grade Container Orchestration — Kubernetes.io”), which enable complex container deployment, management, and between-container networking. Towards mastery of such systems, familiarity with Docker is useful to internalize the core functions of images and containers and helps users understand the dynamism of dependency management.
+
+# 4. Conclusions
+
+I provided an overview of the Docker technology, including the definitions of images and containers, some of the development practices, basic use, advantages of containerization, and some of the key developer communities using containerization. Rather than an ad hoc chore to be delayed to the last minute, dependency management is crucial for reproducible research and development of complex systems, including the most high-traffic and complex cloud compute systems.
+
+## 4a. Further reading
+
+More of my writing on software development and dependency management:
+
+* 1. [blog1, R bash script]()
+
+* 2. [blog2, r-nf]()
+
+## 4b. Works Cited
+
+* 1. Alessandri, Simone, Maria L Ratto, Sergio Rabellino, Gabriele Piacenti, Sandro Gepiro Contaldo, Simone Pernice, Marco Beccuti, Raffaele A Calogero, and Luca Alessandri. 2024. “CREDO: A Friendly Customizable, REproducible, DOcker File Generator for Bioinformatics Applications.” BMC Bioinformatics 25 (1): 110.
+
+* 2. Fay, Colin. “An Introduction to Docker for R Users — Colinfay.me.” [colinfay.me/docker-r-reproducibility](https://colinfay.me/docker-r-reproducibility/).
+
+* 3. “Announcement: FAIR Data in Earth Science.” 2019. Nature 565 (7738): 134.
+
+* 4. “Bioconductor - Home — Bioconductor.org.” [bioconductor.org](https://www.bioconductor.org/).
+
+* 5. “Build System &#X2014; Bioconda Documentation — Bioconda.github.io.” [bioconda.github.io/contributor...](https://bioconda.github.io/contributor/build-system.html).
+
+* 6. “Challenges in Irreproducible Research — Nature.com.” [nature.com/collections...]( https://www.nature.com/collections/prbfkwmwvz).
+
+* 7. Grüning, Björn, Ryan Dale, Andreas Sjödin, Brad A Chapman, Jillian Rowe, Christopher H Tomkins-Tinch, Renan Valieris, Johannes Köster, and Bioconda Team. 2018. “Bioconda: Sustainable and Comprehensive Software Distribution for the Life Sciences.” Nat. Methods 15 (7): 475–76.
+
+* 8. Heil, Benjamin J, Michael M Hoffman, Florian Markowetz, Su-In Lee, Casey S Greene, and Stephanie C Hicks. 2021. “Reproducibility Standards for Machine Learning in the Life Sciences.” Nat. Methods 18 (10): 1132–35.
+
+* 9. Maden, Sean K., Louise A. Huuki-Myers, Sang Ho Kwon, Leonardo Collado-Torres, Kristen R. Maynard, and Stephanie C. Hicks. 2024. “Lute: Estimating the Cell Composition of Heterogeneous Tissue with Varying Cell Sizes Using Gene Expression.” bioRxiv. [doi.org/10.1101/2024.04.04.588105](https://doi.org/10.1101/2024.04.04.588105).
+
+* 10. Nüst, Daniel, Vanessa Sochat, Ben Marwick, Stephen J Eglen, Tim Head, Tony Hirst, and Benjamin D Evans. 2020. “Ten Simple Rules for Writing Dockerfiles for Reproducible Data Science.” PLoS Comput. Biol. 16 (11): e1008316.
+
+* 11. “Overview of Docker Hub — Docs.docker.com.” [docs.docker.com/docker-hub](https://docs.docker.com/docker-hub/).
+
+* 12. “Production-Grade Container Orchestration — Kubernetes.io.” [kubernetes.io](https://kubernetes.io/).
+
+* 13. “Reporting Standards and Availability of Data, Materials, Code and Protocols | Nature Portfolio — Nature.com.” [nature.com/nature-portfolio/editorial-policies/reporting-standards](https://www.nature.com/nature-portfolio/editorial-policies/reporting-standards).
+
+* 14. “The Comprehensive R Archive Network — Cran.r-Project.org.” [cran.r-project.org](https://cran.r-project.org/).
+
+* 15. “Understanding CI/CD - AWS Prescriptive Guidance — Docs.aws.amazon.com.” https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-cicd-litmus/understanding-cicd.html#:~:text=Continuous%20integration%20and%20continuous%20delivery,change%20to%20the%20production%20environment.
