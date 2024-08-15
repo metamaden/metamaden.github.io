@@ -215,3 +215,11 @@ a, a:hover, a:active, a:visited {
         color: white;
     }
 }
+/*social media hove link icon styles*/
+.aicon {
+    font-size: 24px;
+    &:hover {
+        color: white;
+        font-size: 22px;
+    }
+}
