@@ -20,6 +20,7 @@
     <!--begin blank container-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./inst/styles/news_styles.css">
     <div class="sticky">
         <div class="row">
           <div class="column2">
@@ -74,42 +75,48 @@
     </div>
     <!-- end side navigation menu -->
     <h1>News</h1>
-    <p>
-        <!--begin share block1-->
-        <i class="fa fa-share"></i>
-        <!-- LinkedIn share link2-->
-        <a class="aicon" href="https://www.linkedin.com/shareArticle?text='News'%20Sean%20Maden%20Professional%20Website&url=https://metamaden.github.io/news.html" target="_blank">
-        <i class="fa fa-linkedin-square"></i></a>
-        <!-- Twitter share link-->
-        <a class="aicon" href="https://twitter.com/intent/tweet?text='News'%20Sean%20Maden%20Professional%20Website&url=https://metamaden.github.io/news.html" target="_blank">
-        <i class="fa fa-twitter"></i></a>
-        <!-- BlueSky share link-->
-        <a class="aicon" href="https://bsky.app/intent/compose?text='News'%20Sean%20Maden%20Professional%20Website%20https://metamaden.github.io/news.html" target="_blank">
-        <i class="fa fa-cloud"></i></a>
-        <br>
-        <!--end share block1-->
-    <p>
+
     <h2>Latest</h2>
+
+    <p>Updates from Sean's blogs, manuscripts, events, and other projects.<br></p>
+
+    <!--begin news slideshow-->
+    <div class="slideshow-container">
+        <div class="controls">
+            <button id="prev">❮</button>
+            <button id="next">❯</button>
+            <button id="playPause">❚❚</button>
+        </div>
+        <div class = "slides fade">
+                <img src="./inst/media/jpg/news/news-blog-docker1.jpg" alt="stuff" width=50%>
+                <p>New blog post "The case for containers in computation."<br></p>
+                <p>Read <a href = "https://metamaden.github.io/inst/blog/docker1_2024/index.html">here</a>.<br></p>
+        </div>
+        <div class = "slides fade">
+            <iframe width="50%" src="https://www.youtube.com/embed/RFYPetR_uEU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>New YouTube video "(ENAR Spring Meeting 2024) Improving deconvolution accuracy with cell size rescaling."<br></p> 
+            <p>Watch <a href = "https://www.youtube.com/watch?v=RFYPetR_uEU">here</a>.<br></p>
+        </div>
+        <div class = "slides fade">
+            <img src="./inst/media/jpg/news/news-articles-lute.jpg" alt="stuff" width=50%>
+            <p>New preprint article "lute: estimating the cell composition of heterogeneous tissue with varying cell sizes using gene expression."<br></p> 
+            <p>Read <a href = "https://www.biorxiv.org/content/10.1101/2024.04.04.588105v1">here</a>.<br></p>
+        </div>
+        <div class = "slides fade">
+            <iframe width="50%" src="https://www.youtube.com/embed/1UHkNqpbalw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>New YouTube cgmappeR tutorial.<br></p> 
+            <p>Watch <a href = "https://www.youtube.com/embed/1UHkNqpbalw">here</a>.<br></p>
+        </div>
+    </div>
+    <!--end news slideshow-->
+
+    <!--begin contact-->
     <p></p><br>
     <h2>Contact</h2>
-    <p>Want to work together? Drop me a line at <a href="mailto:maden.sean@gmail.com">maden.sean@gmail.com</a> .</p><br>
-    
-    <p>
-        <!--begin share block2-->
-        <i class="fa fa-share"></i>
-        <!-- LinkedIn share link2-->
-        <a class="aicon" href="https://www.linkedin.com/shareArticle?text='News'%20Sean%20Maden%20Professional%20Website&url=https://metamaden.github.io/news.html" target="_blank">
-        <i class="fa fa-linkedin-square"></i></a>
-        <!-- Twitter share link-->
-        <a class="aicon" href="https://twitter.com/intent/tweet?text='News'%20Sean%20Maden%20Professional%20Website&url=https://metamaden.github.io/news.html" target="_blank">
-        <i class="fa fa-twitter"></i></a>
-        <!-- BlueSky share link-->
-        <a class="aicon" href="https://bsky.app/intent/compose?text='News'%20Sean%20Maden%20Professional%20Website%20https://metamaden.github.io/news.html" target="_blank">
-        <i class="fa fa-cloud"></i></a>
-        <br>
-        <!--end share block2-->
-    <p>
+    <p>Want to work together? Drop me a line at <a href="mailto:maden.sean@gmail.com">maden.sean@gmail.com</a>.</p><br>
+    <!--end contact-->
 
+    <script src="./inst/scripts/news_scripts.js"></script>
     <script src="scripts.js"></script>
 </body>
 

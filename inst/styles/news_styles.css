@@ -1,0 +1,56 @@
+/*
+
+news_styles.css
+
+Author: Sean Maden
+
+Styles for the News webpage.
+
+*/
+
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    background-color: hsla(241, 54%, 35%, 1); /* Black background color */
+    border: 2px solid white;
+}
+
+.slides {
+    display: none;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    z-index: 0;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 5s;
+}
+
+@keyframes fade {
+    from {opacity: .3} 
+    to {opacity: 1}
+}
+
+.controls {
+    position: center;
+    top: 50%;
+    width: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.controls button {
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background-color: rgba(0,0,0,0.8);
+}
