@@ -10,7 +10,7 @@ Additional styles for pages stored at `./inst/styles/*`.
 
 /* Added for year in text 2024 */
 .scroll-box { 
-    width: 700px; 
+    width: 60%; 
     height: 250px; 
     overflow-y: scroll; 
     border: 1px solid #ccc; 
