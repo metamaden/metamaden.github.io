@@ -11,7 +11,9 @@ Additional styles for pages stored at `./inst/styles/*`.
 /* Added for year in text 2024 */
 
 body { margin: 0; padding: 0; width: 100%; } 
+
 .container { width: 100%; max-width: 1200px; margin: 0 auto; } 
+
 @media (max-width: 600px) { 
     .container { padding: 10px; } 
 }
