@@ -31,7 +31,7 @@ Styles for the News webpage.
 }
 
 @keyframes fade {
-    from {opacity: .3} 
+    from {opacity: .7} 
     to {opacity: 1}
 }
 
