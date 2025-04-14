@@ -6,7 +6,9 @@ var textArray = [
   'Ad: <a href = "https://www.washington.edu/">University of Washington | Be Boundless</a>',
   'Ad: <a href = "https://www.ohsu.edu/knight-cancer-institute">Knight Cancer Research Institute | Driven to cure cancer. Devoted to caring for you.</a>',
   'Ad: <a href = "https://xkcd.com/">XKCD | A Webcomic of romance, sarcasm, math, and language</a>',
-  'Ad: <a href = "https://theoatmeal.com/">The Oatmeal | Comics by Matthew Inman</a>'
+  'Ad: <a href = "https://theoatmeal.com/">The Oatmeal | Comics by Matthew Inman</a>',
+  'Ad: <a href = "https://www.bioconductor.org/">Bioconductor | Open source software for bioinformatics</a>',
+  'Ad: <a href = "https://www.kexp.org/">KEXP | Where the Music Matters</a>'
 ];
 var randomNumber = Math.floor(Math.random() * textArray.length);
 document.getElementById("randomAd").innerHTML = textArray[randomNumber];
