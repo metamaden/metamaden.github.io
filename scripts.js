@@ -20,3 +20,14 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0px";
 }
+
+// scroll box script, from year in text 2024
+document.querySelector('.scrollbox').addEventListener('scroll', function() { console.log('Scrolling...'); });
+function openPage(pageName) {
+    closeNav();
+    const tabContents = document.getElementsByClassName('tab-content');
+    for (const content of tabContents) {
+        content.style.display = 'none';
+    }
+    document.getElementById(pageName).style.display = 'block';
+}
